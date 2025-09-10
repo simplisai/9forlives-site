@@ -1,0 +1,56 @@
+{
+  "name": "9forlives-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page moderna e responsiva para o projeto 9forlives - Uma iniciativa do Social Profit para encerrar o maior vazio espiritual da história.",
+  "main": "9forlives-page.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "npx serve .",
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'No build process needed for static HTML'",
+    "deploy": "netlify deploy --prod --dir ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/socialprofit/9forlives-page.git"
+  },
+  "keywords": [
+    "9forlives",
+    "landing-page",
+    "social-profit",
+    "biblia",
+    "evangelizacao",
+    "missoes",
+    "html",
+    "tailwindcss",
+    "javascript",
+    "responsive",
+    "netlify"
+  ],
+  "author": {
+    "name": "Social Profit",
+    "url": "https://socialprofit.org"
+  },
+  "license": "MIT",
+  "homepage": "https://9forlives.netlify.app",
+  "bugs": {
+    "url": "https://github.com/socialprofit/9forlives-page/issues"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1",
+    "netlify-cli": "^17.10.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "netlify": {
+    "build": {
+      "publish": "."
+    }
+  }
+}

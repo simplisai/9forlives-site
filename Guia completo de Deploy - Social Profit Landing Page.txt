@@ -1,0 +1,330 @@
+🚀 Guia Completo de Deploy - Social Profit Landing Page
+📋 Índice
+Estrutura do Projeto
+Design System
+Dependências & Bibliotecas
+Configuração do Tailwind
+Componentes & Seções
+Animações & Interações
+Scripts & Funcionalidades
+Deploy & Otimização
+📁 Estrutura do Projeto
+plaintext
+social-profit-landing/
+├── public/
+│   ├── favicon.svg (logo Social Profit)
+│   └── assets/
+├── src/
+│   ├── styles/
+│   │   ├── globals.css
+│   │   └── components.css
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── SideProgress.jsx
+│   │   └── sections/
+│   ├── utils/
+│   │   └── animations.js
+│   └── App.jsx
+├── tailwind.config.js
+├── package.json
+└── index.html
+🎨 Design System
+Paleta de Cores
+javascript
+// tailwind.config.js - cores EXATAS
+colors: {
+  'custom-bg': '#09090b',        // Fundo principal (zinc-950)
+  'custom-fg': '#fafafa',        // Texto principal (zinc-50)
+  'custom-card': '#18181b',      // Cards/containers (zinc-900)
+  'custom-border': '#27272a',    // Bordas (zinc-800)
+  'custom-primary': '#7ccf00',   // Verde principal
+  'custom-chart1': '#bbf451',    // Verde claro
+  'custom-chart2': '#9ae600'     // Verde médio
+}
+Tipografia
+css
+/* Fontes principais */
+font-family: 
+- Primária: Inter (weights: 100,200,300,400,500,600)
+- Display: Space Grotesk (weights: 300,400,500,600)
+
+/* Hierarquia */
+- H1 Hero: 2.5rem/6xl/7xl + tracking-tight + Space Grotesk + font-thin
+- H2 Seções: 3xl/4xl/5xl + tracking-tight + font-light
+- Labels: 11px/xs + uppercase + tracking-[0.28em] + font-light
+- Corpo: lg/xl/2xl + font-light
+- CTAs: sm/base + font-medium
+Espaçamento & Layout
+css
+/* Container */
+max-width: 7xl (1280px)
+padding: px-4 sm:px-6
+
+/* Seções */
+padding: py-24 sm:py-28
+min-height: 100vh
+snap-start (scroll snap)
+
+/* Cards */
+border-radius: rounded-2xl (16px)
+padding: p-8/p-10
+border: border-white/10
+background: bg-white/[0.02-0.04] + backdrop-blur-xl
+📦 Dependências & Bibliotecas
+Package.json
+json
+{
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.263.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "vite": "^4.4.0"
+  }
+}
+CDN Links (se não usar bundler)
+View
+
+Copy
+Preview
+Code
+
+⚙️ Configuração do Tailwind
+tailwind.config.js COMPLETO
+javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'custom-bg': '#09090b',
+        'custom-fg': '#fafafa', 
+        'custom-card': '#18181b',
+        'custom-border': '#27272a',
+        'custom-primary': '#7ccf00',
+        'custom-chart1': '#bbf451',
+        'custom-chart2': '#9ae600'
+      },
+      fontFamily: {
+        'inter': ['Inter', 'ui-sans-serif', 'system-ui'],
+        'space': ['Space Grotesk', 'ui-sans-serif', 'system-ui']
+      },
+      animation: {
+        'slideUp': 'slideUp 1s ease-out forwards',
+        'fadeIn': 'fadeIn 2s ease-out forwards'
+      },
+      keyframes: {
+        slideUp: {
+          '0%': { 
+            opacity: '0', 
+            transform: 'translateY(32px)', 
+            filter: 'blur(4px)' 
+          },
+          '100%': { 
+            opacity: '1', 
+            transform: 'translateY(0)', 
+            filter: 'blur(0)' 
+          }
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        }
+      },
+      backdropBlur: {
+        'xs': '2px'
+      }
+    },
+  },
+  plugins: [],
+}
+🎯 Componentes & Seções
+1. Header Fixo
+jsx
+// Características OBRIGATÓRIAS:
+- Position: fixed top-0 z-50
+- Background: bg-black/30 backdrop-blur-xl
+- Border: rounded-2xl border-custom-border  
+- Logo: height h-8
+- CTAs: rounded-full com hover states
+- Responsive: flex/hidden behaviors
+2. Hero Section
+jsx
+// Layout:
+- min-h-screen + flex items-center justify-center
+- Container: max-w-5xl + rounded-[28px]
+- Background: bg-white/[0.02] + múltiplos gradientes
+- Grid pattern: opacity-[0.16] + mask-image radial
+
+// Elementos:
+- Logo: h-16 com animate slideUp
+- H1: text-6xl/7xl + Space Grotesk + gradient text
+- Subtitle: badges inline com ring-1
+- CTAs: primary + secondary buttons
+3. Progress Sidebar (Desktop)
+jsx
+// Position: fixed right-6 top-1/2
+// Dots: size-3 rounded-full com estados ativos
+// Tooltips: hover com bg-black/80
+// Navigation: scroll suave para seções
+4. Seções de Conteúdo
+jsx
+// Padrão universal:
+- snap-start + min-h-screen
+- py-24 sm:py-28
+- Intersection Observer para animações
+- Cards: rounded-2xl + border-white/10 + backdrop-blur-xl
+✨ Animações & Interações
+Sistema de Animações
+javascript
+// 1. Scroll-triggered animations
+const observeElements = () => {
+  const elements = document.querySelectorAll('[data-animate]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = parseInt(entry.target.dataset.delay || '0');
+        setTimeout(() => {
+          entry.target.classList.add('opacity-100', 'translate-y-0', 'blur-0');
+          entry.target.classList.remove('opacity-0');
+        }, delay);
+      }
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+  
+  elements.forEach(el => observer.observe(el));
+};
+Estados de Hover
+css
+/* Botões primários */
+.btn-primary:hover {
+  background-color: #9ae600; /* custom-chart2 */
+}
+
+/* Cards */
+.card:hover {
+  border-color: rgba(124, 207, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Progress dots */
+.progress-dot:hover {
+  background-color: rgba(124, 207, 0, 0.7);
+}
+🔧 Scripts & Funcionalidades
+Funcionalidades Obrigatórias
+javascript
+// 1. Inicialização dos ícones Lucide
+lucide.createIcons();
+
+// 2. Smooth scroll para seções
+const setupSmoothScroll = () => {
+  document.querySelectorAll('[data-jump]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const sectionId = btn.dataset.jump;
+      const section = document.querySelector(`[data-section="${sectionId}"]`);
+      section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+};
+
+// 3. Progress sidebar ativo
+const updateProgressIndicator = () => {
+  const sections = document.querySelectorAll('[data-section]');
+  const buttons = document.querySelectorAll('[data-jump]');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const sectionId = entry.target.dataset.section;
+        buttons.forEach(btn => {
+          btn.classList.toggle('is-active', btn.dataset.jump === sectionId);
+        });
+      }
+    });
+  }, { threshold: 0.6 });
+  
+  sections.forEach(section => observer.observe(section));
+};
+
+// 4. CTAs funcionais
+const setupCTAs = () => {
+  const ecosystemsSection = document.querySelector('[data-section="3"]');
+  
+  ['mainCTA', 'headerCTA', 'finalCTA'].forEach(id => {
+    document.getElementById(id)?.addEventListener('click', () => {
+      ecosystemsSection?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+};
+🚀 Deploy & Otimização
+1. Build Production
+bash
+# Vite/React
+npm run build
+
+# Verificar:
+- Fonts carregando corretamente
+- Tailwind CSS compilado
+- Ícones Lucide funcionando
+- Scroll snap habilitado
+- Animações suaves
+2. Performance Checklist
+markdown
+✅ Preconnect para Google Fonts
+✅ Lazy loading para imagens (se houver)
+✅ Otimização de bundle (tree shaking)
+✅ Minificação CSS/JS
+✅ Backdrop-blur com fallback
+✅ Intersection Observer com polyfill
+3. Browser Support
+markdown
+✅ Chrome/Edge 88+
+✅ Firefox 84+ 
+✅ Safari 14+
+✅ Backdrop-blur fallback
+✅ CSS Grid fallback
+✅ IntersectionObserver fallback
+4. SEO & Meta Tags
+View
+
+Copy
+Preview
+Code
+
+🎯 Checklist Final de Deploy
+Visual & UX
+ Paleta de cores exata (#7ccf00, #09090b, etc.)
+ Fontes Inter + Space Grotesk carregando
+ Gradientes de fundo animados
+ Cards com backdrop-blur-xl
+ Hover states funcionando
+ Responsividade perfeita
+Animações & Interações
+ Elementos aparecem com data-animate
+ Delays escalonados (0ms, 80ms, 120ms...)
+ Scroll snap funcionando
+ Progress sidebar ativo
+ Smooth scroll entre seções
+Funcionalidades
+ Todos os CTAs redirecionam para seção 3
+ Lucide icons renderizando
+ Navigation funcional
+ Tooltips no sidebar
+ IntersectionObserver ativo
+Performance
+ Primeiro paint < 2s
+ Animações suaves 60fps
+ Sem layout shifts
+ Fallbacks para browsers antigos
+🔥 IMPORTANTE: Mantenha EXATAMENTE as classes Tailwind, delays de animação, estrutura HTML e funcionalidades JavaScript. O design foi calibrado pixel por pixel para a experiência perfeita.

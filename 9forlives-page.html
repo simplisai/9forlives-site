@@ -1,0 +1,1131 @@
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9forlives — Ninguém fica sem a Palavra</title>
+<meta name="description" content="Essa será a última geração da humanidade que enfrentará o problema do acesso à Bíblia. Uma iniciativa do Social Profit para encerrar o maior vazio espiritual da história.">
+<meta name="keywords" content="9forlives, bíblia, social profit, palavra de deus, acesso bíblia, evangelização, missões">
+<meta name="author" content="Social Profit">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#7ccf00">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://9forlives.netlify.app/">
+<meta property="og:title" content="9forlives — Ninguém fica sem a Palavra">
+<meta property="og:description" content="Essa será a última geração da humanidade que enfrentará o problema do acesso à Bíblia. Uma iniciativa do Social Profit para encerrar o maior vazio espiritual da história.">
+<meta property="og:image" content="https://lojvbcnyewsjfcrzsdja.supabase.co/storage/v1/object/public/9forlives-assets/logo-9forlives/9forlives.svg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://9forlives.netlify.app/">
+<meta property="twitter:title" content="9forlives — Ninguém fica sem a Palavra">
+<meta property="twitter:description" content="Essa será a última geração da humanidade que enfrentará o problema do acesso à Bíblia. Uma iniciativa do Social Profit para encerrar o maior vazio espiritual da história.">
+<meta property="twitter:image" content="https://lojvbcnyewsjfcrzsdja.supabase.co/storage/v1/object/public/9forlives-assets/logo-9forlives/9forlives.svg">
+
+<link rel="icon" type="image/svg+xml" href="https://lojvbcnyewsjfcrzsdja.supabase.co/storage/v1/object/public/9forlives-assets/logo-9forlives/9forlives.svg">
+<link rel="canonical" href="https://9forlives.netlify.app/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'custom-bg': '#09090b',
+          'custom-fg': '#fafafa', 
+          'custom-card': '#18181b',
+          'custom-border': '#27272a',
+          'custom-primary': '#7ccf00',
+          'custom-chart1': '#bbf451',
+          'custom-chart2': '#9ae600'
+        },
+        fontFamily: {
+          'inter': ['Inter', 'ui-sans-serif', 'system-ui'],
+          'space': ['Space Grotesk', 'ui-sans-serif', 'system-ui']
+        },
+        animation: {
+          'slideUp': 'slideUp 1s ease-out forwards',
+          'fadeIn': 'fadeIn 2s ease-out forwards'
+        },
+        keyframes: {
+          slideUp: {
+            '0%': { 
+              opacity: '0', 
+              transform: 'translateY(32px)', 
+              filter: 'blur(4px)' 
+            },
+            '100%': { 
+              opacity: '1', 
+              transform: 'translateY(0)', 
+              filter: 'blur(0)' 
+            }
+          },
+          fadeIn: {
+            '0%': { opacity: '0' },
+            '100%': { opacity: '1' }
+          }
+        },
+        backdropBlur: {
+          'xs': '2px'
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-custom-bg text-custom-fg antialiased selection:bg-custom-primary/20 overflow-x-hidden snap-y snap-mandatory" style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; scroll-behavior: smooth;">
+  <!-- Gradientes de fundo sutis -->
+  <div class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-24 -left-24 h-80 w-80 rounded-full blur-3xl bg-custom-primary/20"></div>
+    <div class="absolute top-1/3 -right-24 h-80 w-80 rounded-full blur-3xl bg-custom-chart2/10"></div>
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 h-72 w-72 rounded-full blur-3xl bg-custom-chart1/10"></div>
+  </div>
+
+  <!-- Progressão lateral (desktop) -->
+  <aside class="hidden lg:flex fixed right-6 top-1/2 -translate-y-1/2 z-40 h-[70vh] items-center">
+    <div class="relative h-full">
+      <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-white/10"></div>
+      <div class="flex flex-col justify-between h-full">
+        <button class="group relative flex items-center justify-center is-active" data-jump="0" aria-label="Início">
+          <span class="relative grid place-items-center">
+            <span class="size-3 rounded-full bg-white/25 transition-all duration-500 ease-out group-hover:bg-custom-primary/70"></span>
+            <span class="absolute -left-3 size-0 rounded-full bg-custom-primary/30 opacity-0 transition-all duration-500 ease-out group-[.is-active]:size-4 group-[.is-active]:opacity-100"></span>
+          </span>
+          <span class="absolute -left-2 -translate-x-full px-3 py-1.5 rounded-md bg-black/80 border border-white/10 text-xs font-light text-white opacity-0 pointer-events-none transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-x-[110%]">Início</span>
+        </button>
+        <button class="group relative flex items-center justify-center" data-jump="1" aria-label="Realidade">
+          <span class="relative grid place-items-center">
+            <span class="size-3 rounded-full bg-white/25 transition-all duration-500 ease-out group-hover:bg-custom-primary/70"></span>
+            <span class="absolute -left-3 size-0 rounded-full bg-custom-primary/30 opacity-0 transition-all duration-500 ease-out group-[.is-active]:size-4 group-[.is-active]:opacity-100"></span>
+          </span>
+          <span class="absolute -left-2 -translate-x-full px-3 py-1.5 rounded-md bg-black/80 border border-white/10 text-xs font-light text-white opacity-0 pointer-events-none transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-x-[110%]">Realidade</span>
+        </button>
+        <button class="group relative flex items-center justify-center" data-jump="2" aria-label="Problema">
+          <span class="relative grid place-items-center">
+            <span class="size-3 rounded-full bg-white/25 transition-all duration-500 ease-out group-hover:bg-custom-primary/70"></span>
+            <span class="absolute -left-3 size-0 rounded-full bg-custom-primary/30 opacity-0 transition-all duration-500 ease-out group-[.is-active]:size-4 group-[.is-active]:opacity-100"></span>
+          </span>
+          <span class="absolute -left-2 -translate-x-full px-3 py-1.5 rounded-md bg-black/80 border border-white/10 text-xs font-light text-white opacity-0 pointer-events-none transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-x-[110%]">Problema</span>
+        </button>
+        <button class="group relative flex items-center justify-center" data-jump="3" aria-label="Confronto">
+          <span class="relative grid place-items-center">
+            <span class="size-3 rounded-full bg-white/25 transition-all duration-500 ease-out group-hover:bg-custom-primary/70"></span>
+            <span class="absolute -left-3 size-0 rounded-full bg-custom-primary/30 opacity-0 transition-all duration-500 ease-out group-[.is-active]:size-4 group-[.is-active]:opacity-100"></span>
+          </span>
+          <span class="absolute -left-2 -translate-x-full px-3 py-1.5 rounded-md bg-black/80 border border-white/10 text-xs font-light text-white opacity-0 pointer-events-none transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-x-[110%]">Confronto</span>
+        </button>
+        <button class="group relative flex items-center justify-center" data-jump="4" aria-label="Decreto">
+          <span class="relative grid place-items-center">
+            <span class="size-3 rounded-full bg-white/25 transition-all duration-500 ease-out group-hover:bg-custom-primary/70"></span>
+            <span class="absolute -left-3 size-0 rounded-full bg-custom-primary/30 opacity-0 transition-all duration-500 ease-out group-[.is-active]:size-4 group-[.is-active]:opacity-100"></span>
+          </span>
+          <span class="absolute -left-2 -translate-x-full px-3 py-1.5 rounded-md bg-black/80 border border-white/10 text-xs font-light text-white opacity-0 pointer-events-none transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-x-[110%]">Decreto</span>
+        </button>
+        <button class="group relative flex items-center justify-center" data-jump="5" aria-label="Sistema">
+          <span class="relative grid place-items-center">
+            <span class="size-3 rounded-full bg-white/25 transition-all duration-500 ease-out group-hover:bg-custom-primary/70"></span>
+            <span class="absolute -left-3 size-0 rounded-full bg-custom-primary/30 opacity-0 transition-all duration-500 ease-out group-[.is-active]:size-4 group-[.is-active]:opacity-100"></span>
+          </span>
+          <span class="absolute -left-2 -translate-x-full px-3 py-1.5 rounded-md bg-black/80 border border-white/10 text-xs font-light text-white opacity-0 pointer-events-none transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-x-[110%]">Sistema</span>
+        </button>
+        <button class="group relative flex items-center justify-center" data-jump="6" aria-label="Método">
+          <span class="relative grid place-items-center">
+            <span class="size-3 rounded-full bg-white/25 transition-all duration-500 ease-out group-hover:bg-custom-primary/70"></span>
+            <span class="absolute -left-3 size-0 rounded-full bg-custom-primary/30 opacity-0 transition-all duration-500 ease-out group-[.is-active]:size-4 group-[.is-active]:opacity-100"></span>
+          </span>
+          <span class="absolute -left-2 -translate-x-full px-3 py-1.5 rounded-md bg-black/80 border border-white/10 text-xs font-light text-white opacity-0 pointer-events-none transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-x-[110%]">Método</span>
+        </button>
+        <button class="group relative flex items-center justify-center" data-jump="7" aria-label="Parábola">
+          <span class="relative grid place-items-center">
+            <span class="size-3 rounded-full bg-white/25 transition-all duration-500 ease-out group-hover:bg-custom-primary/70"></span>
+            <span class="absolute -left-3 size-0 rounded-full bg-custom-primary/30 opacity-0 transition-all duration-500 ease-out group-[.is-active]:size-4 group-[.is-active]:opacity-100"></span>
+          </span>
+          <span class="absolute -left-2 -translate-x-full px-3 py-1.5 rounded-md bg-black/80 border border-white/10 text-xs font-light text-white opacity-0 pointer-events-none transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-x-[110%]">Parábola</span>
+        </button>
+        <button class="group relative flex items-center justify-center" data-jump="8" aria-label="Convocação">
+          <span class="relative grid place-items-center">
+            <span class="size-3 rounded-full bg-white/25 transition-all duration-500 ease-out group-hover:bg-custom-primary/70"></span>
+            <span class="absolute -left-3 size-0 rounded-full bg-custom-primary/30 opacity-0 transition-all duration-500 ease-out group-[.is-active]:size-4 group-[.is-active]:opacity-100"></span>
+          </span>
+          <span class="absolute -left-2 -translate-x-full px-3 py-1.5 rounded-md bg-black/80 border border-white/10 text-xs font-light text-white opacity-0 pointer-events-none transition-all duration-300 ease-out group-hover:opacity-100 group-hover:-translate-x-[110%]">Convocação</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="mt-4 sm:mt-5 rounded-2xl border border-custom-border bg-black/30 backdrop-blur-xl">
+        <div class="flex items-center justify-between px-4 sm:px-6 py-3.5">
+          <div class="flex items-center gap-3">
+            <img src="https://lojvbcnyewsjfcrzsdja.supabase.co/storage/v1/object/public/9forlives-assets/logo-9forlives/logowhite.svg" alt="9forlives" class="h-8 w-auto">
+          </div>
+          <div class="flex items-center gap-3">
+            <button class="hidden sm:flex items-center gap-2 rounded-full border border-white/10 bg-zinc-900/50 px-4 py-2.5 text-sm font-light text-zinc-300 hover:text-white hover:border-custom-primary/40 hover:bg-zinc-900 transition-colors" data-jump="1">
+              Ver o Problema
+              <i data-lucide="arrow-down" class="w-4 h-4"></i>
+            </button>
+            <button id="headerCTA" class="group inline-flex items-center gap-2 rounded-full bg-custom-primary px-4 sm:px-5 py-2.5 text-sm font-medium text-custom-card hover:bg-custom-chart2 transition-colors">
+              Fazer Parte Dessa Geração
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative">
+    <!-- Hero -->
+    <section id="s0" data-section="0" class="group snap-start min-h-screen flex items-center justify-center pt-28 sm:pt-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 w-full">
+        <div class="relative mx-auto max-w-5xl text-center rounded-[28px] overflow-hidden border border-white/10 bg-white/[0.02] backdrop-blur-xl">
+          <!-- Fundo reativo -->
+          <div class="pointer-events-none absolute inset-0 -z-10">
+            <div class="absolute -inset-x-32 -top-48 h-72 blur-3xl opacity-70" style="background-image: radial-gradient(60% 60% at 50% 50%, rgba(124,207,0,0.18), transparent 60%), radial-gradient(60% 60% at 20% 20%, rgba(187,244,81,0.14), transparent 62%), radial-gradient(50% 50% at 80% 30%, rgba(154,230,0,0.16), transparent 60%);"></div>
+            <div class="absolute left-1/2 top-[42%] -translate-x-1/2 size-[720px] rounded-full opacity-30" style="background: radial-gradient(closest-side, rgba(124,207,0,0.18), rgba(124,207,0,0.08) 40%, transparent 65%); filter: blur(26px);"></div>
+            <div class="absolute inset-0 opacity-[0.16]" style="background-image: linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 36px 36px; mask-image: radial-gradient(ellipse at center, black 45%, transparent 85%);"></div>
+          </div>
+
+          <div class="px-6 sm:px-10 py-14 sm:py-16">
+            <div class="mb-6 flex items-center justify-center gap-2" data-animate="" data-delay="0">
+              <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-3.5 py-1.5">
+                <span class="size-1.5 rounded-full bg-custom-primary animate-pulse"></span>
+                <span class="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-custom-primary font-light">Uma iniciativa do Social Profit</span>
+              </span>
+            </div>
+
+            <h1 class="tracking-tight text-[2.5rem] sm:text-6xl md:text-7xl font-thin leading-[0.95] mx-auto max-w-4xl" style="font-family: 'Space Grotesk', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+              <span class="block text-transparent bg-clip-text" data-animate="" data-delay="80" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.98), rgba(161,161,170,0.68)); text-shadow: 0 1px 0 rgba(255,255,255,0.08), 0 12px 40px rgba(124,207,0,0.28);">
+                Ninguém fica sem a
+              </span>
+              <span class="relative inline-block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-custom-primary via-custom-chart1 to-custom-chart2" data-animate="" data-delay="140" style="text-shadow: 0 0 0 rgba(0,0,0,0), 0 18px 48px rgba(187,244,81,0.35), 0 0 32px rgba(124,207,0,0.28);">
+                Palavra
+              </span>
+            </h1>
+
+            <p class="mt-5 text-lg sm:text-xl md:text-2xl font-light text-zinc-300 mx-auto max-w-3xl" data-animate="" data-delay="220">
+              Essa será a <span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1">última geração</span> da humanidade que enfrentará o problema do acesso à Bíblia.
+            </p>
+
+            <!-- CTAs -->
+            <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+              <button id="mainCTA" class="group inline-flex items-center gap-2 rounded-full bg-custom-primary px-5 py-3 text-sm sm:text-base font-medium text-custom-card hover:bg-custom-chart2 transition-colors" data-animate="" data-delay="300">
+                Quero Fazer Parte Dessa Geração
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </button>
+              <button class="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-zinc-900/50 px-5 py-3 text-sm sm:text-base font-light text-zinc-300 hover:text-white hover:border-custom-primary/40 hover:bg-zinc-900 transition-all" data-jump="1" data-animate="" data-delay="360">
+                Entender o Problema
+                <i data-lucide="arrow-down" class="w-5 h-5"></i>
+              </button>
+            </div>
+
+            <!-- indicador de scroll -->
+            <button class="group absolute bottom-4 left-1/2 -translate-x-1/2 inline-flex items-center gap-2 text-xs text-zinc-400 hover:text-white transition-colors" data-jump="1" data-animate="" data-delay="420">
+              <span class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5">role</span>
+              <i data-lucide="chevrons-down" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 1: A Realidade -->
+    <section data-section="1" class="group snap-start min-h-screen flex items-center justify-center py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 w-full">
+        <div class="max-w-4xl mx-auto text-center">
+          <!-- Introdução -->
+          <div class="space-y-8 mb-16">
+            <h2 class="tracking-tight text-3xl sm:text-4xl md:text-5xl font-light opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0">
+              A <span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1">Bíblia</span> é o livro mais traduzido do mundo.
+            </h2>
+            
+            <p class="text-2xl sm:text-3xl font-extralight text-zinc-300 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="80">
+              E também o mais <span class="inline-flex items-center rounded px-1 ring-1 ring-red-400/40 bg-red-400/10 text-red-300">inacessível</span>.
+            </p>
+          </div>
+
+          <!-- Divisor -->
+          <div class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent mb-16 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="140"></div>
+
+          <!-- Esta é a realidade -->
+          <div class="mb-12">
+            <p class="text-xl sm:text-2xl font-medium text-red-400 mb-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="180">
+              Esta é a realidade:
+            </p>
+
+            <div class="grid gap-6">
+              <!-- Analfabetismo -->
+              <div class="rounded-2xl border border-red-400/30 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="220">
+                <p class="text-xl sm:text-2xl text-zinc-200 font-light mb-2">
+                  <span class="inline-flex items-center rounded px-2 ring-1 ring-red-400/40 bg-red-400/10 text-red-300 text-2xl sm:text-3xl font-medium">785 milhões de pessoas</span> não sabem ler.
+                </p>
+                <p class="text-lg text-zinc-400">Mas apenas <span class="text-white font-medium">63 idiomas</span> têm Bíblia em áudio completa.</p>
+              </div>
+
+              <!-- Pobreza -->
+              <div class="rounded-2xl border border-red-400/30 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="280">
+                <p class="text-xl sm:text-2xl text-zinc-200 font-light mb-2">
+                  <span class="inline-flex items-center rounded px-2 ring-1 ring-red-400/40 bg-red-400/10 text-red-300 text-2xl sm:text-3xl font-medium">1,3 bilhão de pessoas</span> vivem com menos de US$ 2 por dia.
+                </p>
+                <p class="text-lg text-zinc-400">Uma Bíblia impressa custa o equivalente a <span class="text-white font-medium">15 dias de comida</span>.</p>
+              </div>
+
+              <!-- Deficiência visual -->
+              <div class="rounded-2xl border border-red-400/30 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="340">
+                <p class="text-xl sm:text-2xl text-zinc-200 font-light mb-2">
+                  <span class="inline-flex items-center rounded px-2 ring-1 ring-red-400/40 bg-red-400/10 text-red-300 text-2xl sm:text-3xl font-medium">285 milhões de pessoas</span> são cegas ou têm baixa visão.
+                </p>
+                <p class="text-lg text-zinc-400">Existem Bíblias em braille para apenas <span class="text-white font-medium">35 idiomas</span>.</p>
+              </div>
+
+              <!-- Idiomas sem tradução -->
+              <div class="rounded-2xl border border-red-400/30 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="400">
+                <p class="text-xl sm:text-2xl text-zinc-200 font-light">
+                  <span class="inline-flex items-center rounded px-2 ring-1 ring-red-400/40 bg-red-400/10 text-red-300 text-2xl sm:text-3xl font-medium">1.000 idiomas</span> ainda não têm uma única palavra das Escrituras traduzida.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divisor -->
+          <div class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent mb-12 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="460"></div>
+
+          <!-- O resultado -->
+          <div class="space-y-8">
+            <p class="text-xl sm:text-2xl font-medium text-red-400 mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="500">
+              O resultado?
+            </p>
+
+            <div class="rounded-2xl border border-red-400/30 bg-white/[0.03] backdrop-blur-xl p-10 mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="540">
+              <p class="text-3xl sm:text-4xl font-light leading-relaxed">
+                Milhões de cristãos vivem um <span class="inline-flex items-center rounded px-2 ring-1 ring-red-400/40 bg-red-400/10 text-red-300 font-medium">jejum involuntário</span> da Palavra de Deus.
+              </p>
+            </div>
+
+            <div class="space-y-4 mb-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="580">
+              <p class="text-xl text-zinc-300 font-light">Não por escolha.</p>
+              <p class="text-2xl text-red-400 font-medium">Por impossibilidade.</p>
+            </div>
+
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="620">
+              <p class="text-3xl sm:text-4xl font-light text-custom-primary leading-relaxed">
+                E pela primeira vez na história, <span class="inline-flex items-center rounded px-2 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 font-medium">isso pode mudar</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 2: O Problema Invisível -->
+    <section id="s2" data-section="2" class="group snap-start min-h-screen flex items-center justify-center py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 w-full">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-custom-primary font-light mb-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0">O Problema Invisível</p>
+          
+          <h2 class="tracking-tight text-3xl sm:text-4xl font-light mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="80">
+            O mundo tem milhões de cristãos sem Bíblia.
+          </h2>
+          
+          <p class="text-xl sm:text-2xl font-light text-zinc-300 mb-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="140">
+            E há um motivo oculto, quase silencioso:
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+          <div class="rounded-2xl border border-red-400/30 bg-white/[0.03] backdrop-blur-xl p-8 sm:p-10 mb-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="200">
+            <p class="text-3xl sm:text-4xl font-light text-center">
+              Mais de <span class="inline-flex items-center rounded px-2 ring-1 ring-red-400/40 bg-red-400/10 text-red-300 text-4xl sm:text-5xl font-medium">300 milhões</span> de cristãos são analfabetos.
+            </p>
+          </div>
+
+          <div class="grid gap-5">
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="260">
+              <p class="text-lg text-zinc-300">Eles amam a Palavra.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="300">
+              <p class="text-lg text-zinc-300">Eles participam de cultos.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="340">
+              <p class="text-lg text-zinc-300">Eles choram nos louvores.</p>
+            </div>
+            <div class="rounded-xl border border-red-400/25 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="380">
+              <p class="text-xl text-red-400 font-light">Mas não conseguem ler sozinhos.</p>
+            </div>
+            <div class="rounded-xl border border-red-400/25 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="420">
+              <p class="text-xl text-red-400 font-light">Dependem de alguém para ouvir a voz de Deus.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto mt-12 text-center">
+          <p class="text-2xl font-light text-custom-primary mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="480">
+            Agora, pela primeira vez na história, a tecnologia quebra essa barreira:
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-5">
+            <div class="rounded-2xl border border-custom-primary/25 bg-white/[0.03] backdrop-blur-xl p-6 hover:border-custom-primary/40 transition-all opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="540">
+              <div class="mx-auto mb-4 grid place-items-center size-14 rounded-full bg-custom-primary/15">
+                <i data-lucide="headphones" class="w-7 h-7 text-custom-primary"></i>
+              </div>
+              <p class="text-base font-light">Bíblias em áudio para quem não sabe ler</p>
+            </div>
+            <div class="rounded-2xl border border-custom-primary/25 bg-white/[0.03] backdrop-blur-xl p-6 hover:border-custom-primary/40 transition-all opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="580">
+              <div class="mx-auto mb-4 grid place-items-center size-14 rounded-full bg-custom-primary/15">
+                <i data-lucide="languages" class="w-7 h-7 text-custom-primary"></i>
+              </div>
+              <p class="text-base font-light">IA para traduzir para todas as línguas vivas</p>
+            </div>
+            <div class="rounded-2xl border border-custom-primary/25 bg-white/[0.03] backdrop-blur-xl p-6 hover:border-custom-primary/40 transition-all opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="620">
+              <div class="mx-auto mb-4 grid place-items-center size-14 rounded-full bg-custom-primary/15">
+                <i data-lucide="zap" class="w-7 h-7 text-custom-primary"></i>
+              </div>
+              <p class="text-base font-light">Sistemas que tornam a Palavra viva</p>
+            </div>
+          </div>
+
+          <div class="mt-10 space-y-4 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="680">
+            <p class="text-xl text-custom-primary font-light">O analfabetismo deixa de ser obstáculo.</p>
+            <p class="text-2xl text-custom-chart1 font-light">O acesso deixa de ser privilégio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3: O Confronto -->
+    <section id="s3" data-section="3" class="group snap-start min-h-screen flex items-center justify-center py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 w-full">
+        <div class="text-center mb-10">
+          <p class="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-red-400 font-light mb-4 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0">O Confronto</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto text-center mb-12">
+          <p class="text-xl sm:text-2xl text-zinc-300 font-light mb-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="80">
+            Se você viajar para:
+          </p>
+          
+          <div class="grid sm:grid-cols-3 gap-4 mb-8">
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-5 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="120">
+              <p class="text-base">Um vilarejo isolado na Amazônia</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-5 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="160">
+              <p class="text-base">Uma comunidade remota na África</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-5 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="200">
+              <p class="text-base">Uma aldeia esquecida no Nepal</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div class="rounded-2xl border border-red-400/30 bg-white/[0.03] backdrop-blur-xl p-8 text-center opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="240">
+            <div class="mx-auto mb-6 grid place-items-center size-16 rounded-full bg-red-500/15">
+              <i data-lucide="check-circle" class="w-8 h-8 text-red-400"></i>
+            </div>
+            <p class="text-2xl font-light text-red-400 mb-2">Você encontra</p>
+            <p class="text-3xl font-medium text-red-300">Coca-Cola</p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 text-center opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="300">
+            <div class="mx-auto mb-6 grid place-items-center size-16 rounded-full bg-zinc-500/15">
+              <i data-lucide="x-circle" class="w-8 h-8 text-zinc-400"></i>
+            </div>
+            <p class="text-2xl font-light text-zinc-300 mb-2">Mas não encontra</p>
+            <p class="text-3xl font-medium text-white">Bíblias</p>
+          </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto mt-12 text-center">
+          <div class="space-y-4 mb-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="360">
+            <p class="text-lg text-zinc-300">Não por falta de fé.</p>
+            <p class="text-lg text-zinc-300">Não por falta de tecnologia.</p>
+            <p class="text-lg text-zinc-300">Não por falta de pessoas dispostas.</p>
+          </div>
+
+          <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-8 mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="420">
+            <p class="text-2xl font-light">Falta <span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 text-3xl font-medium">método</span>.</p>
+            <p class="text-2xl font-light mt-2">Falta <span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 text-3xl font-medium">sistema</span>.</p>
+            <p class="text-2xl font-light mt-2">Falta <span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 text-3xl font-medium">decisão coletiva</span>.</p>
+          </div>
+
+          <div class="rounded-2xl border border-red-400/30 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="480">
+            <p class="text-3xl font-light text-red-400">E essa ausência não atravessará mais uma geração.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 4: A Última Geração -->
+    <section id="s4" data-section="4" class="group snap-start min-h-screen flex items-center justify-center py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 w-full">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-custom-primary font-light mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0">A Última Geração</p>
+          
+          <h2 class="tracking-tight text-4xl sm:text-5xl md:text-6xl font-light leading-tight opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="80">
+            Essa será a <span class="inline-flex items-center rounded px-2 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1">última geração</span> da humanidade que enfrentará o problema do acesso à Bíblia.
+          </h2>
+
+          <div class="mt-12 space-y-6">
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="140">
+              <p class="text-2xl font-light text-zinc-300">Não é sonho.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="180">
+              <p class="text-2xl font-light text-zinc-300">Não é hipótese.</p>
+            </div>
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-10 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="220">
+              <p class="text-3xl font-medium text-custom-primary">É um decreto.</p>
+            </div>
+          </div>
+
+          <div class="mt-12 rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="280">
+            <p class="text-3xl sm:text-4xl font-light leading-relaxed">
+              Nós escolhemos encerrar esse problema <span class="inline-flex items-center rounded px-2 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 font-medium">aqui</span>.<br>
+              <span class="inline-flex items-center rounded px-2 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 font-medium">Agora</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 5: O 9forlives -->
+    <section id="s5" data-section="5" class="group snap-start min-h-screen flex items-center justify-center py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 w-full">
+        <div class="text-center mb-8">
+          <div class="flex items-center justify-center mb-4">
+            <img src="https://lojvbcnyewsjfcrzsdja.supabase.co/storage/v1/object/public/9forlives-assets/logo-9forlives/logowhite.svg" alt="9forlives" class="h-16 sm:h-20 w-auto opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0">
+          </div>
+          <p class="text-xl text-zinc-400 font-light opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="80">nasceu para matar esse problema pela raiz.</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-6 mb-12">
+          <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="120">
+            <p class="text-lg text-zinc-300">Não somos uma ONG.</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="160">
+            <p class="text-lg text-zinc-300">Não pedimos doações.</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="200">
+            <p class="text-lg text-zinc-300">Não somos um fundo assistencialista.</p>
+          </div>
+          <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="240">
+            <p class="text-xl text-custom-primary font-light">Somos um <span class="font-medium">sistema vivo</span> que conecta três atores para um propósito único:</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-12 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="300">
+          <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 hover:border-custom-primary/50 transition-all hover:-translate-y-0.5">
+            <div class="mx-auto mb-5 grid place-items-center size-16 rounded-full bg-custom-primary/15">
+              <i data-lucide="user-check" class="w-8 h-8 text-custom-primary"></i>
+            </div>
+            <h4 class="text-lg font-medium mb-2 text-custom-primary">O Assinante</h4>
+            <p class="text-zinc-300 font-light">financia o acesso</p>
+          </div>
+          <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 hover:border-custom-primary/50 transition-all hover:-translate-y-0.5">
+            <div class="mx-auto mb-5 grid place-items-center size-16 rounded-full bg-custom-primary/15">
+              <i data-lucide="hand-heart" class="w-8 h-8 text-custom-primary"></i>
+            </div>
+            <h4 class="text-lg font-medium mb-2 text-custom-primary">O Missionário</h4>
+            <p class="text-zinc-300 font-light">entrega pessoalmente</p>
+          </div>
+          <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 hover:border-custom-primary/50 transition-all hover:-translate-y-0.5">
+            <div class="mx-auto mb-5 grid place-items-center size-16 rounded-full bg-custom-primary/15">
+              <i data-lucide="book-heart" class="w-8 h-8 text-custom-primary"></i>
+            </div>
+            <h4 class="text-lg font-medium mb-2 text-custom-primary">O Receptor</h4>
+            <p class="text-zinc-300 font-light">recebe a Bíblia exata para sua necessidade</p>
+          </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="380">
+          <div class="rounded-xl border border-custom-primary/25 bg-white/[0.03] backdrop-blur-xl p-6 text-center">
+            <p class="text-xl font-light">Cada assinatura vira crédito.</p>
+          </div>
+          <div class="rounded-xl border border-custom-primary/25 bg-white/[0.03] backdrop-blur-xl p-6 text-center">
+            <p class="text-xl font-light">Cada crédito vira Bíblia.</p>
+          </div>
+          <div class="rounded-xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-8 text-center">
+            <p class="text-2xl font-medium text-custom-primary">Cada Bíblia encerra uma ausência.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 6: A Metodologia dos 3 Pilares -->
+    <section id="s6" data-section="6" class="group snap-start min-h-screen flex items-center justify-center py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 w-full">
+        <div class="text-center mb-10">
+          <p class="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-custom-primary font-light mb-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0">A Metodologia dos 3 Pilares</p>
+          <h2 class="tracking-tight text-3xl sm:text-4xl font-light opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="80">
+            O que torna isso sustentável não é sorte. <span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1">É método.</span>
+          </h2>
+        </div>
+
+        <div class="max-w-5xl mx-auto mb-12">
+          <p class="text-center text-xl text-zinc-300 font-light mb-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="140">
+            O 9forlives opera sobre três pilares inquebráveis:
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-8 hover:border-custom-primary/50 transition-all hover:-translate-y-0.5 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="200">
+              <div class="mb-6">
+                <div class="mx-auto mb-4 grid place-items-center size-16 rounded-full bg-custom-primary/15">
+                  <span class="text-2xl font-bold text-custom-primary">1</span>
+                </div>
+                <h3 class="text-xl font-medium text-custom-primary mb-3">Constância</h3>
+              </div>
+              <div class="space-y-3 text-zinc-300">
+                <p>Pequenas contribuições regulares criam um impacto previsível.</p>
+                <p class="font-medium text-white">Quanto mais constante, maior o alcance.</p>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-8 hover:border-custom-primary/50 transition-all hover:-translate-y-0.5 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="260">
+              <div class="mb-6">
+                <div class="mx-auto mb-4 grid place-items-center size-16 rounded-full bg-custom-primary/15">
+                  <span class="text-2xl font-bold text-custom-primary">2</span>
+                </div>
+                <h3 class="text-xl font-medium text-custom-primary mb-3">União</h3>
+              </div>
+              <div class="space-y-3 text-zinc-300">
+                <p>Um pouco de muitos vale mais que muito de poucos.</p>
+                <p class="font-medium text-white">Quando todos participam, ninguém fica para trás.</p>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-8 hover:border-custom-primary/50 transition-all hover:-translate-y-0.5 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="320">
+              <div class="mb-6">
+                <div class="mx-auto mb-4 grid place-items-center size-16 rounded-full bg-custom-primary/15">
+                  <span class="text-2xl font-bold text-custom-primary">3</span>
+                </div>
+                <h3 class="text-xl font-medium text-custom-primary mb-3">Transparência</h3>
+              </div>
+              <div class="space-y-3 text-zinc-300">
+                <p>Você acompanha cada passo.</p>
+                <p>Sabe para onde vai cada centavo.</p>
+                <p class="font-medium text-white">Recebe vídeos reais de quem foi alcançado com o seu nome.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="400">
+          <div class="max-w-4xl mx-auto rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-10">
+            <p class="text-2xl sm:text-3xl font-light text-center mb-4" style="font-family: 'Space Grotesk', sans-serif;">
+              Impacto Transformador = (Constância × União × Transparência)²
+            </p>
+            <p class="text-lg text-zinc-300 leading-relaxed">
+              Essa é a fórmula que multiplica esforços isolados em uma força coletiva impossível de parar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 7: A Parábola da Filha -->
+    <section id="s7" data-section="7" class="group snap-start min-h-screen flex items-center justify-center py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 w-full">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-yellow-400 font-light mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0">A Parábola da Filha</p>
+          
+          <div class="space-y-8 mb-12">
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="80">
+              <p class="text-xl sm:text-2xl font-light">Imagine que sua filha tem <span class="inline-flex items-center rounded px-1 ring-1 ring-white/20 bg-white/5 text-white/90">3 anos</span>.</p>
+            </div>
+            <div class="rounded-2xl border border-red-400/25 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="140">
+              <p class="text-xl sm:text-2xl font-light">Ela está doente. <span class="inline-flex items-center rounded px-1 ring-1 ring-red-400/40 bg-red-400/10 text-red-300">Terminal</span>.</p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-10 mb-12 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="200">
+            <p class="text-xl sm:text-2xl font-light mb-4">O médico olha nos seus olhos e diz:</p>
+            <div class="space-y-3 text-custom-primary">
+              <p class="text-2xl font-light">"Existe um remédio.</p>
+              <p class="text-2xl font-light"><span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1">Cem por cento eficaz</span>.</p>
+              <p class="text-2xl font-light">Zero efeitos colaterais."</p>
+            </div>
+          </div>
+
+          <div class="space-y-6 mb-12">
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="260">
+              <p class="text-xl font-light">Um pai não hesita.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="300">
+              <p class="text-xl font-light">Um pai atravessa o mundo.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="340">
+              <p class="text-xl font-light">Um pai faz o impossível.</p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-10 mb-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="380">
+            <p class="text-2xl sm:text-3xl font-light leading-relaxed">
+              O que separa sua filha da vida não é o remédio.<br>
+              É a <span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 font-medium">decisão de buscá-lo</span>.
+            </p>
+          </div>
+
+          <p class="text-2xl sm:text-3xl font-light mb-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="440">
+            Agora troque a sua filha por <span class="inline-flex items-center rounded px-2 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 text-3xl sm:text-4xl font-medium">milhões de cristãos</span>:
+          </p>
+
+          <div class="space-y-4 mb-12">
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="500">
+              <p class="text-lg">Pessoas que amam a Deus.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="540">
+              <p class="text-lg">Pessoas que sonham em ter acesso à Palavra.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="580">
+              <p class="text-lg">Pessoas que esperam pela cura.</p>
+            </div>
+          </div>
+
+          <div class="space-y-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="620">
+            <div class="space-y-3 text-custom-primary text-xl font-light">
+              <p>Nós temos o remédio.</p>
+              <p>Nós temos a Bíblia.</p>
+              <p>Nós temos a tecnologia.</p>
+            </div>
+            
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-10">
+              <p class="text-3xl font-light leading-relaxed">
+                O que separa milhões da Palavra é apenas a nossa <span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 font-medium">decisão de agir</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 8: A Convocação -->
+    <section id="s8" data-section="8" class="group snap-start min-h-screen flex items-center justify-center py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 w-full">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-custom-primary font-light mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0">A Convocação</p>
+          
+          <h2 class="tracking-tight text-3xl sm:text-4xl md:text-5xl font-light mb-12 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="80">
+            Essa geração vai ser lembrada.
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="rounded-2xl border border-red-400/30 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="140">
+              <p class="text-xl font-light text-red-400">Ou como a geração que viu o problema e virou as costas.</p>
+            </div>
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="180">
+              <p class="text-xl font-light text-custom-primary">Ou como a geração que encerrou o maior vazio espiritual da história.</p>
+            </div>
+          </div>
+
+          <div class="space-y-8 mb-12">
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="220">
+              <div class="flex items-center justify-center mb-4">
+                <img src="https://lojvbcnyewsjfcrzsdja.supabase.co/storage/v1/object/public/9forlives-assets/logo-9forlives/logowhite.svg" alt="9forlives" class="h-12 w-auto">
+              </div>
+              <p class="text-2xl sm:text-3xl font-light">O 9forlives não pede ajuda.</p>
+              <p class="text-2xl sm:text-3xl font-medium text-custom-primary mt-2">Ele convoca construtores de futuro.</p>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="280">
+              <p class="text-xl font-light leading-relaxed">
+                O futuro não vai nos perguntar quanto lucramos.<br>
+                Vai nos perguntar <span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 font-medium">quais problemas resolvemos</span>.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-2 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="340">
+            <button id="finalCTA" class="group inline-flex items-center gap-3 rounded-full bg-custom-primary px-8 py-4 text-lg font-medium text-custom-card hover:bg-custom-chart2 transition-colors shadow-[0_20px_60px_-20px_rgba(124,207,0,0.4)]">
+              Quero Fazer Parte Dessa Geração
+              <i data-lucide="arrow-right" class="w-6 h-6"></i>
+            </button>
+            <p class="mt-6 text-xs text-zinc-500">Uma iniciativa do Social Profit — transparência, prestação de contas e impacto verificável.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seções de Planos (Initially Hidden) -->
+    <div id="pricingSections" class="hidden">
+      <!-- Seção de Planos de Financiamento -->
+      <section data-section="9" class="group snap-start min-h-screen flex items-center justify-center py-24 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 w-full">
+          <!-- Header da Seção -->
+          <div class="text-center max-w-4xl mx-auto mb-16">
+            <div class="flex items-center justify-center mb-6">
+              <img src="https://lojvbcnyewsjfcrzsdja.supabase.co/storage/v1/object/public/9forlives-assets/logo-9forlives/logowhite.svg" alt="9forlives" class="h-12 w-auto opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0">
+            </div>
+            <p class="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-custom-primary font-light mb-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="80">Planos de Financiamento</p>
+            <h2 class="tracking-tight text-3xl sm:text-4xl md:text-5xl font-light mb-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="140" style="font-family: 'Space Grotesk', sans-serif;">
+              Invista no Acesso. Multiplique o Impacto.
+            </h2>
+            <div class="space-y-4 text-lg text-zinc-300 font-light max-w-3xl mx-auto opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="200">
+              <p>No 9forlives, cada assinatura não é uma doação — é um investimento direto no acesso à Palavra de Deus.</p>
+              <p>Cada real se transforma em créditos que financiam Bíblias — impressas, em áudio ou braille — de acordo com a fila real de pedidos feita pelos missionários.</p>
+              <p class="font-medium text-white">Você não escolhe quem ajuda. O sistema conecta automaticamente quem precisa com quem pode financiar.</p>
+            </div>
+            <p class="text-xl font-medium text-custom-chart1 mt-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="260">Escolha o plano que mais representa o tamanho do impacto que você quer causar:</p>
+          </div>
+
+          <!-- Grade de Planos -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <!-- Plano Semente -->
+            <div class="group relative rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 hover:border-custom-primary/30 transition-all duration-500 hover:-translate-y-0.5 hover:bg-white/[0.05] opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="320">
+              <div class="text-3xl mb-4">🌱</div>
+              <h3 class="text-2xl font-medium mb-2" style="font-family: 'Space Grotesk', sans-serif;">Plano Semente</h3>
+              <div class="flex items-baseline gap-2 mb-6">
+                <span class="text-4xl font-light tracking-tight">R$ 9</span>
+                <span class="text-zinc-400">/mês</span>
+              </div>
+              <ul class="space-y-3 text-sm text-zinc-300 mb-8">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Financia aproximadamente 1 Bíblia física por mês</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Ideal para quem quer começar pequeno, mas com constância</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Em um ano, você coloca 12 Bíblias nas mãos de quem sonhava com elas</span>
+                </li>
+              </ul>
+              <button class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300">Escolher Plano</button>
+            </div>
+
+            <!-- Plano Multiplicador -->
+            <div class="group relative rounded-2xl border border-custom-primary/50 bg-white/[0.03] backdrop-blur-xl p-8 hover:border-custom-primary transition-all duration-500 hover:-translate-y-0.5 hover:bg-white/[0.05] opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="380">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span class="bg-custom-primary text-custom-card text-xs px-4 py-1.5 rounded-full font-medium">Mais Popular</span>
+              </div>
+              <div class="text-3xl mb-4">🌍</div>
+              <h3 class="text-2xl font-medium mb-2" style="font-family: 'Space Grotesk', sans-serif;">Plano Multiplicador</h3>
+              <div class="flex items-baseline gap-2 mb-6">
+                <span class="text-4xl font-light tracking-tight">R$ 99</span>
+                <span class="text-zinc-400">/mês</span>
+              </div>
+              <ul class="space-y-3 text-sm text-zinc-300 mb-8">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Financia 10 a 15 Bíblias por mês</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Atende tanto pedidos de Bíblias físicas quanto de Bíblias em áudio ou braille</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Impacta centenas de vidas ao longo do ano</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Acompanha relatórios detalhados do impacto gerado</span>
+                </li>
+              </ul>
+              <button class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300">Escolher Plano</button>
+            </div>
+
+            <!-- Plano Visionário -->
+            <div class="group relative rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 hover:border-custom-primary/30 transition-all duration-500 hover:-translate-y-0.5 hover:bg-white/[0.05] opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="440">
+              <div class="text-3xl mb-4">🚀</div>
+              <h3 class="text-2xl font-medium mb-2" style="font-family: 'Space Grotesk', sans-serif;">Plano Visionário</h3>
+              <div class="flex items-baseline gap-2 mb-6">
+                <span class="text-4xl font-light tracking-tight">R$ 999</span>
+                <span class="text-zinc-400">/mês</span>
+              </div>
+              <ul class="space-y-3 text-sm text-zinc-300 mb-8">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Financia centenas de Bíblias físicas ou dezenas de Bíblias em áudio e braille</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Acelera a fila de pedidos e potencializa missionários locais</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Acompanha dashboards exclusivos e relatórios estratégicos</span>
+                </li>
+              </ul>
+              <button class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300">Escolher Plano</button>
+            </div>
+
+            <!-- Plano Legado -->
+            <div class="group relative rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 hover:border-custom-primary/30 transition-all duration-500 hover:-translate-y-0.5 hover:bg-white/[0.05] opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="500">
+              <div class="text-3xl mb-4">👑</div>
+              <h3 class="text-2xl font-medium mb-2" style="font-family: 'Space Grotesk', sans-serif;">Plano Legado</h3>
+              <div class="flex items-baseline gap-2 mb-6">
+                <span class="text-4xl font-light tracking-tight">R$ 9.999</span>
+                <span class="text-zinc-400">/mês</span>
+              </div>
+              <ul class="space-y-3 text-sm text-zinc-300 mb-8">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Você se torna um pilar do movimento global</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Garante operações logísticas inteiras em regiões remotas</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Permite um impacto exponencial: milhares de vidas alcançadas todos os anos</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-custom-primary mt-0.5 shrink-0"></i>
+                  <span>Acesso antecipado a relatórios executivos e estatísticas exclusivas</span>
+                </li>
+              </ul>
+              <button class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300">Escolher Plano</button>
+            </div>
+          </div>
+
+          <!-- Mensagem Final e CTA -->
+          <div class="text-center max-w-3xl mx-auto opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="560">
+            <div class="space-y-4 text-lg text-zinc-300 font-light mb-8">
+              <p class="font-medium text-white">Não importa o valor. O que importa é a constância.</p>
+              <p>Quando muitos contribuem pouco, ninguém fica sem acesso à Palavra.</p>
+            </div>
+            <button class="group relative inline-flex items-center gap-3 px-10 py-4 bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium rounded-full transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-custom-primary/25 text-lg">
+              <span>Quero Financiar Bíblias</span>
+              <i data-lucide="arrow-right" class="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Rastreabilidade e Transparência -->
+      <section data-section="10" class="group snap-start min-h-screen flex items-center justify-center py-24 sm:py-28">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 w-full">
+          <!-- Header da Seção -->
+          <div class="text-center max-w-4xl mx-auto mb-16">
+            <div class="flex items-center justify-center mb-6">
+              <img src="https://lojvbcnyewsjfcrzsdja.supabase.co/storage/v1/object/public/9forlives-assets/logo-9forlives/6.svg" alt="9forlives" class="h-12 w-auto opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0">
+            </div>
+            <p class="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-custom-primary font-light mb-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="80">Transparência e Impacto</p>
+            <h2 class="tracking-tight text-3xl sm:text-4xl md:text-5xl font-light mb-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="140" style="font-family: 'Space Grotesk', sans-serif;">
+              Cada Bíblia Tem Nome. Cada Vida Tem Voz.
+            </h2>
+            <p class="text-xl text-zinc-300 font-light max-w-3xl mx-auto opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="200">
+              No 9forlives, nenhuma Bíblia é apenas um número. Cada assinatura é rastreada do início ao fim: do seu cartão até as mãos de quem recebe.
+            </p>
+          </div>
+
+          <!-- Grid de Features de Transparência -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- Sistema Inteligente -->
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="260">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-custom-primary/20 flex items-center justify-center">
+                  <i data-lucide="list-ordered" class="w-6 h-6 text-custom-primary"></i>
+                </div>
+                <h3 class="text-xl font-medium" style="font-family: 'Space Grotesk', sans-serif;">Sistema Inteligente de Fila de Requisições</h3>
+              </div>
+              <ul class="space-y-3 text-zinc-300">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span>Missionários registram quem precisa, qual tipo de Bíblia e em qual região</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span>O sistema conecta automaticamente os créditos dos assinantes à fila de pedidos</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span>Isso garante que as necessidades mais urgentes sejam atendidas primeiro</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Logística Auditada -->
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="320">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-custom-primary/20 flex items-center justify-center">
+                  <i data-lucide="truck" class="w-6 h-6 text-custom-primary"></i>
+                </div>
+                <h3 class="text-xl font-medium" style="font-family: 'Space Grotesk', sans-serif;">Logística Auditada</h3>
+              </div>
+              <ul class="space-y-3 text-zinc-300">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span>Compras otimizadas em lote reduzem custos e aceleram entregas</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span>Logística auditada garante que cada Bíblia chegue ao destino correto</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span>Status de entrega atualizado em tempo real</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Auditoria e Prestação -->
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="380">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-custom-primary/20 flex items-center justify-center">
+                  <i data-lucide="bar-chart-3" class="w-6 h-6 text-custom-primary"></i>
+                </div>
+                <h3 class="text-xl font-medium" style="font-family: 'Space Grotesk', sans-serif;">Auditoria e Prestação de Contas</h3>
+              </div>
+              <ul class="space-y-3 text-zinc-300">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span>100% dos créditos são rastreáveis</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span>Relatórios mensais mostram quantas Bíblias foram financiadas com sua assinatura</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span>Painéis individuais exibem a fila de pedidos que você ajudou a atender</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Vídeos Personalizados -->
+            <div class="rounded-2xl border border-custom-primary/30 bg-gradient-to-br from-custom-primary/10 to-custom-chart2/10 backdrop-blur-xl p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="440">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-custom-primary/20 flex items-center justify-center">
+                  <i data-lucide="video" class="w-6 h-6 text-custom-primary"></i>
+                </div>
+                <h3 class="text-xl font-medium text-custom-chart1" style="font-family: 'Space Grotesk', sans-serif;">Vídeos de Agradecimento Personalizados</h3>
+              </div>
+              <p class="text-custom-chart1 font-medium mb-4">O diferencial mais poderoso do 9forlives:</p>
+              <ul class="space-y-3 text-custom-fg">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="play-circle" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span>Cada Bíblia entregue → um vídeo único de agradecimento → direto para você</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="play-circle" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span>O missionário grava o momento da entrega</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="play-circle" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span>O receptor agradece citando o seu nome</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="heart" class="w-4 h-4 text-custom-primary mt-1 shrink-0"></i>
+                  <span class="font-medium">Você vê, ouve e sente o impacto real da sua assinatura</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Exemplo Real -->
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 mb-12 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="500">
+            <h4 class="text-lg font-medium mb-4 text-custom-chart1">Exemplo Real</h4>
+            <blockquote class="text-lg italic text-white border-l-4 border-custom-primary pl-6">
+              "Obrigada, João, por me enviar esta Bíblia em áudio. Agora posso ouvir a Palavra de Deus todos os dias."
+              <footer class="text-sm text-zinc-400 mt-2 not-italic">— Dona Rosa, Nordeste do Brasil</footer>
+            </blockquote>
+          </div>
+
+          <!-- Mensagem Final -->
+          <div class="text-center max-w-3xl mx-auto opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="560">
+            <div class="space-y-2 text-xl font-light mb-8" style="font-family: 'Space Grotesk', sans-serif;">
+              <p class="text-custom-chart1">Propósito. Transparência. Emoção.</p>
+              <p class="text-white">Você vê o impacto. Você sente o impacto. Você vive o impacto.</p>
+            </div>
+            <button class="group relative inline-flex items-center gap-3 px-10 py-4 bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium rounded-full transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-custom-primary/25 text-lg">
+              <span>Quero Financiar Bíblias Agora</span>
+              <i data-lucide="arrow-right" class="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    // Inicializar ícones do Lucide
+    lucide.createIcons();
+
+    // Funcionalidade dos botões CTA para mostrar seções de preços
+    function showPricingSections() {
+      const pricingSections = document.getElementById('pricingSections');
+      
+      // Mostrar as seções com animação suave
+      pricingSections.classList.remove('hidden');
+      
+      // Scroll suave para a primeira seção de preços
+      const firstPricingSection = pricingSections.querySelector('[data-section="9"]');
+      if (firstPricingSection) {
+        setTimeout(() => {
+          firstPricingSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 100);
+      }
+    }
+
+    // Conectar todos os CTAs
+    document.getElementById('mainCTA').addEventListener('click', showPricingSections);
+    document.getElementById('headerCTA').addEventListener('click', showPricingSections);
+    document.getElementById('finalCTA').addEventListener('click', showPricingSections);
+
+    // Revela elementos com data-animate ao entrar na viewport
+    (function () {
+      const els = document.querySelectorAll('[data-animate]');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(el => el.classList.add('opacity-100','translate-y-0','blur-0'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+            setTimeout(() => {
+              el.classList.add('opacity-100','translate-y-0','blur-0');
+              el.classList.remove('opacity-0');
+            }, delay);
+            io.unobserve(el);
+          }
+        });
+      }, { root: null, threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+      els.forEach(el => io.observe(el));
+    })();
+
+    // Scroll suave para seções via [data-jump]
+    (function () {
+      const buttons = document.querySelectorAll('[data-jump]');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = btn.getAttribute('data-jump');
+          const section = document.querySelector(`[data-section="${idx}"]`);
+          if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    })();
+
+    // Atualiza marcador lateral ativo conforme seção visível
+    (function () {
+      const sections = document.querySelectorAll('[data-section]');
+      const dots = new Map();
+      document.querySelectorAll('aside [data-jump]').forEach(btn => {
+        dots.set(btn.getAttribute('data-jump'), btn);
+      });
+      if (!('IntersectionObserver' in window)) return;
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('data-section');
+            dots.forEach((btn, key) => btn.classList.toggle('is-active', key === id));
+          }
+        });
+      }, { threshold: 0.6 });
+      sections.forEach(s => io.observe(s));
+    })();
+  </script>
+
+</body></html>

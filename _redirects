@@ -1,0 +1,11 @@
+# Redirecionamentos para Netlify
+# Este arquivo garante que a página principal seja servida corretamente
+
+# Redireciona a raiz para o arquivo HTML principal
+/    /9forlives-page.html    200
+
+# Redireciona index.html para o arquivo principal
+/index.html    /9forlives-page.html    301
+
+# Fallback para SPA (caso necessário no futuro)
+/*    /9forlives-page.html    200
