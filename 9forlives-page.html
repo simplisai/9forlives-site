@@ -115,6 +115,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
   <style>
+    /* Melhorias tipográficas e visuais */
     .badge-scale {
       transform: scale(0.85);
       transform-origin: center;
@@ -124,6 +125,179 @@
       .badge-scale {
         transform: scale(0.8) !important;
       }
+    }
+
+    /* Padronização tipográfica */
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    /* Melhorias de responsividade */
+    @media (max-width: 475px) {
+      .text-2xl { font-size: 1.25rem; line-height: 1.75rem; }
+      .text-3xl { font-size: 1.5rem; line-height: 2rem; }
+      .text-4xl { font-size: 1.875rem; line-height: 2.25rem; }
+      .text-5xl { font-size: 2.25rem; line-height: 2.5rem; }
+      .text-6xl { font-size: 2.5rem; line-height: 1; }
+      .text-7xl { font-size: 3rem; line-height: 1; }
+      
+      /* Ajustes específicos para mobile */
+      .spacing-section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      
+      .px-4 { padding-left: 1rem; padding-right: 1rem; }
+      .p-6 { padding: 1rem; }
+      .mb-12 { margin-bottom: 2rem; }
+      .mb-16 { margin-bottom: 2.5rem; }
+      
+      /* Hero específico para mobile */
+      .hero-mobile-spacing {
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+      }
+    }
+
+    @media (min-width: 476px) and (max-width: 640px) {
+      .spacing-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+    }
+
+    /* Padronização de border-radius */
+    .rounded-2xl {
+      border-radius: 1rem;
+    }
+
+    .rounded-xl {
+      border-radius: 0.75rem;
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+
+    /* Melhorias de sombras */
+    .shadow-enhanced {
+      box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .shadow-glow {
+      box-shadow: 0 0 20px rgba(124, 207, 0, 0.15);
+    }
+
+    .shadow-glow-strong {
+      box-shadow: 0 0 30px rgba(124, 207, 0, 0.25), 0 10px 40px rgba(124, 207, 0, 0.15);
+    }
+
+    .shadow-modal {
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+
+    /* Transições suaves */
+    .transition-enhanced {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Melhorias de contraste */
+    .text-enhanced-contrast {
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .text-high-contrast {
+      color: rgba(255, 255, 255, 0.98);
+    }
+
+    .text-medium-contrast {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .text-low-contrast {
+      color: rgba(255, 255, 255, 0.70);
+    }
+
+    /* Melhorias de acessibilidade */
+    .focus-enhanced:focus {
+      outline: 2px solid #7ccf00;
+      outline-offset: 2px;
+    }
+
+    .focus-visible-enhanced:focus-visible {
+      outline: 2px solid #7ccf00;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 4px rgba(124, 207, 0, 0.2);
+    }
+
+    /* Melhorias para leitores de tela */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Espaçamentos consistentes */
+    .spacing-section {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    @media (min-width: 640px) {
+      .spacing-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .spacing-section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+
+    /* Melhorias de hover effects */
+    .hover-lift:hover {
+      transform: translateY(-2px);
+    }
+
+    .hover-glow:hover {
+      box-shadow: 0 0 30px rgba(124, 207, 0, 0.25);
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.02);
+    }
+
+    .hover-border:hover {
+      border-color: rgba(124, 207, 0, 0.5);
+    }
+
+    .hover-bg:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    /* Correções de alinhamento */
+    .text-balance {
+      text-wrap: balance;
+    }
+
+    /* Melhorias de acessibilidade */
+    .focus-enhanced:focus {
+      outline: 2px solid #7ccf00;
+      outline-offset: 2px;
     }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -305,7 +479,7 @@ font-family: 'Nunito', sans-serif !important;
       <div class="absolute left-1/2 -translate-x-1/2 w-[1px] bg-gradient-to-b from-custom-primary/60 to-custom-primary/20 transition-all duration-700 ease-out" style="height: 0%; top: 0%; transform: scaleY(0);" id="progress-line"></div>
 
       <div class="flex flex-col gap-8 py-4">
-        <button class="group relative flex items-center justify-center" data-jump="0" aria-label="Início">
+        <button class="group relative flex items-center justify-center is-active" data-jump="0" aria-label="Início">
           <div class="relative">
             <!-- Ponto principal -->
             <div class="w-2 h-2 rounded-full bg-white/20 transition-all duration-300 ease-out group-hover:bg-white/40 group-[.is-active]:bg-custom-primary group-[.is-active]:shadow-[0_0_12px_rgba(139,92,246,0.4)]"></div>
@@ -319,7 +493,7 @@ font-family: 'Nunito', sans-serif !important;
           </div>
         </button>
 
-        <button class="group relative flex items-center justify-center min-h-[44px] min-w-[44px] focus:outline-none focus:ring-2 focus:ring-custom-primary focus:ring-offset-2 focus:ring-offset-black rounded-full is-active" data-jump="1" aria-label="Ir para seção: A Realidade">
+        <button class="group relative flex items-center justify-center min-h-[44px] min-w-[44px] focus:outline-none focus:ring-2 focus:ring-custom-primary focus:ring-offset-2 focus:ring-offset-black rounded-full" data-jump="1" aria-label="Ir para seção: A Realidade">
           <div class="relative">
             <div class="w-2 h-2 rounded-full bg-white/20 transition-all duration-300 ease-out group-hover:bg-white/40 group-focus:bg-white/40 group-[.is-active]:bg-custom-primary group-[.is-active]:shadow-[0_0_12px_rgba(139,92,246,0.4)]"></div>
             <div class="absolute inset-0 w-2 h-2 rounded-full border border-custom-primary/40 opacity-0 scale-150 transition-all duration-300 ease-out group-[.is-active]:opacity-100 group-[.is-active]:scale-100"></div>
@@ -426,9 +600,9 @@ font-family: 'Nunito', sans-serif !important;
 
   <main class="relative">
     <!-- Hero -->
-    <section data-section="0" class="group snap-start min-h-[80vh] flex sm:pt-20 -translate-y-4 pt-10 items-center justify-center">
-      <div class="sm:px-6 -translate-y-4 w-full max-w-7xl mr-auto ml-auto pt-10 pr-4 pb-1 pl-4 translate-y-16">
-        <div class="relative mx-auto max-w-5xl text-center rounded-[28px] overflow-hidden border border-white/10 bg-white/[0.02] backdrop-blur-xl">
+    <section data-section="0" class="group snap-start min-h-[80vh] flex hero-mobile-spacing sm:pt-32 pt-24 translate-y-8 items-center justify-center">
+      <div class="sm:px-6 w-full max-w-7xl mr-auto ml-auto pr-4 pl-4 translate-y-6">
+        <div class="relative mx-auto max-w-5xl text-center rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] backdrop-blur-xl shadow-enhanced">
           <!-- Fundo reativo -->
           <div class="pointer-events-none absolute inset-0 -z-10">
             <div class="absolute -inset-x-32 -top-48 h-72 blur-3xl opacity-70" style="background-image: radial-gradient(60% 60% at 50% 50%, rgba(124,207,0,0.18), transparent 60%), radial-gradient(60% 60% at 20% 20%, rgba(187,244,81,0.14), transparent 62%), radial-gradient(50% 50% at 80% 30%, rgba(154,230,0,0.16), transparent 60%);">
@@ -439,16 +613,16 @@ font-family: 'Nunito', sans-serif !important;
             </div>
           </div>
 
-          <div class="xs:px-6 sm:px-10 xs:py-12 sm:py-32 pt-10 pr-6 pb-10 pl-6">
-            <div class="sm:mb-6 flex gap-2 opacity-100 mb-3 blur-0 translate-y-0 items-center justify-center" data-animate="" data-delay="0">
-              <span class="badge-scale inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-black/40 px-2.5 py-1">
+          <div class="sm:px-6 lg:px-10 sm:py-16 lg:py-32 pt-8 pr-4 pb-8 pl-4 scale-110">
+            <div class="flex gap-2 opacity-100 mb-4 sm:mb-6 blur-0 translate-y-0 items-center justify-center" data-animate="" data-delay="0">
+              <span class="badge-scale inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-black/40 px-2.5 py-1 transition-enhanced">
                 <span class="size-1 rounded-full bg-custom-primary animate-pulse"></span>
               <span class="text-[9px] sm:text-[10px] md:text-[11px] uppercase sm:tracking-[0.24em] text-custom-primary font-light tracking-[0.20em]">Uma iniciativa do Social Profit</span>
               </span>
             </div>
 
             <!-- COPY_HERO_001 -->
-            <h1 class="tracking-tight text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-thin leading-[0.95] mx-auto max-w-4xl" style="font-family: 'Space Grotesk', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+            <h1 class="tracking-tight text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-thin leading-[0.95] mx-auto max-w-4xl text-balance" style="font-family: 'Space Grotesk', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
               <span class="block bg-clip-text text-transparent opacity-100 blur-0 translate-y-0" data-animate="" data-delay="80" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.98), rgba(161,161,170,0.68)); text-shadow: 0 1px 0 rgba(255,255,255,0.08), 0 12px 40px rgba(124,207,0,0.28);">
                 Ninguém ficará sem
               </span>
@@ -458,110 +632,107 @@ font-family: 'Nunito', sans-serif !important;
             </h1>
 
             <!-- COPY_HERO_002a -->
-            <p class="mt-3 xs:mt-5 text-sm xs:text-base sm:text-lg md:text-xl font-light text-zinc-300 mx-auto max-w-3xl px-2 opacity-100 translate-y-0 blur-0" data-animate="" data-delay="220">
-              <strong class="">Nesta geração, iremos garantir que nenhum cristão fique sem a Palavra de Deus</strong>
+            <p class="sm:mt-6 xs:text-base sm:text-lg md:text-xl text-balance text-sm font-light text-zinc-300 opacity-100 max-w-3xl mt-4 mr-auto ml-auto pr-2 pl-2 blur-0 translate-y-0" data-animate="" data-delay="220">
+              <strong class="text-enhanced-contrast">Nesta geração, iremos garantir que nenhum cristão fique sem a Palavra de Deus</strong>
             </p>
 
             <!-- CTAs -->
-            <div class="mt-6 xs:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 px-6">
-
-              <!-- COPY_HERO_003 --><button class="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-zinc-900/50 px-6 py-3.5 text-sm sm:text-base font-light text-zinc-300 hover:text-white hover:border-custom-primary/40 hover:bg-zinc-900 focus:text-white focus:border-custom-primary/40 focus:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-custom-primary focus:ring-offset-2 focus:ring-offset-black transition-all min-h-[44px] min-w-[44px] opacity-100 translate-y-0 blur-0" data-jump="1" data-animate="" data-delay="220" aria-label="Entenda como funciona">
+            <div class="sm:mt-8 flex flex-col sm:flex-row gap-3.5 sm:px-6 mt-6 pr-4 pl-4 items-center justify-center">
+              <!-- COPY_HERO_003 --><button class="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-zinc-900/50 px-6 py-3.5 text-sm sm:text-base font-light text-zinc-300 hover:text-white hover:border-custom-primary/40 hover:bg-zinc-900 focus-enhanced transition-enhanced min-h-[44px] min-w-[44px] opacity-100 translate-y-0 blur-0 hover-lift" data-jump="1" data-animate="" data-delay="220" aria-label="Entenda como funciona">
                 Entenda Como
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-down" class="lucide lucide-arrow-down w-5 h-5" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
               </button>
             </div>
-
-
           </div>
         </div>
       </div>
     </section>
 
     <!-- Seção 1: A Realidade -->
-    <section data-section="1" class="group snap-start min-h-screen flex sm:py-28 -translate-y-16 pt-16 pb-12 items-center justify-center">
-      <div class="sm:px-6 w-full max-w-7xl mr-auto ml-auto pt-10 pr-6 pb-5 pl-6 translate-y-16">
+    <section data-section="1" class="group snap-start min-h-screen flex spacing-section translate-y-16 items-center justify-center">
+      <div class="sm:px-6 w-full max-w-7xl mr-auto ml-auto px-4">
         <div class="text-center max-w-4xl mr-auto ml-auto">
           <!-- Introdução -->
-          <div class="-translate-y-6 mb-12 space-y-6">
+          <div class="mb-16 space-y-4">
             <!-- COPY_REAL_001a -->
-            <h2 class="xs:text-base sm:text-lg md:text-xl transition-all duration-700 ease-out will-change-transform text-sm font-light tracking-tight opacity-100 pr-2 pl-2 blur-0 translate-y-4" data-animate="" data-delay="0">
+            <h2 class="sm:text-2xl md:text-3xl lg:text-4xl transition-enhanced text-enhanced-contrast text-balance leading-tight text-xl font-light tracking-tight opacity-100 pr-2 pl-2 blur-0 -translate-y-2" data-animate="" data-delay="0">
               Pela primeira vez em
-              <span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1">2.000 anos</span>,
+              <span class="inline-flex items-center rounded-lg px-3 py-2 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 font-medium">2.000 anos</span>,
             </h2>
             <!-- COPY_REAL_001b -->
-            <h2 class="xs:text-base sm:text-lg md:text-xl transition-all duration-700 ease-out will-change-transform text-sm font-light tracking-tight opacity-100 pr-2 pl-2 blur-0" data-animate="" data-delay="20">
+            <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl transition-enhanced font-light tracking-tight text-enhanced-contrast opacity-100 px-2 blur-0 text-balance leading-tight" data-animate="" data-delay="20">
               uma geração poderá declarar:
             </h2>
 
             <!-- COPY_REAL_002 -->
-            <p class="xs:text-base sm:text-lg transition-all duration-700 ease-out will-change-transform text-sm text-zinc-300 font-extralight opacity-100 pr-2 pl-2 blur-0 translate-y-0" data-animate="" data-delay="80">
-              <span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1">Nós resolvemos. Acabou!</span>
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl transition-enhanced text-zinc-300 font-light opacity-100 px-2 blur-0 translate-y-0 text-balance leading-relaxed mt-6" data-animate="" data-delay="80">
+              <span class="inline-flex items-center rounded-lg px-4 py-2 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 font-medium text-xl sm:text-2xl">Nós resolvemos. Acabou!</span>
             </p>
           </div>
 
           <!-- Divisor -->
-          <div class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent mb-16 transition-all duration-700 ease-out will-change-transform opacity-100 translate-y-0 blur-0" data-animate="" data-delay="140"></div>
+          <div class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent mb-16 transition-enhanced opacity-100 translate-y-0 blur-0" data-animate="" data-delay="140"></div>
 
           <!-- Esta é a realidade -->
           <div class="mb-12">
             <!-- COPY_REAL_003a -->
-            <p class="text-base sm:text-lg font-medium text-custom-primary mb-10 transition-all duration-700 ease-out will-change-transform opacity-100 translate-y-0 blur-0" data-animate="" data-delay="180">
+            <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-custom-primary mb-8 transition-enhanced opacity-100 translate-y-0 blur-0 text-balance leading-tight" data-animate="" data-delay="180">
               Nenhum cristão no planeta vive mais sem acesso à Palavra de Deus!
             </p>
 
             <!-- COPY_REAL_004 -->
-            <p class="text-base sm:text-lg text-zinc-300 mb-8 transition-all duration-700 ease-out will-change-transform opacity-100 translate-y-0 blur-0" data-animate="" data-delay="200">
+            <p class="text-lg sm:text-xl md:text-2xl text-zinc-300 mb-10 transition-enhanced opacity-100 translate-y-0 blur-0 text-balance leading-relaxed" data-animate="" data-delay="200">
               Veja o que isso significa na prática...
             </p>
 
             <div class="grid gap-6">
               <!-- Exemplo África -->
-              <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 xs:p-8 duration-700 ease-out will-change-transform opacity-100 translate-y-0 blur-0" data-animate="" data-delay="220">
+              <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 transition-enhanced hover-lift shadow-enhanced opacity-100 translate-y-0 blur-0" data-animate="" data-delay="220">
                 <!-- COPY_REAL_005a -->
-                <p class="text-lg xs:text-xl sm:text-2xl text-zinc-200 font-light mb-2">
+                <p class="text-xl sm:text-2xl md:text-3xl text-enhanced-contrast font-light mb-2 text-balance leading-tight">
                   Uma mãe no interior da África
                 </p>
                 <!-- COPY_REAL_005b -->
-                <p class="text-lg xs:text-xl sm:text-2xl text-zinc-200 font-light mb-2">
+                <p class="text-xl sm:text-2xl md:text-3xl text-enhanced-contrast font-light mb-6 text-balance leading-tight">
                   não caminhará mais três dias para ouvir alguém ler a Bíblia.
                 </p>
                 <!-- COPY_REAL_006 -->
-                <p class="text-base xs:text-lg text-custom-chart1 font-medium text-center">Ela terá a sua própria.</p>
+                <p class="text-lg sm:text-xl text-custom-chart1 font-medium text-center mb-2">Ela terá a sua própria.</p>
                 <!-- COPY_REAL_007 -->
-                <p class="text-base xs:text-lg text-custom-chart1 font-medium text-center">Em áudio.</p>
+                <p class="text-lg sm:text-xl text-custom-chart1 font-medium text-center mb-2">Em áudio.</p>
                 <!-- COPY_REAL_008 -->
-                <p class="text-base xs:text-lg text-custom-chart1 font-medium text-center">Na língua do seu coração.</p>
+                <p class="text-lg sm:text-xl text-custom-chart1 font-medium text-center">Na língua do seu coração.</p>
               </div>
 
               <!-- Exemplo Nepal -->
-              <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 xs:p-8 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="280">
+              <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 transition-enhanced hover-lift shadow-enhanced opacity-0 translate-y-6 blur-sm" data-animate="" data-delay="280">
                 <!-- COPY_REAL_009 -->
-                <p class="text-lg xs:text-xl sm:text-2xl text-zinc-200 font-light mb-2">
+                <p class="text-xl sm:text-2xl md:text-3xl text-enhanced-contrast font-light mb-6 text-balance leading-tight">
                   Um homem cego no Nepal conhecerá as promessas de Deus com suas próprias mãos.
                 </p>
                 <!-- COPY_REAL_010 -->
-                <p class="text-base xs:text-lg text-custom-chart1 font-medium text-center">Sua Bíblia em braille.
+                <p class="text-lg sm:text-xl text-custom-chart1 font-medium text-center">Sua Bíblia em braille.
                   Completa. Dele.</p>
               </div>
             </div>
           </div>
 
           <!-- Divisor -->
-          <div class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent mb-12 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="460"></div>
+          <div class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent mb-12 opacity-0 translate-y-6 blur-sm transition-enhanced" data-animate="" data-delay="460"></div>
 
           <!-- O resultado -->
           <div class="space-y-8">
-            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 mb-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="340">
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 mb-6 transition-enhanced hover-lift shadow-enhanced opacity-0 translate-y-6 blur-sm" data-animate="" data-delay="340">
               <!-- COPY_REAL_011 -->
-              <p class="text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-zinc-300 text-center">
+              <p class="text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-zinc-300 text-center text-balance">
                 Isso não é utopia.
               </p>
             </div>
-            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="380">
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 mb-8 transition-enhanced hover-lift shadow-enhanced opacity-0 translate-y-6 blur-sm" data-animate="" data-delay="380">
               <!-- COPY_REAL_012 -->
-              <p class="text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-center">
+              <p class="text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-center text-balance">
                 É o
-                <span class="inline-flex items-center rounded px-2 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 font-medium">futuro que estamos construindo</span>!
+                <span class="inline-flex items-center rounded-lg px-3 py-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 font-medium">futuro que estamos construindo</span>!
               </p>
             </div>
 
@@ -571,66 +742,65 @@ font-family: 'Nunito', sans-serif !important;
     </section>
 
     <!-- Seção 2: O Problema Invisível -->
-    <section id="s2" data-section="2" class="group snap-start min-h-screen flex items-center justify-center py-16 sm:py-20">
-      <div class="mx-auto max-w-7xl px-6 sm:px-6 w-full">
+    <section id="s2" data-section="2" class="group snap-start min-h-screen flex items-center justify-center spacing-section">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 w-full">
         <div class="max-w-4xl mx-auto text-center">
           <!-- COPY_PROB_001 -->
-          <p class="text-[10px] sm:text-[11px] md:text-xs uppercase tracking-[0.24em] sm:tracking-[0.28em] text-custom-primary font-light mb-4 sm:mb-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0">O PROBLEMA INVISÍVEL</p>
+          <p class="text-xs sm:text-sm uppercase tracking-[0.24em] sm:tracking-[0.28em] text-custom-primary font-light mb-6 sm:mb-8 opacity-0 translate-y-6 blur-sm transition-enhanced" data-animate="" data-delay="0">O PROBLEMA INVISÍVEL</p>
 
           <!-- COPY_PROB_002 -->
-          <h2 class="tracking-tight text-xl sm:text-2xl md:text-3xl font-light mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="80">
+          <h2 class="tracking-tight text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mb-8 opacity-0 translate-y-6 blur-sm transition-enhanced text-enhanced-contrast text-balance" data-animate="" data-delay="80">
             Milhões de cristãos vivem sem acesso à Bíblia.
           </h2>
 
-          <div class="rounded-2xl border border-red-400/30 bg-white/[0.03] backdrop-blur-xl p-8 sm:p-10 mb-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="140">
+          <div class="rounded-2xl border border-red-400/30 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 lg:p-10 mb-10 transition-enhanced hover-lift shadow-enhanced opacity-0 translate-y-6 blur-sm" data-animate="" data-delay="140">
             <!-- COPY_PROB_003a -->
-            <p class="text-lg sm:text-xl md:text-2xl font-light text-center mb-4 text-zinc-300">
+            <p class="text-lg sm:text-xl md:text-2xl font-light text-center mb-4 text-zinc-300 text-balance">
               A razão é silenciosa e devastadora:
             </p>
             <!-- COPY_PROB_003b -->
-            <p class="text-xl sm:text-2xl md:text-3xl font-light text-center">
+            <p class="text-xl sm:text-2xl md:text-3xl font-light text-center text-balance">
               mais de
-              <span class="inline-flex items-center rounded px-2 ring-1 ring-red-400/40 bg-red-400/10 text-red-300 text-4xl sm:text-5xl font-medium">300 milhões</span>
+              <span class="inline-flex items-center rounded-lg px-3 py-2 ring-1 ring-red-400/40 bg-red-400/10 text-red-300 text-3xl sm:text-4xl md:text-5xl font-medium">300 milhões</span>
               de cristãos são analfabetos.
             </p>
           </div>
         </div>
 
         <div class="max-w-3xl mx-auto">
-
           <div class="grid gap-5">
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="260">
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 transition-enhanced hover-lift shadow-enhanced opacity-0 translate-y-6 blur-sm" data-animate="" data-delay="260">
               <!-- COPY_PROB_004 -->
               <p class="text-lg text-zinc-300 text-center">Eles adoram.</p>
             </div>
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="300">
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 transition-enhanced hover-lift shadow-enhanced opacity-0 translate-y-6 blur-sm" data-animate="" data-delay="300">
               <!-- COPY_PROB_005 -->
               <p class="text-lg text-zinc-300 text-center">Celebram.</p>
             </div>
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="340">
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 transition-enhanced hover-lift shadow-enhanced opacity-0 translate-y-6 blur-sm" data-animate="" data-delay="340">
               <!-- COPY_PROB_006 -->
               <p class="text-lg text-zinc-300 text-center">Choram nos louvores.</p>
             </div>
-            <div class="rounded-xl border border-red-400/25 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="380">
+            <div class="rounded-xl border border-red-400/25 bg-white/[0.03] backdrop-blur-xl p-6 transition-enhanced hover-lift shadow-enhanced opacity-0 translate-y-6 blur-sm" data-animate="" data-delay="380">
               <!-- COPY_PROB_007a -->
-              <p class="text-xl text-red-400 font-light text-center">Mas dependem de outros</p>
+              <p class="text-xl text-red-400 font-light text-center text-balance">Mas dependem de outros</p>
             </div>
-            <div class="rounded-xl border border-red-400/25 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="420">
+            <div class="rounded-xl border border-red-400/25 bg-white/[0.03] backdrop-blur-xl p-6 transition-enhanced hover-lift shadow-enhanced opacity-0 translate-y-6 blur-sm" data-animate="" data-delay="420">
               <!-- COPY_PROB_007b -->
-              <p class="text-xl text-red-400 font-light text-center">para ouvir a voz de Deus.</p>
+              <p class="text-xl text-red-400 font-light text-center text-balance">para ouvir a voz de Deus.</p>
             </div>
-            <div class="rounded-xl border border-red-400/25 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="460">
+            <div class="rounded-xl border border-red-400/25 bg-white/[0.03] backdrop-blur-xl p-6 transition-enhanced hover-lift shadow-enhanced opacity-0 translate-y-6 blur-sm" data-animate="" data-delay="460">
               <!-- COPY_PROB_008 -->
-              <p class="text-xl text-red-400 font-light text-center">Sua fé é mediada. Sua conexão, limitada.</p>
+              <p class="text-xl text-red-400 font-light text-center text-balance">Sua fé é mediada. Sua conexão, limitada.</p>
             </div>
-            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="500">
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 mb-8 transition-enhanced hover-lift shadow-enhanced opacity-0 translate-y-6 blur-sm" data-animate="" data-delay="500">
               <!-- COPY_PROB_009 -->
-              <p class="text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-center text-custom-primary">O
+              <p class="text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-center text-custom-primary text-balance">O
                 analfabetismo não é mais limitador.</p>
             </div>
-            <div class="rounded-2xl border border-custom-chart1/30 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="540">
+            <div class="rounded-2xl border border-custom-chart1/30 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 mb-8 transition-enhanced hover-lift shadow-enhanced opacity-0 translate-y-6 blur-sm" data-animate="" data-delay="540">
               <!-- COPY_PROB_010 -->
-              <p class="text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-center text-custom-chart1">O
+              <p class="text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-center text-custom-chart1 text-balance">O
                 acesso à Palavra deixa de ser privilégio de quem sabe ler.</p>
             </div>
           </div>
@@ -1754,53 +1924,53 @@ font-family: 'Nunito', sans-serif !important;
   </main>
 
   <!-- Popup Modal para Coleta de Leads -->
-  <div id="leadModal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-sm">
+  <div id="leadModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm">
     <div class="relative w-full max-w-sm sm:max-w-md mx-auto">
       <!-- Modal Content -->
-      <div class="relative rounded-xl sm:rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 shadow-2xl">
+      <div class="relative rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 shadow-modal">
         <!-- Close Button -->
-        <button id="closeModal" class="absolute top-3 right-3 sm:top-4 sm:right-4 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-custom-primary focus:ring-offset-2 focus:ring-offset-transparent" aria-label="Fechar modal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" class="lucide lucide-x w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+        <button id="closeModal" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-enhanced focus-enhanced hover-scale" aria-label="Fechar modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" class="lucide lucide-x w-4 h-4 text-white"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
         </button>
 
         <!-- Header -->
-        <div class="text-center mb-5 sm:mb-6">
-          <div class="flex items-center justify-center mb-3 sm:mb-4">
-            <img src="https://lojvbcnyewsjfcrzsdja.supabase.co/storage/v1/object/public/9forlives-assets/logo-9forlives/9forlives%20(1600%20x%201600%20px).svg" alt="9forlives" class="h-7 sm:h-8 w-auto">
+        <div class="text-center mb-6">
+          <div class="flex items-center justify-center mb-4">
+            <img src="https://lojvbcnyewsjfcrzsdja.supabase.co/storage/v1/object/public/9forlives-assets/logo-9forlives/9forlives%20(1600%20x%201600%20px).svg" alt="9forlives" class="h-8 w-auto">
           </div>
-          <h3 class="text-xl sm:text-2xl font-medium text-white mb-2" style="font-family: 'Space Grotesk', sans-serif;">
+          <h3 class="text-xl sm:text-2xl font-medium text-enhanced-contrast mb-2 text-balance" style="font-family: 'Space Grotesk', sans-serif;">
             Finalize sua Assinatura</h3>
-          <p class="text-xs sm:text-sm text-zinc-300 text-center">Preencha seus dados para começar a financiar Bíblias
+          <p class="text-sm text-zinc-300 text-center text-balance">Preencha seus dados para começar a financiar Bíblias
           </p>
-          <div id="selectedPlan" class="mt-2 sm:mt-3 inline-flex items-center rounded-full px-2.5 sm:px-3 py-1 bg-custom-primary/20 text-custom-primary text-xs sm:text-sm font-medium">
+          <div id="selectedPlan" class="mt-3 inline-flex items-center rounded-full px-3 py-1 bg-custom-primary/20 text-custom-primary text-sm font-medium">
             <!-- Plano selecionado será inserido aqui -->
           </div>
         </div>
 
         <!-- Form -->
-        <form id="leadForm" class="space-y-3 sm:space-y-4">
+        <form id="leadForm" class="space-y-4">
           <!-- Nome -->
           <div>
-            <label for="nome" class="block text-xs sm:text-sm font-medium text-white mb-1.5 sm:mb-2">Nome Completo *</label>
-            <input type="text" id="nome" name="nome" required="" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-custom-primary focus:border-transparent transition-all duration-200 text-sm sm:text-base" placeholder="Seu nome completo">
+            <label for="nome" class="block text-sm font-medium text-enhanced-contrast mb-2">Nome Completo *</label>
+            <input type="text" id="nome" name="nome" required="" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-zinc-400 focus-enhanced transition-enhanced hover-border text-base" placeholder="Seu nome completo">
           </div>
 
           <!-- Email -->
           <div>
-            <label for="email" class="block text-xs sm:text-sm font-medium text-white mb-1.5 sm:mb-2">E-mail *</label>
-            <input type="email" id="email" name="email" required="" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-custom-primary focus:border-transparent transition-all duration-200 text-sm sm:text-base" placeholder="seu@email.com">
+            <label for="email" class="block text-sm font-medium text-enhanced-contrast mb-2">E-mail *</label>
+            <input type="email" id="email" name="email" required="" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-zinc-400 focus-enhanced transition-enhanced hover-border text-base" placeholder="seu@email.com">
           </div>
 
           <!-- Telefone -->
           <div>
-            <label for="telefone" class="block text-xs sm:text-sm font-medium text-white mb-1.5 sm:mb-2">Telefone *</label>
-            <input type="tel" id="telefone" name="telefone" required="" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-custom-primary focus:border-transparent transition-all duration-200 text-sm sm:text-base" placeholder="(11) 99999-9999">
+            <label for="telefone" class="block text-sm font-medium text-enhanced-contrast mb-2">Telefone *</label>
+            <input type="tel" id="telefone" name="telefone" required="" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-zinc-400 focus-enhanced transition-enhanced hover-border text-base" placeholder="(11) 99999-9999">
           </div>
 
           <!-- Estado -->
           <div>
-            <label for="estado" class="block text-xs sm:text-sm font-medium text-white mb-1.5 sm:mb-2">Estado onde mora *</label>
-            <select id="estado" name="estado" required="" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-custom-primary focus:border-transparent transition-all duration-200 text-sm sm:text-base">
+            <label for="estado" class="block text-sm font-medium text-enhanced-contrast mb-2">Estado onde mora *</label>
+            <select id="estado" name="estado" required="" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus-enhanced transition-enhanced hover-border text-base">
               <option value="" class="bg-zinc-900">Selecione seu estado</option>
               <option value="AC" class="bg-zinc-900">Acre</option>
               <option value="AL" class="bg-zinc-900">Alagoas</option>
@@ -1833,25 +2003,25 @@ font-family: 'Nunito', sans-serif !important;
           </div>
 
           <!-- Submit Button -->
-          <button type="submit" id="submitBtn" class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg sm:rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-custom-primary focus:ring-offset-2 focus:ring-offset-transparent disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base">
+          <button type="submit" id="submitBtn" class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 px-6 rounded-xl transition-enhanced focus-enhanced disabled:opacity-50 disabled:cursor-not-allowed text-base hover-lift shadow-glow">
             <span id="submitText">Finalizar Assinatura</span>
             <div id="submitLoader" class="hidden flex items-center justify-center">
-              <div class="w-4 h-4 sm:w-5 sm:h-5 border-2 border-custom-card border-t-transparent rounded-full animate-spin"></div>
-              <span class="ml-2 text-sm sm:text-base">Enviando...</span>
+              <div class="w-5 h-5 border-2 border-custom-card border-t-transparent rounded-full animate-spin"></div>
+              <span class="ml-2 text-base">Enviando...</span>
             </div>
           </button>
         </form>
 
         <!-- Success Message (Hidden by default) -->
         <div id="successMessage" class="hidden text-center">
-          <div class="mb-3 sm:mb-4">
-            <div class="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-custom-primary/20 rounded-full flex items-center justify-center mb-3 sm:mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-6 h-6 sm:w-8 sm:h-8 text-custom-primary"><path d="M20 6 9 17l-5-5"></path></svg>
+          <div class="mb-4">
+            <div class="w-16 h-16 mx-auto bg-custom-primary/20 rounded-full flex items-center justify-center mb-4 shadow-glow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-8 h-8 text-custom-primary"><path d="M20 6 9 17l-5-5"></path></svg>
             </div>
-            <h3 class="text-lg sm:text-xl font-medium text-white mb-2">Parabéns pela decisão!</h3>
-            <p class="text-zinc-300 text-center text-sm sm:text-base">Nossa equipe fará contato em breve.</p>
+            <h3 class="text-xl font-medium text-enhanced-contrast mb-2 text-balance">Parabéns pela decisão!</h3>
+            <p class="text-zinc-300 text-center text-base text-balance">Nossa equipe fará contato em breve.</p>
           </div>
-          <button id="closeSuccessModal" class="bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-2 sm:py-2 px-4 sm:px-6 rounded-lg sm:rounded-xl transition-colors duration-300 text-sm sm:text-base">
+          <button id="closeSuccessModal" class="bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 px-6 rounded-xl transition-enhanced hover-lift text-base">
             Fechar
           </button>
         </div>
@@ -1916,6 +2086,11 @@ font-family: 'Nunito', sans-serif !important;
         entries.forEach(entry => {
           const el = entry.target;
           const delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+          
+          // Verificar se o elemento está desabilitado (dentro de pricingSections oculto)
+          if (el.hasAttribute('data-animate-disabled')) {
+            return; // Não animar elementos desabilitados
+          }
           
           // Limpar timeout anterior se existir
           if (animationTimeouts.has(el)) {
@@ -2197,6 +2372,91 @@ font-family: 'Nunito', sans-serif !important;
           submitBtn.disabled = false;
         }
       });
+    })();
+
+    // Funcionalidade para mostrar seções de preços após scroll ou clique
+    (function() {
+      const pricingSections = document.getElementById('pricingSections');
+      const finalCTA = document.getElementById('finalCTA');
+      const firstSection = document.querySelector('[data-section="1"]');
+      let pricingSectionsRevealed = false;
+
+      // Garantir que a seção permaneça oculta inicialmente
+      if (pricingSections) {
+        pricingSections.style.display = 'none';
+        
+        // Desabilitar animações automáticas dos elementos internos até serem revelados
+        const animatedElements = pricingSections.querySelectorAll('[data-animate]');
+        animatedElements.forEach(el => {
+          el.setAttribute('data-animate-disabled', 'true');
+        });
+      }
+
+      // Função para revelar as seções de preços
+      function revealPricingSections() {
+        if (!pricingSectionsRevealed && pricingSections) {
+          pricingSectionsRevealed = true;
+          
+          // Mostrar a seção
+          pricingSections.style.display = 'block';
+          pricingSections.classList.remove('hidden');
+          pricingSections.classList.add('opacity-0');
+          
+          // Reabilitar animações dos elementos internos
+          const animatedElements = pricingSections.querySelectorAll('[data-animate-disabled]');
+          animatedElements.forEach(el => {
+            el.removeAttribute('data-animate-disabled');
+            el.setAttribute('data-animate', '');
+          });
+          
+          // Animação suave de entrada
+          setTimeout(() => {
+            pricingSections.classList.remove('opacity-0');
+            pricingSections.classList.add('opacity-100', 'transition-opacity', 'duration-1000', 'ease-out');
+            
+            // Trigger das animações internas após um pequeno delay
+            setTimeout(() => {
+              animatedElements.forEach(el => {
+                el.classList.add('opacity-100', 'translate-y-0', 'blur-0');
+                el.classList.remove('opacity-0', 'translate-y-6', 'blur-sm');
+              });
+            }, 200);
+          }, 50);
+        }
+      }
+
+      // Event listener para o botão CTA
+      if (finalCTA) {
+        finalCTA.addEventListener('click', (e) => {
+          e.preventDefault();
+          revealPricingSections();
+          
+          // Scroll suave para as seções de preços
+          setTimeout(() => {
+            pricingSections.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'start' 
+            });
+          }, 300);
+        });
+      }
+
+      // Observer para detectar quando a primeira seção sai da viewport
+      if (firstSection && 'IntersectionObserver' in window) {
+        const scrollObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            // Se a primeira seção não está mais visível (usuário scrollou para baixo)
+            if (!entry.isIntersecting && window.scrollY > entry.target.offsetHeight / 2) {
+              revealPricingSections();
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50% 0px'
+        });
+
+        scrollObserver.observe(firstSection);
+      }
     })();
   </script>
 
