@@ -2117,12 +2117,58 @@ font-family: 'Nunito', sans-serif !important;
       });
       
       els.forEach(el => {
-        // Garantir que elementos iniciem no estado correto
-        if (!el.classList.contains('opacity-100')) {
+        // Verificar se o elemento está na primeira seção
+        const firstSection = document.querySelector('[data-section="1"]');
+        const isInFirstSection = firstSection && firstSection.contains(el);
+        
+        if (isInFirstSection) {
+          // Elementos da primeira seção: desabilitar animações automáticas
+          el.setAttribute('data-animate-disabled', '');
           el.classList.add('opacity-0', 'translate-y-6', 'blur-sm');
+        } else {
+          // Outras seções: comportamento normal
+          if (!el.classList.contains('opacity-100')) {
+            el.classList.add('opacity-0', 'translate-y-6', 'blur-sm');
+          }
         }
         io.observe(el);
       });
+    })();
+
+    // Trigger de scroll para primeira seção
+    (function() {
+      const firstSection = document.querySelector('[data-section="1"]');
+      if (!firstSection) return;
+      
+      let firstSectionAnimated = false;
+      
+      // Observer específico para detectar quando a primeira seção entra na viewport
+      const firstSectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !firstSectionAnimated) {
+            firstSectionAnimated = true;
+            
+            // Reabilitar e animar elementos da primeira seção
+            const animatedElements = firstSection.querySelectorAll('[data-animate-disabled]');
+            animatedElements.forEach((el, index) => {
+              const delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+              
+              setTimeout(() => {
+                el.removeAttribute('data-animate-disabled');
+                el.setAttribute('data-animate', '');
+                el.classList.add('opacity-100', 'translate-y-0', 'blur-0');
+                el.classList.remove('opacity-0', 'translate-y-6', 'blur-sm');
+              }, delay);
+            });
+          }
+        });
+      }, { 
+        root: null, 
+        threshold: 0.1, 
+        rootMargin: '0px 0px -20% 0px' 
+      });
+      
+      firstSectionObserver.observe(firstSection);
     })();
 
     // Scroll suave para seções via [data-jump]
