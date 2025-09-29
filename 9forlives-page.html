@@ -1441,7 +1441,7 @@ font-family: 'Nunito', sans-serif !important;
               </ul>
               <!-- COPY_PLAN_007 -->
               <!-- COPY_PLAN_028 -->
-              <button class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300">Escolher Plano</button>
+              <a href="https://portal.simplispay.com.br/app/plano/b770a762-17ac-49ec-89a6-ee34df58f626/assinar" target="_blank" class="block w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300 text-center">Escolher Plano</a>
             </div>
 
             <!-- Plano Multiplicador -->
@@ -1482,7 +1482,7 @@ font-family: 'Nunito', sans-serif !important;
                 </li>
               </ul>
               <!-- COPY_PLAN_015 -->
-              <button class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300">Escolher Plano</button>
+              <a href="https://portal.simplispay.com.br/app/plano/6269e818-e935-49c5-a49e-526fb3786072/assinar" target="_blank" class="block w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300 text-center">Escolher Plano</a>
             </div>
 
             <!-- Plano Visionário -->
@@ -1513,7 +1513,7 @@ font-family: 'Nunito', sans-serif !important;
                   <span>Dashboards exclusivos e análises estratégicas</span>
                 </li>
               </ul>
-              <button class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300">Escolher Plano</button>
+              <a href="https://portal.simplispay.com.br/app/plano/4dced05f-99ef-400b-bdf2-ebf264090a23/assinar" target="_blank" class="block w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300 text-center">Escolher Plano</a>
             </div>
 
             <!-- Plano Legado -->
@@ -1546,7 +1546,7 @@ font-family: 'Nunito', sans-serif !important;
                   <span>Relatórios executivos e métricas exclusivas</span>
                 </li>
               </ul>
-              <button class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300">Escolher Plano</button>
+              <a href="https://portal.simplispay.com.br/app/plano/efe110f7-3220-4057-ad70-7ebadb2b0480/assinar" target="_blank" class="block w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300 text-center">Escolher Plano</a>
             </div>
           </div>
 
@@ -2293,25 +2293,7 @@ font-family: 'Nunito', sans-serif !important;
       }
 
       // Add event listeners to all "Escolher Plano" buttons
-      document.querySelectorAll('button').forEach(button => {
-        if (button.textContent.includes('Escolher Plano')) {
-          button.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Find the plan name from the closest pricing card
-            const planCard = button.closest('.rounded-2xl');
-            let planName = 'Plano Não Identificado';
-            
-            if (planCard) {
-              const planTitle = planCard.querySelector('h3');
-              if (planTitle) {
-                planName = planTitle.textContent.trim();
-              }
-            }
-            
-            openLeadModal(planName);
-          });
-        }
-      });
+      // Removed - buttons are now direct links to Simplispay
 
       // Close modal event listeners
       closeModalBtns.forEach(btn => {
