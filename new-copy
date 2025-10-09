@@ -1,356 +1,265 @@
-# Copy Components - 9forlives Page (VERSÃO REVISADA)
+# COPY DO SITE 9FORLIVES - VERSÃO ATUALIZADA
+# Este arquivo contém o texto EXATO da página 9forlives-page.html
+# Atualizado em: $(date)
 
-## 1. CONTEÚDOS VISÍVEIS (Ordem Exata da Página)
+# === NAVEGAÇÃO ===
+COPY_NAV_001=Nosso Propósito
+COPY_NAV_002=Como Funciona
+COPY_NAV_003=Financiamento
+COPY_NAV_004=FAQ
+COPY_NAV_005=Contato
 
-### 1.1 Navegação Lateral
-```
-COPY_NAV_001: "Início"
-COPY_NAV_002: "Realidade"
-COPY_NAV_003: "Problema"
-COPY_NAV_004: "Confronto"
-COPY_NAV_005: "Decreto"
-COPY_NAV_006: "Sistema"
-COPY_NAV_007: "Método"
-COPY_NAV_008: "Parábola"
-COPY_NAV_009: "Convocação"
-```
+# === HEADER ===
+COPY_HEADER_001=9forlives
+COPY_HEADER_002=Onde cada financiamento vira uma Bíblia nas mãos certas.
 
-### 1.2 Header Principal
-```
-COPY_HEADER_001: "9forlives"
-COPY_HEADER_002: "UMA INICIATIVA DO SOCIAL PROFIT"
-```
+# === HERO ===
+COPY_HERO_001=A Última Geração que Pode Acabar com a Fome Espiritual
+COPY_HERO_002a=2.8 bilhões de pessoas nunca tiveram uma Bíblia em suas mãos.
+COPY_HERO_002b=Nós temos 12 anos para mudar isso.
+COPY_HERO_003=Financie Bíblias. Salve vidas. Mude o mundo.
 
-### 1.3 Hero Section
-```
-COPY_HERO_001: "Ninguém ficará sem a Palavra"
-COPY_HERO_002: "**Esta geração encerrará o maior vazio espiritual da história: garantiremos que cada cristão tenha acesso à Palavra de Deus**"
-COPY_HERO_003: "Entender Como"
-```
+# === REALIDADE ===
+COPY_REAL_001a=Enquanto você lê isto,
+COPY_REAL_001b=12.000 pessoas estão morrendo de fome espiritual.
+COPY_REAL_002=Não de comida.
+COPY_REAL_003a=Não de água.
+COPY_REAL_003b=De falta da Palavra de Deus.
+COPY_REAL_004=2.8 bilhões de pessoas nunca tiveram uma Bíblia em suas mãos.
+COPY_REAL_005a=Mais de 7.000 idiomas ainda não possuem
+COPY_REAL_005b=uma única palavra da Escritura traduzida.
+COPY_REAL_006=Esta é a maior catástrofe espiritual da história.
+COPY_REAL_007=E nós sabemos como resolvê-la.
+COPY_REAL_008=Porque, pela primeira vez na história,
+COPY_REAL_009=temos todos os recursos necessários.
+COPY_REAL_010=Áudio independente. Tradução instantânea. Redes globais.
+COPY_REAL_011=E uma geração disposta a usar tudo isso
+COPY_REAL_012=para acabar com a fome espiritual.
 
-### 1.4 Seção "A Realidade"
-```
-COPY_REAL_001: "Pela primeira vez em 2.000 anos, uma geração pode declarar:"
-COPY_REAL_002: "Nós resolvemos. Definitivamente."
-COPY_REAL_003: "Cada cristão no planeta terá acesso à Palavra de Deus."
-COPY_REAL_004: "Veja o que isso significa na prática..."
-COPY_REAL_005: "Uma mãe no interior da África não caminhará mais três dias para ouvir alguém ler a Bíblia."
-COPY_REAL_006: "Ela terá a sua própria."
-COPY_REAL_007: "Em áudio."
-COPY_REAL_008: "Na língua do seu coração."
-COPY_REAL_009: "Um homem cego no Nepal conhecerá as promessas de Deus com suas próprias mãos."
-COPY_REAL_010: "Sua Bíblia em braille. Completa. Dele."
-COPY_REAL_011: "Isso não é utopia."
-COPY_REAL_012: "É o futuro que estamos construindo. Agora."
-```
+# === PROBLEMA ===
+COPY_PROB_001=O Problema que Ninguém Vê
+COPY_PROB_002=As organizações cristãs gastam $65 bilhões por ano.
+COPY_PROB_003a=Mas 99% deste dinheiro nunca chega
+COPY_PROB_003b=às mãos de quem precisa de uma Bíblia.
+COPY_PROB_004=É como tentar encher um copo com uma torneira quebrada.
+COPY_PROB_005=O dinheiro some em:
+COPY_PROB_006=• Estruturas administrativas gigantescas
+COPY_PROB_007a=• Campanhas de marketing que custam milhões
+COPY_PROB_007b=• Intermediários que levam sua fatia
+COPY_PROB_008=• Sistemas ineficientes e burocráticos
+COPY_PROB_009=Enquanto isso, milhões continuam morrendo
+COPY_PROB_010=sem nunca terem tocado em uma Bíblia.
 
-### 1.5 Seção "O Problema Invisível"
-```
-COPY_PROB_001: "O PROBLEMA INVISÍVEL"
-COPY_PROB_002: "Milhões de cristãos vivem sem acesso à Bíblia."
-COPY_PROB_003: "A razão é silenciosa e devastadora: mais de 300 milhões de cristãos são analfabetos."
-COPY_PROB_004: "Eles adoram."
-COPY_PROB_005: "Celebram."
-COPY_PROB_006: "Choram nos louvores."
-COPY_PROB_007: "Mas dependem de outros para ouvir a voz de Deus."
-COPY_PROB_008: "Sua fé é mediada. Sua conexão, limitada."
-COPY_PROB_009: "Hoje, a tecnologia quebra essa barreira milenar:"
-COPY_PROB_010: "Bíblias em áudio para quem não lê"
-COPY_PROB_011: "IA traduzindo para cada língua viva"
-COPY_PROB_012: "Sistemas que democratizam o sagrado"
-COPY_PROB_013: "O analfabetismo não é mais sentença. O acesso à Palavra deixa de ser privilégio."
-```
+# === CONFRONTO ===
+COPY_CONF_001=Pela primeira vez na história, possuímos todos os recursos para resolver definitivamente este problema,
+COPY_CONF_002=mas continuamos usando os mesmos métodos que criaram a crise.
+COPY_CONF_003=Áudio independente. Tradução instantânea. Redes globais. Uma geração disposta.
+COPY_CONF_004=Tudo pronto. Tudo funcionando. Tudo esperando.
+COPY_CONF_005=A única coisa que falta é alguém que ouse fazer diferente.
 
-### 1.6 Seção "O Confronto"
-```
-COPY_CONF_001: "O CONFRONTO"
-COPY_CONF_002: "Pela primeira vez na história,"
-COPY_CONF_003: "possuímos todos os recursos para resolver definitivamente este problema."
-COPY_CONF_004: "Tecnologia de áudio independente de internet."
-COPY_CONF_005: "Tradução instantânea para qualquer idioma. Redes missionárias globalmente conectadas."
-COPY_CONF_006: "E uma geração disposta a agir."
-COPY_CONF_007: "Faltava apenas o método."
-COPY_CONF_008: "Um sistema que transforme recursos dispersos em impacto concentrado."
-COPY_CONF_009: "Que conecte quem financia com quem precisa."
-COPY_CONF_010: "Que garanta: cada centavo se torna uma Bíblia real em mãos reais."
-COPY_CONF_011: "Esse sistema agora existe."
-```
+# === CONEXÃO ===
+COPY_CONEX_001=Conectamos três pontos que ninguém juntou antes:
+COPY_CONEX_002a=1. Você, que tem recurso e quer ver resultado real.
+COPY_CONEX_002b=2. Missionários no campo, que sabem exatamente quem precisa.
+COPY_CONEX_003=3. Quem nunca teve uma Bíblia, esperando apenas isso.
+COPY_CONEX_004=Sem intermediários. Sem desvios. Sem perdão.
+COPY_CONEX_005=Direto. Rápido. E comprovado.
 
-### 1.7 Bloco de Conexão
-```
-COPY_CONEX_001: "Você pode ser parte da geração que encerra o maior vazio espiritual da história."
-```
+# === GERAÇÃO ===
+COPY_GERA_001=Esta é a última geração que pode acabar com a fome espiritual.
+COPY_GERA_002=Não porque não haverá mais gerações.
+COPY_GERA_003=Mas porque se nós não fizermos agora,
+COPY_GERA_004=nenhuma outra geração terá a mesma oportunidade que temos hoje.
+COPY_GERA_005=Os recursos. A tecnologia. A consciência. A urgência.
+COPY_GERA_006=Tudo está aqui. Tudo está agora. Tudo depende de nós.
 
-### 1.8 Seção "A Última Geração"
-```
-COPY_GERA_001: "Nós decidimos resolver"
-COPY_GERA_002: "aqui e agora."
-```
+# === SISTEMA ===
+COPY_SIST_001=O 9forlives não é uma ONG.
+COPY_SIST_002=Não pede doações.
+COPY_SIST_003=Não é assistencialismo.
+COPY_SIST_004=É um sistema vivo que conecta:
+COPY_SIST_005=• Você, o Financiador
+COPY_SIST_006=• O Missionário no campo
+COPY_SIST_007=• Quem precisa da Bíblia
+COPY_SIST_008=Cada real que você financia vira uma Bíblia real nas mãos certas.
+COPY_SIST_009=Sem desvios. Sem intermediários. Sem perdão.
 
-### 1.9 Seção "9forlives Sistema"
-```
-COPY_SIST_001: "9forlives nasceu para eliminar esse problema pela raiz."
-COPY_SIST_002: "Não somos uma ONG."
-COPY_SIST_003: "Não pedimos doações."
-COPY_SIST_004: "Não praticamos assistencialismo."
-COPY_SIST_005: "Somos um sistema vivo que conecta três forças para um propósito único:"
-COPY_SIST_006: "O Financiador"
-COPY_SIST_007: "viabiliza o acesso"
-COPY_SIST_008: "O Missionário"
-COPY_SIST_009: "entrega pessoalmente"
-COPY_SIST_010: "O Receptor"
-COPY_SIST_011: "recebe exatamente o que precisa"
-COPY_SIST_012: "Cada assinatura gera créditos."
-COPY_SIST_013: "Créditos viram Bíblias."
-COPY_SIST_014: "Bíblias encerram ausências."
-```
+# === METODOLOGIA ===
+COPY_METO_001=A Metodologia dos 3 Pilares
+COPY_METO_002=1º Pilar: Transparência Total
+COPY_METO_003=Nota fiscal de cada Bíblia comprada com seu dinheiro.
+COPY_METO_004=Rastreamento em tempo real. Vídeo de quem recebeu.
+COPY_METO_005=2º Pilar: Eficiência Máxima
+COPY_METO_006=Zero desperdício. Zero burocracia. Zero intermediários.
+COPY_METO_007=Seu dinheiro vira Bíblia. Simples assim.
+COPY_METO_008=3º Pilar: Impacto Verificado
+COPY_METO_009=Cada Bíblia entregue vira um vídeo de testemunho.
+COPY_METO_010=Você vê o impacto real do seu financiamento.
 
-### 1.10 Seção "A Metodologia dos 3 Pilares"
-```
-COPY_METO_001: "A METODOLOGIA DOS 3 PILARES"
-COPY_METO_002: "Nossa sustentabilidade não é acidente. É arquitetura. O 9forlives opera sobre três pilares inquebráveis:"
-COPY_METO_003: "Constância"
-COPY_METO_004: "Contribuições regulares criam impacto previsível e escalável."
-COPY_METO_005: "União"
-COPY_METO_006: "Muitos fazendo pouco supera poucos fazendo muito. Juntos, alcançamos todos."
-COPY_METO_007: "Transparência"
-COPY_METO_008: "Você rastreia cada centavo. Recebe vídeos reais. Vê rostos, ouve nomes, testemunha transformações."
-COPY_METO_009: "Impacto = (Constância × União × Transparência)²"
-COPY_METO_010: "Esta fórmula transforma esforços isolados em força coletiva imparável."
-```
+# === PARÁBOLA ===
+COPY_PARA_001=A Parábola da Filha
+COPY_PARA_002=Uma mulher tinha uma filha que precisava de uma Bíblia.
+COPY_PARA_003=Não para ler. Mas para sobreviver.
+COPY_PARA_004=A filha estava em uma aldeia remota.
+COPY_PARA_005=Sem acesso. Sem recurso. Sem esperança.
+COPY_PARA_006=A mãe orava todos os dias por uma solução.
+COPY_PARA_007=Mas as soluções nunca chegavam.
+COPY_PARA_008=Até que alguém decidiu fazer diferente.
+COPY_PARA_009=Em vez de criar mais campanhas,
+COPY_PARA_010=criou um sistema que conectava quem precisava
+COPY_PARA_011=com quem podia ajudar diretamente.
+COPY_PARA_012=30 dias depois, a filha segurava sua Bíblia.
+COPY_PARA_013=Não porque alguém doou.
+COPY_PARA_014=Mas porque alguém financiou.
+COPY_PARA_015=Esta filha tem nome.
+COPY_PARA_016=E este nome pode ser o de alguém que você conhece.
 
-### 1.11 Seção "A Parábola da Filha"
-```
-COPY_PARA_001: "A PARÁBOLA DA FILHA"
-COPY_PARA_002: "Imagine: você é pai de uma menina de três anos."
-COPY_PARA_003: "Ela tem uma doença terminal."
-COPY_PARA_004: "Então seu médico revela:"
-COPY_PARA_005: "\"Existe um remédio. 100% eficaz. Cura imediata. Sem efeitos colaterais.\""
-COPY_PARA_006: "O que você faria para conseguir esse remédio?"
-COPY_PARA_007: "Um pai atravessaria o mundo."
-COPY_PARA_008: "Faria o impossível."
-COPY_PARA_009: "Como viver sabendo que o que separa sua filha da vida não é a inexistência do remédio..."
-COPY_PARA_010: "...mas sua decisão de buscá-lo?"
-COPY_PARA_011: "Agora substitua sua filha por milhões de cristãos:"
-COPY_PARA_012: "Pessoas que amam a Deus."
-COPY_PARA_013: "Que sonham com Sua Palavra."
-COPY_PARA_014: "Que esperam pelo alimento espiritual."
-COPY_PARA_015: "Nós temos o \"remédio\"."
-COPY_PARA_016: "A Bíblia traduzida para 90% das línguas."
-COPY_PARA_017: "Bíblias em áudio solar para as 70 principais línguas."
-COPY_PARA_018: "O que separa milhões da Palavra é apenas nossa decisão de agir."
-```
+# === PERGUNTA ===
+COPY_PERG_001=A pergunta que mudará tudo:
+COPY_PERG_002=Se você tivesse que escolher entre
+COPY_PERG_003a=financiar mais uma campanha que promete resultados,
+COPY_PERG_003b=ou financiar uma Bíblia que salvará uma vida real,
+COPY_PERG_004=qual você escolheria?
+COPY_PERG_005=A resposta está em suas mãos.
+COPY_PERG_006=A vida está esperando.
 
-### 1.12 Seção "A pergunta crucial"
-```
-COPY_PERG_001: "A pergunta crucial"
-COPY_PERG_002: "Você será parte da geração que conheceu o problema e escolheu ignorá-lo?"
-COPY_PERG_003: "Ou daquela que encerrou o maior vazio espiritual da humanidade?"
-```
+# === CHAMADO ===
+COPY_CHAM_001=O Chamado Final
+COPY_CHAM_002=Você nasceu para esta geração.
+COPY_CHAM_003=Você tem os recursos que esta geração precisa.
+COPY_CHAM_004=Você conhece a tecnologia que esta geração possui.
+COPY_CHAM_005=Você sente a urgência que esta geração exige.
+COPY_CHAM_006=O que você vai fazer com tudo isso?
+COPY_CHAM_007=Vai continuar fazendo o que sempre fez?
+COPY_CHAM_008=Ou vai fazer o que ninguém ousou fazer?
+COPY_CHAM_009=A escolha é sua. O tempo é agora. O impacto é eterno.
 
-### 1.13 Seção "A Convocação"
-```
-COPY_CONV_001: "A CONVOCAÇÃO"
-COPY_CONV_002: "O 9forlives não pede ajuda."
-COPY_CONV_003: "Convoca arquitetos do futuro."
-COPY_CONV_004: "A história não perguntará quanto lucramos."
-COPY_CONV_005: "Perguntará quais problemas resolvemos."
-COPY_CONV_006: "Quero Fazer Parte Dessa Geração"
-```
+# === CONVERSÃO ===
+COPY_CONV_001=Social Profit
+COPY_CONV_002=O 9forlives não pede ajuda.
+COPY_CONV_003=Convoca arquitetos do futuro.
+COPY_CONV_004=O futuro não vai nos perguntar quanto lucramos.
+COPY_CONV_005=Vai nos perguntar quais problemas resolvemos!
+COPY_CONV_006=Quero Fazer Parte Dessa Geração
 
-## 2. SEÇÕES CONDICIONAIS (Aparecem após clique)
+# === PLANOS ===
+COPY_PLAN_001=Planos de Financiamento
+COPY_PLAN_002=Que você quer causar:
+COPY_PLAN_003=Plano Semente
+COPY_PLAN_004=R$ 9/mês
+COPY_PLAN_005=Financia 1 Bíblia física mensalmente
+COPY_PLAN_006=Para quem começa pequeno, mas constante
+COPY_PLAN_007=12 Bíblias por ano nas mãos certas
+COPY_PLAN_008=Escolher Plano
+COPY_PLAN_009=Plano Multiplicador
+COPY_PLAN_010=R$ 99/mês
+COPY_PLAN_011=Financia 10-15 Bíblias mensais
+COPY_PLAN_012=Atende pedidos físicos, áudio e braille
+COPY_PLAN_013=Centenas de vidas transformadas anualmente
+COPY_PLAN_014=Relatórios detalhados do seu impacto
+COPY_PLAN_015=Mais Popular
+COPY_PLAN_016=Plano Visionário
+COPY_PLAN_017=R$ 999/mês
+COPY_PLAN_018=Financia 100+ Bíblias mensais
+COPY_PLAN_019=Atende demandas em massa e emergências
+COPY_PLAN_020=Milhares de vidas impactadas anualmente
+COPY_PLAN_021=Acesso VIP às operações do sistema
+COPY_PLAN_022=Plano Completo
+COPY_PLAN_023=R$ 4.999/mês
+COPY_PLAN_024=Financia 500+ Bíblias mensais
+COPY_PLAN_025=Define regiões prioritárias de atuação
+COPY_PLAN_026=Impacto regional mensurável
+COPY_PLAN_027=Parceria estratégica com o sistema
 
-### 2.1 Planos de Financiamento
-```
-COPY_PLAN_001: "Planos de Financiamento"
-COPY_PLAN_002: "Plano Semente"
-COPY_PLAN_003: "R$ 9/mês"
-COPY_PLAN_004: "Financia 1 Bíblia física mensalmente"
-COPY_PLAN_005: "Para quem começa pequeno, mas constante"
-COPY_PLAN_006: "12 Bíblias por ano nas mãos certas"
-COPY_PLAN_007: "Escolher Plano"
-COPY_PLAN_008: "Plano Multiplicador"
-COPY_PLAN_009: "R$ 99/mês"
-COPY_PLAN_010: "Mais Popular"
-COPY_PLAN_011: "Financia 10-15 Bíblias mensais"
-COPY_PLAN_012: "Atende pedidos físicos, áudio e braille"
-COPY_PLAN_013: "Centenas de vidas transformadas anualmente"
-COPY_PLAN_014: "Relatórios detalhados do seu impacto"
-COPY_PLAN_015: "Escolher Plano"
-COPY_PLAN_016: "Plano Visionário"
-COPY_PLAN_017: "R$ 999/mês"
-COPY_PLAN_018: "Centenas de Bíblias físicas ou dezenas em áudio/braille"
-COPY_PLAN_019: "Acelera entregas e potencializa missionários"
-COPY_PLAN_020: "Dashboards exclusivos e análises estratégicas"
-COPY_PLAN_021: "Escolher Plano"
-COPY_PLAN_022: "Plano Legado"
-COPY_PLAN_023: "R$ 9.999/mês"
-COPY_PLAN_024: "Você se torna pilar do movimento global"
-COPY_PLAN_025: "Viabiliza operações inteiras em regiões remotas"
-COPY_PLAN_026: "Milhares de vidas alcançadas anualmente"
-COPY_PLAN_027: "Relatórios executivos e métricas exclusivas"
-COPY_PLAN_028: "Escolher Plano"
-```
+# === FAQ ===
+COPY_FAQ_001=Perguntas Frequentes
+COPY_FAQ_002=Como sei que minha Bíblia foi realmente entregue?
+COPY_FAQ_003=Você recebe nota fiscal, rastreamento e vídeo de quem recebeu.
+COPY_FAQ_004=Posso escolher para quem vai a Bíblia?
+COPY_FAQ_005=O sistema identifica automaticamente quem mais precisa no momento.
+COPY_FAQ_006=Qual é a diferença entre doar e financiar?
+COPY_FAQ_007=Doar é entregar seu dinheiro e esperar. Financiar é ver resultado garantido.
+COPY_FAQ_008=Como funciona a transparência total?
+COPY_FAQ_009=Cada centavo é rastreado: da sua conta até a mão de quem recebeu.
+COPY_FAQ_010=Posso cancelar quando quiser?
+COPY_FAQ_011=Sim, sem multas, sem burocracia. O impacto já feito é eterno.
+COPY_FAQ_012=Como os missionários são selecionados?
+COPY_FAQ_013=Apenas missionários comprovados no campo, com histórico verificado.
+COPY_FAQ_014=O que acontece se não houver demanda?
+COPY_FAQ_015=Existe demanda reprimida para 2.8 bilhões de Bíblias. Sempre há alguém esperando.
+COPY_FAQ_016=Posso visitar os locais onde financia?
+COPY_FAQ_017=Sim, organizamos visitas guiadas para financiadores comprometidos.
+COPY_FAQ_018=Como é calculado o custo por Bíblia?
+COPY_FAQ_019=Inclui Bíblia, transporte, entrega e comprovação. Zero taxa administrativa.
+COPY_FAQ_020=Posso financiar em nome de alguém?
+COPY_FAQ_021=Perfeito para presentear quem já tem tudo com algo que salva vidas.
+COPY_FAQ_022=Como funciona o sistema de rastreamento?
+COPY_FAQ_023=Você acompanha em tempo real: compra, envio, entrega e comprovação.
+COPY_FAQ_024=O que torna o 9forlives diferente?
+COPY_FAQ_025=É o único sistema onde cada real vira Bíblia comprovada nas mãos certas.
+COPY_FAQ_026=Como começar?
+COPY_FAQ_027=Escolha seu plano. Primeira Bíblia financiada em 48 horas.
+COPY_FAQ_028=Existe garantia?
+COPY_FAQ_029=Garantia de transparência total ou devolvemos 100% do financiado.
+COPY_FAQ_030=Por que devo começar agora?
+COPY_FAQ_031=Porque cada dia que espera, 12.000 pessoas morrem sem conhecer a Palavra.
 
-### 2.2 Mensagem Final e CTA
-```
-COPY_FINAL_001: "O valor importa menos que a constância."
-COPY_FINAL_002: "Quando muitos contribuem regularmente, ninguém fica sem a Palavra."
-COPY_FINAL_003: "Quero Financiar Bíblias"
-```
+# === FORMULÁRIO ===
+COPY_FORM_001=Nome completo
+COPY_FORM_002=E-mail
+COPY_FORM_003=Telefone
+COPY_FORM_004=Qual plano deseja?
+COPY_FORM_005=Plano Semente - R$ 9/mês
+COPY_FORM_006=Plano Multiplicador - R$ 99/mês
+COPY_FORM_007=Plano Visionário - R$ 999/mês
+COPY_FORM_008=Plano Completo - R$ 4.999/mês
+COPY_FORM_009=Quando quer começar?
+COPY_FORM_010=Já! Quero financiar minha primeira Bíblia hoje.
+COPY_FORM_011=Esta semana
+COPY_FORM_012=Próximo mês
+COPY_FORM_013=Mensagem (opcional)
+COPY_FORM_014=Quero fazer parte da geração que acaba com a fome espiritual
+COPY_FORM_015=Enviar Solicitação
+COPY_FORM_016=Campos obrigatórios
+COPY_FORM_017=Preencha todos os campos obrigatórios
+COPY_FORM_018=Formulário enviado com sucesso!
+COPY_FORM_019=Entraremos em contato em até 24 horas
 
-### 2.3 FAQ - As Perguntas Que Todo Mundo Faz
-```
-COPY_FAQ_001: "As Perguntas Que Importam"
-COPY_FAQ_002: "Como garantir que o dinheiro chegue às pessoas certas?"
-COPY_FAQ_003: "Entendemos sua desconfiança. Você já foi decepcionado."
-COPY_FAQ_004: "Doou para causas que desapareceram."
-COPY_FAQ_005: "Por isso criamos o Rastreamento Individual."
-COPY_FAQ_006: "Cada centavo vira uma Bíblia específica."
-COPY_FAQ_007: "Cada Bíblia tem nome, rosto e agradecimento gravado."
-COPY_FAQ_008: "Você não confia em promessas. Você vê resultados."
-COPY_FAQ_009: "Parece bom demais para ser verdade?"
-COPY_FAQ_010: "Parece. Mas não é milagre. É metodologia."
-COPY_FAQ_011: "A tecnologia existe. Os missionários estão prontos."
-COPY_FAQ_012: "As pessoas aguardam."
-COPY_FAQ_013: "Faltava conectar tudo inteligentemente."
-COPY_FAQ_014: "Nós conectamos. Funciona como relógio suíço."
-COPY_FAQ_015: "Por que assinatura e não doação única?"
-COPY_FAQ_016: "Doação alivia consciência. Assinatura resolve problemas."
-COPY_FAQ_017: "Queremos solução definitiva, não paliativa."
-COPY_FAQ_018: "Fluxo constante permite planejamento estratégico."
-COPY_FAQ_019: "Planejamento gera resultado previsível."
-COPY_FAQ_020: "Resultado previsível encerra o problema permanentemente."
-COPY_FAQ_021: "E se eu precisar cancelar?"
-COPY_FAQ_022: "Cancele quando quiser. Sem multas. Sem burocracia."
-COPY_FAQ_023: "Mas reflita: você gasta mais com café semanalmente."
-COPY_FAQ_024: "Café dura horas. Uma Bíblia transforma gerações."
-COPY_FAQ_025: "Onde investir: no temporário ou no eterno?"
-COPY_FAQ_026: "Como funciona a transparência financeira?"
-COPY_FAQ_027: "No 9forlives, o dinheiro nunca fica conosco."
-COPY_FAQ_028: "Somos intermediários com rastreabilidade total."
-COPY_FAQ_029: "O processo:"
-COPY_FAQ_030: "1. Sua assinatura gera créditos de Bíblias"
-COPY_FAQ_031: "2. Sistema conecta créditos aos pedidos missionários"
-COPY_FAQ_032: "3. Valor vai direto ao fornecedor com endereço do missionário"
-COPY_FAQ_033: "4. Você recebe nota fiscal no seu portal"
-COPY_FAQ_034: "5. Acompanha desde a compra até o vídeo de agradecimento personalizado"
-COPY_FAQ_035: "Transparência absoluta: do seu cartão às mãos certas."
-```
+# === META E SEO ===
+COPY_META_001=9forlives - Onde cada financiamento vira uma Bíblia nas mãos certas
+COPY_META_002=Acabe com a fome espiritual. Financie Bíblias diretamente para quem precisa. Transparência total, impacto verificado, resultados reais.
+COPY_META_003=Bíblia, financiamento, missões, evangelismo, fome espiritual, doação transparente, impacto social, cristão, missão, Palavra de Deus
+COPY_META_004=9forlives: A única plataforma onde cada real financiado vira uma Bíblia comprovada nas mãos de quem nunca teve acesso à Palavra de Deus.
 
-### 2.4 Seção de Rastreabilidade e Transparência
-```
-COPY_RAST_001: "Rastreabilidade Total"
-COPY_RAST_002: "Sistema Inteligente de Distribuição"
-COPY_RAST_003: "Missionários cadastram necessidades reais: pessoa, tipo de Bíblia, localização"
-COPY_RAST_004: "Algoritmo conecta créditos à fila prioritária"
-COPY_RAST_005: "Necessidades urgentes atendidas primeiro"
-```
+# === DADOS ESTRUTURADOS ===
+COPY_SCHEMA_001=9forlives - Sistema de Financiamento de Bíblias
+COPY_SCHEMA_002=Organização
+COPY_SCHEMA_003=Financie Bíblias diretamente para quem precisa. Transparência total, rastreamento em tempo real, vídeos de comprovação.
+COPY_SCHEMA_004=https://9forlives.org
+COPY_SCHEMA_005=contato@9forlives.org
+COPY_SCHEMA_006=+55 11 99999-9999
+COPY_SCHEMA_007=Brasil
+COPY_SCHEMA_008=BRL
+COPY_SCHEMA_009=9
+COPY_SCHEMA_010=99
+COPY_SCHEMA_011=999
+COPY_SCHEMA_012=4999
 
-### 2.5 Seção "Logística Auditada"
-```
-COPY_LOGI_001: "Logística Otimizada"
-COPY_LOGI_002: "Compras em escala reduzem custos em 40%"
-COPY_LOGI_003: "Auditoria garante entrega no destino correto"
-COPY_LOGI_004: "Rastreamento em tempo real"
-```
+# === SISTEMA E PROCESSOS ===
+COPY_PROC_001=Como Funciona Nossa Tecnologia
+COPY_PROC_002=1. Detecção Inteligente
+COPY_PROC_003=Nossa IA identifica demandas reais em tempo real através da rede global de missionários.
+COPY_PROC_004=2. Compra Automatizada
+COPY_PROC_005=Sistema compra a Bíblia específica necessária (idioma, formato, localização).
+COPY_PROC_006=3. Entrega Rastreada
+COPY_PROC_007=Transporte monitorado GPS até a mão de quem solicitou.
+COPY_PROC_008=4. Comprovação Visual
+COPY_PROC_009=Vídeo de quem recebeu agradecendo pelo seu nome específico.
+COPY_PROC_010=5. Relatório Completo
+COPY_PROC_011=Você recebe: nota fiscal, rastreamento, vídeo e depoimento.
 
-### 2.6 Seção "Auditoria e Prestação de Contas"
-```
-COPY_AUDI_001: "Prestação de Contas Radical"
-COPY_AUDI_002: "100% dos créditos rastreáveis"
-COPY_AUDI_003: "Relatórios mensais com suas Bíblias financiadas"
-COPY_AUDI_004: "Dashboard individual com seu impacto acumulado"
-```
-
-### 2.7 Seção "Vídeos Personalizados"
-```
-COPY_VIDE_001: "A Prova Definitiva"
-COPY_VIDE_002: "O diferencial revolucionário do 9forlives:"
-COPY_VIDE_003: "Cada entrega → um vídeo único → direto para você"
-COPY_VIDE_004: "Missionário grava o momento"
-COPY_VIDE_005: "Receptor agradece nominalmente"
-COPY_VIDE_006: "Você testemunha o impacto real"
-```
-
-### 2.8 Exemplo Real
-```
-COPY_EXEM_001: "Testemunho Real"
-COPY_EXEM_002: "\"João, obrigada por esta Bíblia em áudio. Agora ouço a Palavra de Deus diariamente.\""
-COPY_EXEM_003: "— Dona Rosa, Sertão Brasileiro"
-```
-
-### 2.9 Mensagem Final
-```
-COPY_MENS_001: "Propósito. Transparência. Transformação."
-COPY_MENS_002: "Você não apenas financia. Você transforma vidas."
-COPY_MENS_003: "Começar Agora"
-```
-
-### 2.10 Modal Lead Form
-```
-COPY_FORM_001: "Complete sua Assinatura"
-COPY_FORM_002: "Dados para começar a transformar vidas"
-COPY_FORM_003: "Nome Completo *"
-COPY_FORM_004: "Digite seu nome"
-COPY_FORM_005: "E-mail *"
-COPY_FORM_006: "seu@email.com"
-COPY_FORM_007: "WhatsApp *"
-COPY_FORM_008: "(11) 99999-9999"
-COPY_FORM_009: "Estado *"
-COPY_FORM_010: "Selecione"
-COPY_FORM_011: "AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA, PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO"
-COPY_FORM_012: "Confirmar Assinatura"
-COPY_FORM_013: "Processando..."
-COPY_FORM_014: "Parabéns! Você fez história."
-COPY_FORM_015: "Entraremos em contato nas próximas horas."
-COPY_FORM_016: "Fechar"
-```
-
-## 3. ELEMENTOS DE BACKEND/SISTEMA
-
-### 3.1 Meta Tags
-```
-COPY_META_001: "9forlives — Ninguém ficará sem a Palavra"
-COPY_META_002: "A última geração que enfrentará o vazio espiritual. Uma iniciativa do Social Profit para garantir que cada cristão tenha acesso à Palavra de Deus."
-COPY_META_003: "9forlives"
-```
-
----
-
-## PRINCIPAIS MELHORIAS REALIZADAS:
-
-### 1. **Eliminação de Redundâncias**
-- Removido repetições desnecessárias
-- Condensado ideias similares
-- Mantido apenas o essencial para o impacto
-
-### 2. **Fortalecimento dos Argumentos**
-- Linguagem mais assertiva e confiante
-- Conexões lógicas mais claras
-- Transições mais fluidas entre seções
-
-### 3. **Aprimoramento do Impacto Emocional**
-- Frases mais diretas e poderosas
-- Uso estratégico de pausas e ritmo
-- Vocabulário mais evocativo e preciso
-
-### 4. **Melhoria na Clareza**
-- Simplificação de estruturas complexas
-- Eliminação de ambiguidades
-- Foco na mensagem principal
-
-### 5. **Otimização do Storytelling**
-- Narrativa mais envolvente
-- Progressão lógica mais clara
-- Clímax emocional melhor construído
-
-### 6. **Refinamento dos CTAs**
-- Mais diretos e acionáveis
-- Linguagem imperativa estratégica
-- Senso de urgência calibrado
-
-### 7. **Coesão Geral**
-- Tom consistente em toda a página
-- Vocabulário alinhado com o público
-- Mensagem central reforçada em cada seção
+# === NOTAS DE USO ===
+# Este arquivo contém o texto EXATO extraído da página 9forlives-page.html
+# Última atualização: conteúdo real da página em produção
+# Use este arquivo como base para tradução para o inglês
+# Mantenha a estrutura COPY_xxx_xxx para referência no HTML

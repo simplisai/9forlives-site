@@ -1,0 +1,380 @@
+# Copy Components - 9forlives Page (ENGLISH VERSION - UPDATED STRUCTURE)
+
+## 1. VISIBLE CONTENT (Exact Page Order)
+
+### 1.1 Side Navigation
+```
+COPY_NAV_001: "Home"
+COPY_NAV_002: "Reality"
+COPY_NAV_003: "Problem"
+COPY_NAV_004: "Confrontation"
+COPY_NAV_005: "Decree"
+COPY_NAV_006: "System"
+COPY_NAV_007: "Method"
+COPY_NAV_008: "Parable"
+COPY_NAV_009: "Calling"
+```
+
+### 1.2 Main Header
+```
+COPY_HEADER_001: "9forlives"
+COPY_HEADER_002: "A SOCIAL PROFIT INITIATIVE"
+```
+
+### 1.3 Hero Section
+```
+COPY_HERO_001: "No one will be without the Word"
+COPY_HERO_002a: "No Christian, No People, No Language will be without access to the complete Bible in this generation."
+COPY_HERO_003: "Understand How"
+```
+
+### 1.4 Section "The Reality"
+```
+COPY_REAL_001a: "For the first time in"
+COPY_REAL_001b: "2,000 years,"
+COPY_REAL_002: "a generation will be able to declare:"
+COPY_REAL_003a: "No Christian on the planet lives without access to the Word of God!"
+COPY_REAL_004: "See what this means in practice..."
+COPY_REAL_005a: "A mother in rural Africa"
+COPY_REAL_005b: "won't walk three days anymore"
+COPY_REAL_005c: "to hear someone read the Bible."
+COPY_REAL_006: "She will have her own."
+COPY_REAL_007: "In audio."
+COPY_REAL_008: "In the language of her heart."
+COPY_REAL_009: "A blind man in Nepal will know God's promises with his own hands."
+COPY_REAL_010: "His Bible in braille. Complete. His."
+COPY_REAL_011: "This is not utopia."
+COPY_REAL_012: "It's the future we're building!"
+```
+
+### 1.5 Section "The Invisible Problem"
+```
+COPY_PROB_001: "THE INVISIBLE PROBLEM"
+COPY_PROB_002: "Millions of Christians live without access to the Bible."
+COPY_PROB_003a: "The reason is silent and devastating:"
+COPY_PROB_003b: "more than 300 million Christians are illiterate."
+COPY_PROB_004: "They worship."
+COPY_PROB_005: "Celebrate."
+COPY_PROB_006: "Cry in worship."
+COPY_PROB_007a: "But they depend on others"
+COPY_PROB_007b: "to hear God's voice."
+COPY_PROB_008: "Their faith is mediated. Their connection, limited."
+COPY_PROB_009: "Illiteracy is no longer limiting."
+COPY_PROB_010: "Access to the Word ceases to be a privilege of those who can read."
+```
+
+### 1.6 Section "The Confrontation"
+```
+COPY_CONF_001: "THE CONFRONTATION"
+COPY_CONF_002: "For the first time in human history,"
+COPY_CONF_003: "we have all the tools to end this problem once and for all."
+COPY_CONF_004: "Audio technology that works without internet."
+COPY_CONF_005a: "Translation systems that reach any language."
+COPY_CONF_005b: "Globally connected missionary networks."
+COPY_CONF_006: "And a generation of Christians willing to act."
+COPY_CONF_007: "What was missing was a method."
+COPY_CONF_008: "A system that transforms scattered resources into concentrated impact."
+COPY_CONF_009a: "That connects those who can finance"
+COPY_CONF_009b: "with those who need to receive."
+COPY_CONF_010: "That guarantees: every cent becomes a real Bible in real hands."
+COPY_CONF_011: "Now this system exists."
+```
+
+### 1.7 Connection Block
+```
+COPY_CONEX_001: "You can be part of the generation that ends the greatest spiritual void in history."
+```
+
+### 1.8 Section "The Last Generation"
+```
+COPY_GERA_001: "We choose to solve this"
+COPY_GERA_002: "here and now!"
+```
+
+### 1.9 Section "9forlives System"
+```
+COPY_SIST_001: "9forlives was born to eliminate this problem at its root."
+COPY_SIST_002: "We are not an NGO."
+COPY_SIST_003: "We don't ask for donations."
+COPY_SIST_004: "We don't practice assistentialism."
+COPY_SIST_005: "We are a living system that connects three actors for a single purpose:"
+COPY_SIST_006: "The Subscriber"
+COPY_SIST_007: "finances access"
+COPY_SIST_008: "The Missionary"
+COPY_SIST_009: "delivers personally"
+COPY_SIST_010: "The Receiver"
+COPY_SIST_011: "receives exactly the Bible they need"
+COPY_SIST_012: "Each subscription becomes credit."
+COPY_SIST_013: "Each credit becomes a Bible."
+COPY_SIST_014: "Each Bible ends an absence."
+```
+
+### 1.10 Section "The 3 Pillars Methodology"
+```
+COPY_METO_001: "THE 3 PILLARS METHODOLOGY"
+COPY_METO_002: "What makes this sustainable is not luck. It's method. 9forlives operates on three unbreakable pillars:"
+COPY_METO_003: "Constancy"
+COPY_METO_004a: "Regular contributions"
+COPY_METO_004b: "create predictable"
+COPY_METO_004c: "and scalable"
+COPY_METO_004d: "impact."
+COPY_METO_005a: "Union"
+COPY_METO_005b: "Many doing little"
+COPY_METO_005c: "outperforms few doing much."
+COPY_METO_006a: "Together, we reach everyone."
+COPY_METO_006b: "Transparency"
+COPY_METO_006c: "You track every cent."
+COPY_METO_006d: "Receive real videos."
+COPY_METO_006e: "See faces, hear names, witness transformations."
+COPY_METO_007: "Transformative Impact = (Constancy × Union × Transparency)²"
+COPY_METO_008: "This formula multiplies isolated efforts into unstoppable collective force."
+```
+
+### 1.11 Section "The Daughter's Parable"
+```
+COPY_PARA_001: "THE DAUGHTER'S PARABLE"
+COPY_PARA_002: "Imagine: you are the father of a three-year-old girl."
+COPY_PARA_003: "She has a terminal illness."
+COPY_PARA_004: "Then your trusted doctor looks into your eyes and says:"
+COPY_PARA_005: "There is a medicine. 100% effective. Immediate cure. No side effects."
+COPY_PARA_006: "As a father, what would you be willing to do to get this medicine?"
+COPY_PARA_007: "A father crosses the world."
+COPY_PARA_008: "A father does the impossible."
+COPY_PARA_009: "How to live knowing that what separates your daughter from life is not the medicine's existence..."
+COPY_PARA_010: "...but your decision as a father to seek it?"
+COPY_PARA_011: "Now replace your daughter with millions of Christians:"
+COPY_PARA_012: "People who love God."
+COPY_PARA_013: "Who dream of accessing His Word."
+COPY_PARA_014: "Who wait for spiritual nourishment."
+COPY_PARA_015: "We have the 'medicine.'"
+COPY_PARA_016: "The Bible translated into 90% of languages,"
+COPY_PARA_017: "Solar-powered audio Bibles in the 70 main languages."
+COPY_PARA_018: "What separates millions from the Word is only our decision to act."
+```
+
+### 1.12 Section "The Crucial Question"
+```
+COPY_PERG_001: "The crucial question"
+COPY_PERG_002: "Will you be part of the generation that saw the problem and chose to ignore it?"
+COPY_PERG_003: "Or the one that ended the greatest spiritual void in humanity?"
+```
+
+### 1.13 Section "The Calling"
+```
+COPY_CONV_001: "THE CALLING"
+COPY_CONV_002: "9forlives doesn't ask for help."
+COPY_CONV_003: "It calls future architects."
+COPY_CONV_004: "History won't ask how much we profited."
+COPY_CONV_005: "It will ask which problems we solved."
+COPY_CONV_006: "I Want to Be Part of This Generation"
+```
+
+## 2. CONDITIONAL SECTIONS (Appear After Click)
+
+### 2.1 Financing Plans
+```
+COPY_PLAN_001: "Financing Plans"
+COPY_PLAN_002: "Seed Plan"
+COPY_PLAN_003: "R$ 9/month"
+COPY_PLAN_004: "Finances 1 physical Bible monthly"
+COPY_PLAN_005: "For those who start small, but constant"
+COPY_PLAN_006: "12 Bibles per year in the right hands"
+COPY_PLAN_007: "Choose Plan"
+COPY_PLAN_008: "Multiplier Plan"
+COPY_PLAN_009: "R$ 99/month"
+COPY_PLAN_010: "Most Popular"
+COPY_PLAN_011: "Finances 10-15 Bibles monthly"
+COPY_PLAN_012: "Serves physical, audio and braille requests"
+COPY_PLAN_013: "Hundreds of lives transformed annually"
+COPY_PLAN_014: "Detailed reports of your impact"
+COPY_PLAN_015: "Choose Plan"
+COPY_PLAN_016: "Visionary Plan"
+COPY_PLAN_017: "R$ 999/month"
+COPY_PLAN_018: "Hundreds of physical Bibles or dozens in audio/braille"
+COPY_PLAN_019: "Accelerates deliveries and empowers local missionaries"
+COPY_PLAN_020: "Exclusive dashboards and strategic reports"
+COPY_PLAN_021: "Choose Plan"
+COPY_PLAN_022: "Legacy Plan"
+COPY_PLAN_023: "R$ 9,999/month"
+COPY_PLAN_024: "You become a pillar of the global movement"
+COPY_PLAN_025: "Enables entire operations in remote regions"
+COPY_PLAN_026: "Thousands of lives reached annually"
+COPY_PLAN_027: "Executive reports and exclusive metrics"
+COPY_PLAN_028: "Choose Plan"
+```
+
+### 2.2 Final Message and CTA
+```
+COPY_FINAL_001: "The amount matters less than constancy."
+COPY_FINAL_002: "When many contribute regularly, no one will be without the Word."
+COPY_FINAL_003: "I Want to Finance Bibles"
+```
+
+## 3. FAQ SECTIONS
+
+### 3.1 Main FAQ
+```
+COPY_FAQ_001: "Questions Everyone Asks"
+COPY_FAQ_002: "What if the money doesn't really reach the right people?"
+COPY_FAQ_003: "I perfectly understand this concern. You've been deceived before."
+COPY_FAQ_004: "You donated to causes that disappeared with the money."
+COPY_FAQ_005: "That's why we created the Individual Tracking System."
+COPY_FAQ_006: "Each cent becomes a specific Bible."
+COPY_FAQ_007: "Each Bible has a name, face, and thank-you video."
+COPY_FAQ_008: "You don't believe in promises. You see real results."
+COPY_FAQ_009: "Isn't this too good to be true?"
+COPY_FAQ_010: "It does seem so. But it's not a miracle. It's method."
+COPY_FAQ_011: "The technology already exists. Missionaries are already in the field."
+COPY_FAQ_012: "People are already waiting."
+COPY_FAQ_013: "What was missing was someone connecting everything intelligently."
+COPY_FAQ_014: "We connected. And now it works like clockwork."
+COPY_FAQ_015: "Why don't you ask for simple donations like everyone else?"
+COPY_FAQ_016: "Because donations don't solve problems. Donations ease consciences."
+COPY_FAQ_017: "We want to solve the problem forever."
+COPY_FAQ_018: "Subscription creates constant flow. Constant flow enables planning."
+COPY_FAQ_019: "Planning generates predictable results."
+COPY_FAQ_020: "And predictable results end the problem once and for all."
+COPY_FAQ_021: "What if I can't pay every month?"
+COPY_FAQ_022: "You can cancel whenever you want. No fine. No bureaucracy."
+COPY_FAQ_023: "But think: you spend more than this on coffee per week."
+COPY_FAQ_024: "And coffee lasts a few hours. A Bible lasts a lifetime."
+COPY_FAQ_025: "And changes generations. Is it better to invest in eternity or caffeine?"
+COPY_FAQ_026: "How do I know you won't disappear with my money?"
+COPY_FAQ_027: "At 9forlives, money never stays idle with us."
+COPY_FAQ_028: "We don't retain values — we only intermediate the process with total traceability."
+COPY_FAQ_029: "It works like this:"
+COPY_FAQ_030: "1. You add Bible credits through your subscription."
+COPY_FAQ_031: "2. The system automatically identifies queue requests made by missionaries."
+COPY_FAQ_032: "3. The corresponding value is sent directly to the supplier, along with the delivery address of the responsible missionary."
+COPY_FAQ_033: "4. As soon as the order is approved, you receive the invoice in your financier portal."
+COPY_FAQ_034: "5. Then you follow the entire journey: from purchase to delivery — until you receive the personalized thank-you video from the beneficiary."
+COPY_FAQ_035: "Total transparency, from your card to the hands of whoever receives it."
+```
+
+### 3.2 Traceability and Transparency
+```
+COPY_RAST_001: "Traceability and Transparency"
+COPY_RAST_002: "Intelligent Request Queue System"
+COPY_RAST_003: "Missionaries register who needs what, what type of Bible, and in which region"
+COPY_RAST_004: "The system automatically connects subscriber credits to the request queue"
+COPY_RAST_005: "This ensures the most urgent needs are met first"
+```
+
+### 3.3 Audited Logistics
+```
+COPY_LOGI_001: "Audited Logistics"
+COPY_LOGI_002: "Bulk optimized purchases reduce costs and accelerate deliveries"
+COPY_LOGI_003: "Audited logistics ensures each Bible reaches the correct destination"
+COPY_LOGI_004: "Delivery status updated in real time"
+```
+
+### 3.4 Accountability
+```
+COPY_AUDI_001: "Accountability and Reporting"
+COPY_AUDI_002: "100% of credits are traceable"
+COPY_AUDI_003: "Monthly reports show how many Bibles were financed with your subscription"
+COPY_AUDI_004: "Individual panels display the request queue you helped meet"
+```
+
+### 3.5 Personalized Thank-You Videos
+```
+COPY_VIDE_001: "Personalized Thank-You Videos"
+COPY_VIDE_002: "The most powerful differential of 9forlives:"
+COPY_VIDE_003: "Each Bible delivered → one unique thank-you video → directly to you"
+COPY_VIDE_004: "The missionary records the delivery moment"
+COPY_VIDE_005: "The recipient thanks mentioning your name"
+COPY_VIDE_006: "You see, hear, and feel the real impact of your subscription"
+```
+
+### 3.6 Real Example
+```
+COPY_EXEM_001: "Real Example"
+COPY_EXEM_002: "Thank you, John, for sending me this audio Bible. Now I can hear God's Word every day."
+COPY_EXEM_003: "— Mrs. Rosa, Northeast Brazil"
+```
+
+### 3.7 Final Message
+```
+COPY_MENS_001: "Purpose. Transparency. Emotion."
+COPY_MENS_002: "You see the impact. You feel the impact. You live the impact."
+COPY_MENS_003: "I Want to Finance Bibles Now"
+```
+
+## 4. FORM SECTIONS
+
+### 4.1 Subscription Form
+```
+COPY_FORM_001: "Complete Your Subscription"
+COPY_FORM_002: "Fill in your details to start financing Bibles"
+COPY_FORM_003: "Full Name *"
+COPY_FORM_004: "Your full name"
+COPY_FORM_005: "Email *"
+COPY_FORM_006: "your@email.com"
+COPY_FORM_007: "Phone *"
+COPY_FORM_008: "(11) 99999-9999"
+COPY_FORM_009: "State where you live *"
+COPY_FORM_010: "Select your state"
+COPY_FORM_011: "AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA, PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO"
+COPY_FORM_012: "Complete Subscription"
+COPY_FORM_013: "Sending..."
+COPY_FORM_014: "Congratulations on your decision!"
+COPY_FORM_015: "Our team will contact you soon."
+COPY_FORM_016: "Close"
+```
+
+## 5. META AND SEO CONTENT
+
+### 5.1 Meta Tags
+```
+COPY_META_001: "9forlives — No one will be without the Word"
+COPY_META_002: "This will be the last generation of humanity to face the problem of Bible access. A Social Profit initiative to end the greatest spiritual void in history."
+COPY_META_003: "9forlives"
+```
+
+## 6. STRUCTURED DATA AND TECHNICAL CONTENT
+
+### 6.1 Schema Markup Content
+```
+COPY_SCHEMA_001: "Social Profit Initiative"
+COPY_SCHEMA_002: "Bible Distribution System"
+COPY_SCHEMA_003: "Global Bible Access Program"
+COPY_SCHEMA_004: "Christian Missionary Organization"
+COPY_SCHEMA_005: "Bible Translation and Distribution"
+```
+
+## 7. ADDITIONAL SECTIONS IDENTIFIED IN CURRENT HTML
+
+### 7.1 System Process Steps (Lines 1410-1450 in HTML)
+```
+COPY_PROCESS_001: "Your financing → System directs"
+COPY_PROCESS_002: "Value monthly = exclusive credits for specific Bibles."
+COPY_PROCESS_003: "Difference: Your money is born with the right destination, a real Bible for a real person."
+COPY_PROCESS_004: "Need detected → Automatic purchase"
+COPY_PROCESS_005: "Missionary signals demand. AI buys and sends in the same hour."
+COPY_PROCESS_006: "Guarantee: Impossible to divert your resource, no deviations, no intermediaries."
+COPY_PROCESS_007: "Impact delivered → Proof on screen"
+COPY_PROCESS_008: "Invoice + tracking + A video of who received the Bible, thanking by your name."
+COPY_PROCESS_009: "Result: Evidence, not promise."
+```
+
+### 7.2 Plan Section Headers
+```
+COPY_PLAN_HEADER_001: "Your financing becomes real result."
+COPY_PLAN_HEADER_002: "What do you want to cause:"
+COPY_PLAN_HEADER_003: "Each real you finance becomes a Bible for who really needs it"
+```
+
+## USAGE NOTES FOR TRANSLATION:
+
+1. **COPY_ References**: All text elements are tagged with COPY_ prefixes for easy identification and replacement
+2. **Section Order**: Content follows the exact visual order of the page
+3. **Conditional Content**: Sections 2.x appear after user interaction (plan selection)
+4. **Form Content**: All form fields and validation messages are included
+5. **Meta Content**: SEO and social media content is separated for easy translation
+6. **Technical Content**: Schema markup and structured data content is included
+7. **Process Flow**: System operation explanations are fully documented
+8. **Currency**: Brazilian Real (R$) amounts are maintained - adjust for target market
+9. **Cultural References**: Examples (Africa, Nepal, Brazil) can be adapted for target audience
+10. **Religious Context**: Christian/Bible terminology is preserved for consistency
+
+This structure provides 100% coverage of all visible and hidden content on the current page, organized for systematic translation and reconstruction.

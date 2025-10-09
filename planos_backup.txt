@@ -1,0 +1,352 @@
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="560">
+              <!-- COPY_PARA_008d -->
+              <p class="text-lg text-center">"Mas ela terá o remédio."</p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-6 sm:p-8 mb-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="380">
+            <!-- COPY_PARA_009 -->
+            <p class="text-2xl sm:text-3xl font-light leading-relaxed">
+              Bilhões esperam pela cura espiritual.
+            </p>
+          </div>
+
+          <p class="text-2xl sm:text-3xl font-light mb-10 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="440">
+            <!-- COPY_PARA_010 -->
+            Troque sua filha por
+            <span class="inline-flex items-center rounded px-2 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 text-3xl sm:text-4xl font-medium">bilhões de cristãos</span>
+            esperando pela Palavra:
+          </p>
+
+          <div class="space-y-4 mb-12">
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="500">
+              <!-- COPY_PARA_011a -->
+              <p class="text-lg text-center">Pessoas que amam Deus.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="540">
+              <!-- COPY_PARA_011b -->
+              <p class="text-lg text-center">Sonham ter acesso à Palavra.</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="580">
+              <!-- COPY_PARA_011c -->
+              <p class="text-lg text-center">Esperam pela cura espiritual.</p>
+            </div>
+          </div>
+
+          <div class="space-y-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="620">
+            <div class="space-y-3 text-custom-primary text-xl font-light">
+              <!-- COPY_PARA_012a -->
+              <p>Temos o remédio.</p>
+              <!-- COPY_PARA_012b -->
+              <p>Temos a Bíblia.</p>
+              <!-- COPY_PARA_012c -->
+              <p>Temos a tecnologia.</p>
+            </div>
+
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-6 sm:p-8">
+              <!-- COPY_PARA_013 -->
+              <p class="text-3xl font-light leading-relaxed">
+                O que separa bilhões da Palavra é nossa
+                <span class="inline-flex items-center rounded px-1 ring-1 ring-custom-primary/40 bg-custom-primary/10 text-custom-chart1 font-medium">decisão de agir</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 8: A Convocação -->
+    <section id="s8" data-section="8" class="group snap-start min-h-screen flex items-center justify-center py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-6 sm:px-6 w-full">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-[10px] sm:text-[11px] md:text-xs uppercase tracking-[0.24em] sm:tracking-[0.28em] text-custom-primary font-light mb-6 sm:mb-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0"><!-- COPY_CONV_001 -->A CONVOCAÇÃO</p>
+
+
+
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+
+          </div>
+
+          <div class="space-y-8 mb-12">
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-6 sm:p-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="220">
+              <div class="flex items-center justify-center mb-4">
+                <img src="https://lojvbcnyewsjfcrzsdja.supabase.co/storage/v1/object/public/9forlives-assets/logo-9forlives/9forlives%20(1600%20x%201600%20px).svg" alt="9forlives" class="h-12 w-auto">
+              </div>
+              <p class="text-2xl sm:text-3xl font-light text-center"><!-- COPY_CONV_002 -->O 9forlives não pede ajuda.
+              </p>
+              <p class="text-2xl sm:text-3xl font-medium text-custom-primary mt-2 text-center">
+                <!-- COPY_CONV_003 -->Convoca arquitetos do futuro.</p>
+            </div>
+
+            <!-- Componentes adicionados no local correto -->
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-6 sm:p-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="280">
+              <p class="text-2xl sm:text-3xl font-light text-center text-white">O futuro não vai nos perguntar quanto
+                lucramos.</p>
+            </div>
+
+            <div class="rounded-2xl border border-custom-primary/30 bg-white/[0.04] backdrop-blur-xl p-6 sm:p-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="320">
+              <p class="text-2xl sm:text-3xl font-medium text-custom-primary text-center">Vai nos perguntar quais
+                problemas resolvemos!</p>
+            </div>
+
+
+          </div>
+
+          <div class="pt-2 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="340">
+            <button id="finalCTA" class="group inline-flex items-center gap-3 rounded-full bg-custom-primary px-8 py-4 text-sm sm:text-base md:text-lg font-medium text-custom-card hover:bg-custom-chart2 transition-colors shadow-[0_20px_60px_-20px_rgba(124,207,0,0.4)]">
+              <!-- COPY_CONV_006 -->Quero Fazer Parte Dessa Geração
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-6 h-6"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+            <p class="mt-4 sm:mt-6 text-[10px] sm:text-xs text-zinc-500 text-center">Uma iniciativa do Social Profit —
+              transparência.</p>
+            <p class="text-[10px] sm:text-xs text-zinc-500 mt-1 text-center">Prestação de contas.</p>
+            <p class="text-[10px] sm:text-xs text-zinc-500 mt-1 sm:mt-2 text-center">E impacto verificável.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Seções de Planos (Initially Hidden) -->
+    <div id="pricingSections" class="hidden">
+      <!-- Seção de Planos de Financiamento -->
+      <section data-section="9" class="group snap-start min-h-screen flex items-center justify-center py-16 sm:py-20">
+        <div class="mx-auto max-w-7xl px-6 sm:px-6 w-full">
+          <!-- Header da Seção -->
+          <div class="text-center max-w-4xl mx-auto mb-16">
+            <div class="flex items-center justify-center mb-6">
+              <img src="https://lojvbcnyewsjfcrzsdja.supabase.co/storage/v1/object/public/9forlives-assets/logo-9forlives/9forlives%20(1600%20x%201600%20px).svg" alt="9forlives" class="h-12 w-auto opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="0">
+            </div>
+            <p class="text-[10px] sm:text-[11px] md:text-xs uppercase tracking-[0.24em] sm:tracking-[0.28em] text-custom-primary font-light mb-4 sm:mb-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="80">Planos de Financiamento</p>
+            <h2 class="tracking-tight text-3xl sm:text-4xl md:text-5xl font-light mb-6 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="140" style="font-family: 'Space Grotesk', sans-serif;">
+              Invista no Acesso. Multiplique o Impacto.
+            </h2>
+            <div class="space-y-6 text-lg font-light max-w-4xl mx-auto opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="200">
+
+              <!-- Primeira frase em box separado -->
+              <div class="rounded-xl border border-zinc-700/50 bg-zinc-900/30 backdrop-blur-sm p-6">
+                <p class="text-zinc-300 text-center">No 9forlives, cada assinatura
+                  <span class="inline-flex items-center rounded-lg px-3 py-1 ring-1 ring-red-400/40 bg-red-400/10 text-red-300 font-medium">não é uma doação</span>.
+                </p>
+              </div>
+
+              <!-- Segunda frase em box separado -->
+              <div class="rounded-xl border border-zinc-700/50 bg-zinc-900/30 backdrop-blur-sm p-6">
+                <p class="text-zinc-300 text-center">É um
+                  <span class="text-green-400 font-medium">investimento direto</span> no acesso à Palavra de Deus.</p>
+              </div>
+
+              <!-- Terceira frase em box separado -->
+              <div class="rounded-xl border border-zinc-700/50 bg-zinc-900/30 backdrop-blur-sm p-6">
+                <p class="text-center text-zinc-300">Cada real se transforma em créditos que financiam Bíblias.</p>
+              </div>
+
+              <!-- Tipos de Bíblias -->
+              <div class="grid md:grid-cols-3 gap-4">
+                <div class="text-center p-4 rounded-lg border border-zinc-700/30 bg-zinc-900/20">
+                  <div class="mx-auto mb-2 w-10 h-10 rounded-full bg-purple-500/15 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400">
+                      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                    </svg>
+                    </svg>
+                  </div>
+                  <p class="text-sm text-purple-400 font-medium text-center">Impressas</p>
+                </div>
+
+                <div class="text-center p-4 rounded-lg border border-zinc-700/30 bg-zinc-900/20">
+                  <div class="mx-auto mb-2 w-10 h-10 rounded-full bg-orange-500/15 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-400">
+                      <polygon points="11 5,6 9,2 9,2 15,6 15,11 19,13 19,13 5,11 5"></polygon>
+                    </svg>
+                  </div>
+                  <p class="text-sm text-orange-400 font-medium text-center">Em áudio</p>
+                </div>
+
+                <div class="text-center p-4 rounded-lg border border-zinc-700/30 bg-zinc-900/20">
+                  <div class="mx-auto mb-2 w-10 h-10 rounded-full bg-cyan-500/15 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cyan-400">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <circle cx="12" cy="12" r="1"></circle>
+                      <circle cx="12" cy="12" r="8"></circle>
+                    </svg>
+                  </div>
+                  <p class="text-sm text-cyan-400 font-medium text-center">Braille</p>
+                </div>
+              </div>
+
+              <p class="text-center text-zinc-300">— de acordo com a fila real.</p>
+              <p class="text-center text-zinc-300">De pedidos feita pelos missionários.</p>
+
+              <!-- Bloco de destaque final -->
+              <div class="rounded-xl border border-custom-chart1/30 bg-custom-chart1/5 backdrop-blur-sm p-6 space-y-3">
+                <div class="flex items-center justify-center gap-3">
+                  <div class="w-2 h-2 rounded-full bg-custom-chart1 animate-pulse"></div>
+                  <p class="font-medium text-white text-center">Você não escolhe quem ajuda.</p>
+                  <div class="w-2 h-2 rounded-full bg-custom-chart1 animate-pulse"></div>
+                </div>
+                <div class="flex items-center justify-center gap-3">
+
+                  <p class="font-medium text-white text-center">O sistema conecta automaticamente quem precisa com quem
+                    pode financiar.</p>
+                </div>
+              </div>
+            </div>
+            <!-- COPY_PLAN_001 -->
+            <p class="text-xl font-medium text-custom-chart1 mt-8 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform text-center" data-animate="" data-delay="260">Planos de Financiamento</p>
+            <p class="text-xl font-medium text-custom-chart1 opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform text-center" data-animate="" data-delay="280">Que você quer causar:</p>
+          </div>
+
+          <!-- Grade de Planos -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <!-- Plano Semente -->
+            <div class="group relative rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 hover:border-custom-primary/30 transition-all duration-500 hover:-translate-y-0.5 hover:bg-white/[0.05] opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="320">
+              <div class="text-3xl mb-4">🌱</div>
+              <!-- COPY_PLAN_002 -->
+              <h3 class="text-2xl font-medium mb-2" style="font-family: 'Space Grotesk', sans-serif;">Plano Semente</h3>
+              <div class="flex items-baseline gap-2 mb-6">
+                <!-- COPY_PLAN_003 -->
+                <span class="text-4xl font-light tracking-tight">R$ 9</span>
+                <span class="text-zinc-400">/mês</span>
+              </div>
+              <ul class="space-y-3 text-sm text-zinc-300 mb-8">
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_004 -->
+                  <span>Financia 1 Bíblia física mensalmente</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_005 -->
+                  <span>Para quem começa pequeno, mas constante</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_006 -->
+                  <span>12 Bíblias por ano nas mãos certas</span>
+                </li>
+              </ul>
+              <!-- COPY_PLAN_007 -->
+              <!-- COPY_PLAN_028 -->
+              <button class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300">Escolher Plano</button>
+            </div>
+
+            <!-- Plano Multiplicador -->
+            <div class="group relative rounded-2xl border border-custom-primary/50 bg-white/[0.03] backdrop-blur-xl p-8 hover:border-custom-primary transition-all duration-500 hover:-translate-y-0.5 hover:bg-white/[0.05] opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="380">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                <!-- COPY_PLAN_010 -->
+                <span class="bg-custom-primary text-custom-card text-xs px-4 py-1.5 rounded-full font-medium">Mais Popular</span>
+              </div>
+              <div class="text-3xl mb-4">🌍</div>
+              <!-- COPY_PLAN_008 -->
+              <h3 class="text-2xl font-medium mb-2" style="font-family: 'Space Grotesk', sans-serif;">Plano
+                Multiplicador</h3>
+              <div class="flex items-baseline gap-2 mb-6">
+                <!-- COPY_PLAN_009 -->
+                <span class="text-4xl font-light tracking-tight">R$ 99</span>
+                <span class="text-zinc-400">/mês</span>
+              </div>
+              <ul class="space-y-3 text-sm text-zinc-300 mb-8">
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_011 -->
+                  <span>Financia 10-15 Bíblias mensais</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_012 -->
+                  <span>Atende pedidos físicos, áudio e braille</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_013 -->
+                  <span>Centenas de vidas transformadas anualmente</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_014 -->
+                  <span>Relatórios detalhados do seu impacto</span>
+                </li>
+              </ul>
+              <!-- COPY_PLAN_015 -->
+              <button class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300">Escolher Plano</button>
+            </div>
+
+            <!-- Plano Visionário -->
+            <div class="group relative rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 hover:border-custom-primary/30 transition-all duration-500 hover:-translate-y-0.5 hover:bg-white/[0.05] opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="440">
+              <div class="text-3xl mb-4">🚀</div>
+              <!-- COPY_PLAN_016 -->
+              <h3 class="text-2xl font-medium mb-2" style="font-family: 'Space Grotesk', sans-serif;">Plano Visionário
+              </h3>
+              <div class="flex items-baseline gap-2 mb-6">
+                <!-- COPY_PLAN_017 -->
+                <span class="text-4xl font-light tracking-tight">R$ 999</span>
+                <span class="text-zinc-400">/mês</span>
+              </div>
+              <ul class="space-y-3 text-sm text-zinc-300 mb-8">
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_018 -->
+                  <span>Centenas de Bíblias físicas ou dezenas em áudio/braille</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_019 -->
+                  <span>Acelera entregas e potencializa missionários</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_020 -->
+                  <span>Dashboards exclusivos e análises estratégicas</span>
+                </li>
+              </ul>
+              <button class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300">Escolher Plano</button>
+            </div>
+
+            <!-- Plano Legado -->
+            <div class="group relative rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 hover:border-custom-primary/30 transition-all duration-500 hover:-translate-y-0.5 hover:bg-white/[0.05] opacity-0 translate-y-6 blur-sm duration-700 ease-out will-change-transform" data-animate="" data-delay="500">
+              <div class="text-3xl mb-4">👑</div>
+              <h3 class="text-2xl font-medium mb-2" style="font-family: 'Space Grotesk', sans-serif;">Plano Legado</h3>
+              <div class="flex items-baseline gap-2 mb-6">
+                <span class="text-4xl font-light tracking-tight">R$ 9.999</span>
+                <span class="text-zinc-400">/mês</span>
+              </div>
+              <ul class="space-y-3 text-sm text-zinc-300 mb-8">
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_024 -->
+                  <span>Você se torna pilar do movimento global</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_025 -->
+                  <span>Viabiliza operações inteiras em regiões remotas</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_026 -->
+                  <span>Milhares de vidas alcançadas anualmente</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-4 h-4 text-custom-primary mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <!-- COPY_PLAN_027 -->
+                  <span>Relatórios executivos e métricas exclusivas</span>
+                </li>
+              </ul>
+              <button class="w-full bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium py-3 rounded-xl transition-colors duration-300">Escolher Plano</button>
+            </div>
+          </div>
+
+          <!-- Mensagem Final e CTA -->
+          <div class="text-center max-w-3xl mx-auto opacity-0 translate-y-6 blur-sm transition-all duration-700 ease-out will-change-transform" data-animate="" data-delay="560">
+            <div class="space-y-4 text-lg text-zinc-300 font-light mb-8">
+              <p class="font-medium text-white text-center">Não importa o valor. O que importa é a constância.</p>
+              <p>Quando muitos contribuem pouco, ninguém ficará sem acesso à Palavra.</p>
+            </div>
+            <button class="group relative inline-flex items-center gap-3 px-10 py-4 bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium rounded-full transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-custom-primary/25 text-sm sm:text-base md:text-lg">
+              <span>Quero Financiar Bíblias</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+        </div>
+      </section>
