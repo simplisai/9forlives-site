@@ -681,14 +681,180 @@ font-family: 'Nunito', sans-serif !important;
                 the Word
               </span>
             </h1>
+            
+            <!-- Globo 3D integrado abaixo da parte 2 (canvas direto, sem wrapper) -->
+            <canvas id="cobe" class="mt-3 md:mt-5 lg:mt-6 mx-auto block max-w-4xl w-full h-[260px] sm:h-[360px] md:h-[480px] lg:h-[560px] xl:h-[640px] bg-transparent"></canvas>
+
+            <script type="module">
+              import createGlobe from 'https://esm.sh/cobe@0.6.2'
+
+              // Estado e referências
+              let phi = 0
+              const canvas = document.getElementById('cobe')
+              let globe = null
+
+              // Localizações - exatamente como no globo original
+              const locations = [
+                // BRASIL - Principais Cidades
+                { location: [-23.5505, -46.6333], size: 0.04, name: 'São Paulo' },
+                { location: [-22.9068, -43.1729], size: 0.04, name: 'Rio de Janeiro' },
+                { location: [-15.7942, -47.8822], size: 0.04, name: 'Brasília' },
+                { location: [-19.9167, -43.9345], size: 0.03, name: 'Belo Horizonte' },
+                { location: [-25.4284, -49.2733], size: 0.03, name: 'Curitiba' },
+                { location: [-30.0346, -51.2177], size: 0.03, name: 'Porto Alegre' },
+                { location: [-8.0476, -34.877], size: 0.03, name: 'Recife' },
+                { location: [-12.9714, -38.5014], size: 0.03, name: 'Salvador' },
+                { location: [-3.7319, -38.5267], size: 0.03, name: 'Fortaleza' },
+                { location: [-20.3155, -40.3128], size: 0.03, name: 'Vitória' },
+                { location: [-27.5954, -48.548], size: 0.03, name: 'Florianópolis' },
+                { location: [-16.6869, -49.2648], size: 0.03, name: 'Goiânia' },
+                // AMÉRICA DO NORTE
+                { location: [40.7128, -74.006], size: 0.04, name: 'Nova York' },
+                { location: [34.0522, -118.2437], size: 0.04, name: 'Los Angeles' },
+                { location: [41.8781, -87.6298], size: 0.03, name: 'Chicago' },
+                { location: [43.6532, -79.3832], size: 0.03, name: 'Toronto' },
+                { location: [19.4326, -99.1332], size: 0.03, name: 'Cidade do México' },
+                // EUROPA
+                { location: [51.5074, -0.1278], size: 0.04, name: 'Londres' },
+                { location: [48.8566, 2.3522], size: 0.04, name: 'Paris' },
+                { location: [52.52, 13.405], size: 0.03, name: 'Berlim' },
+                { location: [41.9028, 12.4964], size: 0.03, name: 'Roma' },
+                { location: [40.4168, -3.7038], size: 0.03, name: 'Madrid' },
+                { location: [38.7223, -9.1393], size: 0.03, name: 'Lisboa' },
+                // ÁSIA
+                { location: [35.6762, 139.6503], size: 0.04, name: 'Tóquio' },
+                { location: [39.9042, 116.4074], size: 0.04, name: 'Pequim' },
+                { location: [28.6139, 77.209], size: 0.04, name: 'Nova Delhi' },
+                { location: [1.3521, 103.8198], size: 0.03, name: 'Singapura' },
+                { location: [37.5665, 126.978], size: 0.03, name: 'Seul' },
+                { location: [22.3193, 114.1694], size: 0.03, name: 'Hong Kong' },
+                // ÁFRICA
+                { location: [-26.2041, 28.0473], size: 0.03, name: 'Joanesburgo' },
+                { location: [-33.9249, 18.4241], size: 0.03, name: 'Cidade do Cabo' },
+                { location: [30.0444, 31.2357], size: 0.03, name: 'Cairo' },
+                { location: [-1.2921, 36.8219], size: 0.03, name: 'Nairóbi' },
+                // OCEANIA
+                { location: [-33.8688, 151.2093], size: 0.03, name: 'Sydney' },
+                { location: [-37.8136, 144.9631], size: 0.03, name: 'Melbourne' },
+                // AMÉRICA DO SUL (outros países)
+                { location: [-34.6037, -58.3816], size: 0.03, name: 'Buenos Aires' },
+                { location: [-33.4489, -70.6693], size: 0.03, name: 'Santiago' },
+                { location: [4.711, -74.0721], size: 0.03, name: 'Bogotá' },
+                { location: [-12.0464, -77.0428], size: 0.03, name: 'Lima' }
+              ]
+
+              // Ângulo inicial: África (20°) para girar até o Brasil
+              const africaLongitude = 20
+              const initialPhi = -(africaLongitude * Math.PI) / 180
+              phi = initialPhi
+
+              // Calcular tamanho proporcional baseado no viewport
+              function updateCanvasSize() {
+                let desiredSize;
+                
+                // Tamanhos reduzidos para melhor proporção visual
+                if (window.innerWidth < 640) {
+                  // Mobile: 55% da largura, máximo 280px
+                  desiredSize = Math.min(window.innerWidth * 0.55, 280);
+                } else if (window.innerWidth < 768) {
+                  // Tablet pequeno: 45%, máximo 340px
+                  desiredSize = Math.min(window.innerWidth * 0.45, 340);
+                } else if (window.innerWidth < 1024) {
+                  // Tablet: 38%, máximo 380px
+                  desiredSize = Math.min(window.innerWidth * 0.38, 380);
+                } else if (window.innerWidth < 1280) {
+                  // Desktop médio: 32%, máximo 420px
+                  desiredSize = Math.min(window.innerWidth * 0.32, 420);
+                } else {
+                  // Desktop grande: 28%, máximo 460px
+                  desiredSize = Math.min(window.innerWidth * 0.28, 460);
+                }
+
+                const dpr = window.devicePixelRatio || 2;
+                canvas.width = desiredSize * dpr;
+                canvas.height = desiredSize * dpr;
+                canvas.style.width = desiredSize + 'px';
+                canvas.style.height = desiredSize + 'px';
+                
+                return { width: canvas.width, height: canvas.height };
+              }
+
+              function initGlobe() {
+                const { width, height } = updateCanvasSize()
+                if (globe) globe.destroy()
+                globe = createGlobe(canvas, {
+                  devicePixelRatio: window.devicePixelRatio || 2,
+                  width,
+                  height,
+                  phi: initialPhi,
+                  theta: -0.3,
+                  dark: 1,
+                  diffuse: 1.2,
+                  mapSamples: 16000,
+                  mapBrightness: 4.2,
+                  baseColor: [0.12, 0.12, 0.12],
+                  markerColor: [0.1, 0.9, 0.4],
+                  glowColor: [0.1, 0.3, 0.2],
+                  markers: locations,
+                  onRender: (state) => {
+                    state.phi = phi
+                    phi += 0.003
+                  }
+                })
+              }
+
+              // Inicializa
+              initGlobe()
+
+              // Responsividade com debounce
+              let resizeTimeout
+              window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout)
+                resizeTimeout = setTimeout(() => {
+                  initGlobe()
+                }, 250)
+              })
+
+              // API opcional de controle (mantida como no original)
+              window.globePuro = {
+                addLocation(lat, lon, name, size = 0.03) {
+                  locations.push({ location: [lat, lon], size, name })
+                  if (globe) globe.markers = locations
+                },
+                setSpeed(speed) {
+                  if (!globe) return
+                  const currentOnRender = globe.onRender
+                  globe.onRender = (state) => {
+                    state.phi = phi
+                    phi += speed
+                  }
+                },
+                pause() {
+                  if (!globe) return
+                  globe.onRender = (state) => {
+                    state.phi = phi
+                  }
+                },
+                resume() {
+                  if (!globe) return
+                  globe.onRender = (state) => {
+                    state.phi = phi
+                    phi += 0.003
+                  }
+                },
+                reset() {
+                  phi = initialPhi
+                }
+              }
+            </script>
 
             <!-- COPY_HERO_002a -->
-            <p class="sm:mt-6 xs:text-base sm:text-lg md:text-xl text-balance text-sm font-light text-zinc-300 opacity-100 max-w-3xl mt-4 mr-auto ml-auto pr-2 pl-2 blur-0 translate-y-0" data-animate="" data-delay="220">
+            <p class="sm:mt-0 xs:text-base sm:text-lg md:text-xl text-balance text-sm font-light text-zinc-300 opacity-100 max-w-3xl mt-0 mr-auto ml-auto pr-2 pl-2 blur-0 translate-y-0" data-animate="" data-delay="220">
               <strong class="text-enhanced-contrast">No Christian, No People, No Language will be left without access to the complete Bible in this generation.</strong>
             </p>
 
             <!-- CTAs -->
-            <div class="sm:mt-8 flex flex-col sm:flex-row gap-3.5 sm:px-6 mt-6 pr-4 pl-4 items-center justify-center">
+            <div class="sm:mt-4 flex flex-col sm:flex-row gap-3.5 sm:px-6 mt-3 pr-4 pl-4 items-center justify-center">
               <!-- COPY_HERO_003 --><button class="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-zinc-900/50 px-6 py-3.5 text-sm sm:text-base font-light text-zinc-300 hover:text-white hover:border-custom-primary/40 hover:bg-zinc-900 focus-enhanced transition-enhanced min-h-[44px] min-w-[44px] opacity-100 translate-y-0 blur-0 hover-lift" data-jump="1" data-animate="" data-delay="220" aria-label="Understand how it works">
                 Understand How
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-down" class="lucide lucide-arrow-down w-5 h-5" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
