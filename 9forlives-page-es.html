@@ -2846,7 +2846,6 @@ try { Typebot.initStandard({ typebot: "financiador-onboarding", apiHost: "https:
       function handler(e){
         const selector='a[href^="https://portal.simplispay.com.br/app/plano/"]';
         let link=e.target.closest(selector);
-        const cta=e.target.closest('[data-open-typebot-cta]');
         if(!link && pricingSections && pricingSections.contains(e.target)){
           let scope=e.target;
           while(scope && scope!==pricingSections){
@@ -2855,10 +2854,10 @@ try { Typebot.initStandard({ typebot: "financiador-onboarding", apiHost: "https:
             scope=scope.parentElement;
           }
         }
-        if(!link && !cta) return;
+        if(!link) return;
         e.preventDefault();
         e.stopPropagation();
-        openTypebot(link ? link.href : null);
+        openTypebot(link.href);
       }
       ['touchstart','mousedown','click'].forEach(evt=>document.addEventListener(evt,handler,true));
       document.addEventListener('keydown',(e)=>{
