@@ -1772,7 +1772,7 @@ font-family: 'Nunito', sans-serif !important;
               <p class="font-medium text-white text-center">No importa el valor. Lo que importa es la constancia.</p>
               <p>Cuando muchos contribuyen poco, nadie se quedará sin acceso a la Palabra.</p>
             </div>
-            <button class="group relative inline-flex items-center gap-3 px-10 py-4 bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium rounded-full transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-custom-primary/25 text-sm sm:text-base md:text-lg">
+            <button data-open-typebot-cta="true" class="group relative inline-flex items-center gap-3 px-10 py-4 bg-custom-primary hover:bg-custom-chart2 text-custom-card font-medium rounded-full transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-custom-primary/25 text-sm sm:text-base md:text-lg">
               <span>Quiero Financiar Biblias</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
             </button>
@@ -2825,7 +2825,47 @@ font-family: 'Nunito', sans-serif !important;
       });
     })();
   </script>
-
-
-
+  <div id="typebotOverlay" class="fixed inset-0 z-50 hidden">
+    <typebot-standard style="width: 100%; height: 100%;"></typebot-standard>
+  </div>
+  <script>
+    (function(){
+      const pricingSections=document.getElementById('pricingSections');
+      function openTypebot(href){
+        const overlay=document.getElementById('typebotOverlay');
+        if(overlay) overlay.classList.remove('hidden');
+        if(!window.__typebotInit){
+          const typebotInitScript=document.createElement('script');
+          typebotInitScript.type='module';
+          typebotInitScript.innerHTML=`import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
+try { Typebot.initStandard({ typebot: "financiador-onboarding", apiHost: "https://entrar.simplis.ai" }); } catch(err) { console.error('Typebot init error', err); }`;
+          typebotInitScript.addEventListener('error',()=>{ if(href) window.location.href=href; });
+          document.body.append(typebotInitScript);
+          window.__typebotInit=true;
+        }
+      }
+      document.addEventListener('click',(e)=>{
+        const selector='a[href^="https://portal.simplispay.com.br/app/plano/"]';
+        let link=e.target.closest(selector);
+        const cta=e.target.closest('[data-open-typebot-cta]');
+        if(!link && pricingSections && pricingSections.contains(e.target)){
+          let scope=e.target;
+          while(scope && scope!==pricingSections){
+            const candidate=scope.querySelector && scope.querySelector(selector);
+            if(candidate){ link=candidate; break; }
+            scope=scope.parentElement;
+          }
+        }
+        if(!link && !cta) return;
+        e.preventDefault();
+        openTypebot(link ? link.href : null);
+      });
+      document.addEventListener('keydown',(e)=>{
+        if(e.key==='Escape'){
+          const overlay=document.getElementById('typebotOverlay');
+          if(overlay) overlay.classList.add('hidden');
+        }
+      });
+    })();
+  </script>
 </body></html>
