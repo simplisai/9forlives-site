@@ -2826,7 +2826,7 @@ font-family: 'Nunito', sans-serif !important;
     })();
   </script>
   <div id="typebotOverlay" class="fixed inset-0 z-50 hidden">
-    <typebot-standard style="width: 100%; height: 100%;"></typebot-standard>
+    <typebot-standard style="width: 100%; height: 100vh;"></typebot-standard>
   </div>
   <script>
     (function(){
@@ -2839,12 +2839,11 @@ font-family: 'Nunito', sans-serif !important;
           typebotInitScript.type='module';
           typebotInitScript.innerHTML=`import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
 try { Typebot.initStandard({ typebot: "financiador-onboarding", apiHost: "https://entrar.simplis.ai" }); } catch(err) { console.error('Typebot init error', err); }`;
-          typebotInitScript.addEventListener('error',()=>{ if(href) window.location.href=href; });
           document.body.append(typebotInitScript);
           window.__typebotInit=true;
         }
       }
-      document.addEventListener('click',(e)=>{
+      function handler(e){
         const selector='a[href^="https://portal.simplispay.com.br/app/plano/"]';
         let link=e.target.closest(selector);
         const cta=e.target.closest('[data-open-typebot-cta]');
@@ -2858,8 +2857,10 @@ try { Typebot.initStandard({ typebot: "financiador-onboarding", apiHost: "https:
         }
         if(!link && !cta) return;
         e.preventDefault();
+        e.stopPropagation();
         openTypebot(link ? link.href : null);
-      });
+      }
+      ['touchstart','mousedown','click'].forEach(evt=>document.addEventListener(evt,handler,true));
       document.addEventListener('keydown',(e)=>{
         if(e.key==='Escape'){
           const overlay=document.getElementById('typebotOverlay');
