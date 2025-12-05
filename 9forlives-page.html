@@ -2862,7 +2862,7 @@ try { Typebot.initStandard({ typebot: "financiador-onboarding", apiHost: "https:
       e.stopPropagation();
       openTypebot(link.href);
     }
-    ['touchstart','mousedown','click'].forEach(evt=>document.addEventListener(evt,handler,true));
+    ['mousedown','click'].forEach(evt=>document.addEventListener(evt,handler,true));
     document.addEventListener('keydown',(e)=>{
       if(e.key==='Escape'){
         const overlay=document.getElementById('typebotOverlay');
