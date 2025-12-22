@@ -38,6 +38,10 @@ build/
 .env.test.local
 .env.production.local
 
+# Supabase temp
+.branches
+.temp
+
 # Arquivos temporários
 *.tmp
 *.temp
@@ -52,3 +56,4 @@ build/
 # Arquivos de desenvolvimento local
 .local/
 .dev/
+.trae/

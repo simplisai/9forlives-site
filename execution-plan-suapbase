@@ -1,0 +1,1402 @@
+# 📘 GUIA COMPLETO DE INTEGRAÇÃO SUPABASE + 9FORLIVES ONBOARDING
+
+**Data:** 09/12/2025  
+**Projeto:** 9forlives Landing Page + Onboarding  
+**Tecnologia:** HTML Estático + Supabase Edge Functions  
+
+***
+
+## 📋 ÍNDICE
+
+1. [Pré-requisitos](#1-pré-requisitos)
+2. [Estrutura de Arquivos](#2-estrutura-de-arquivos)
+3. [Instalação e Configuração](#3-instalação-e-configuração)
+4. [Códigos Completos](#4-códigos-completos)
+5. [Deploy e Testes](#5-deploy-e-testes)
+6. [Troubleshooting](#6-troubleshooting)
+
+***
+
+## 1. PRÉ-REQUISITOS
+
+### ✅ Ferramentas Necessárias
+
+```bash
+# Node.js (versão 16+)
+node --version  # Deve retornar v16.0.0 ou superior
+
+# npm
+npm --version
+
+# Git
+git --version
+
+# Supabase CLI (será instalado no próximo passo)
+```
+
+### ✅ Credenciais do Projeto
+
+```env
+Project ID: cnhwgplsmstnjqsltekh
+Supabase URL: https://cnhwgplsmstnjqsltekh.supabase.co
+Anon Key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNuaHdncGxzbXN0bmpxc2x0ZWtoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk0MTczODgsImV4cCI6MjA3NDk5MzM4OH0.nvSFZGoBQOajNC0HdcWj7pABan0eG9wtnEPtMU2jIJU
+```
+
+**IMPORTANTE:** Você precisará também da **SERVICE_ROLE_KEY**. Para obtê-la:
+1. Acesse https://supabase.com/dashboard/project/cnhwgplsmstnjqsltekh/settings/api
+2. Na seção "Project API keys", copie a **service_role** key (secret)
+
+***
+
+## 2. ESTRUTURA DE ARQUIVOS
+
+```
+9forlives-page/
+│
+├── 9forlives-page.html              ✅ JÁ EXISTE
+├── onboarding-missionary.html       ✅ JÁ EXISTE  
+├── onboarding-financier.html        ✅ JÁ EXISTE
+├── netlify.toml                     ✅ JÁ EXISTE
+├── package.json                     ✅ JÁ EXISTE
+│
+├── .env.local                       🆕 CRIAR (não commitar!)
+├── .gitignore                       🆕 ATUALIZAR
+│
+├── js/                              🆕 CRIAR PASTA
+│   ├── config.js                    🆕 Configurações Supabase
+│   ├── supabaseClient.js            🆕 Cliente Supabase
+│   ├── onboardingService.js         🆕 Lógica de onboarding
+│   └── formHandlers.js              🆕 Handlers dos formulários
+│
+├── supabase/                        🆕 CRIAR PASTA
+│   ├── config.toml                  🆕 Config Supabase CLI
+│   └── functions/                   🆕 Edge Functions
+│       └── create-user-onboarding/
+│           ├── index.ts             🆕 Função principal
+│           └── deno.json            🆕 Config Deno
+│
+└── docs/                            🆕 CRIAR PASTA (opcional)
+    └── INTEGRATION_GUIDE.md         🆕 Este guia
+```
+
+***
+
+## 3. INSTALAÇÃO E CONFIGURAÇÃO
+
+### PASSO 1: Instalar Supabase CLI
+
+```bash
+# Instalar globalmente
+npm install -g supabase
+
+# Verificar instalação
+supabase --version
+# Deve retornar: supabase 1.x.x
+
+# Login no Supabase
+supabase login
+# Isso abrirá o navegador para autenticação
+```
+
+***
+
+### PASSO 2: Criar Arquivo `.env.local`
+
+Crie o arquivo `.env.local` na **raiz do projeto**:
+
+```bash
+# Criar arquivo
+touch .env.local
+```
+
+**Conteúdo do `.env.local`:**
+
+```env
+# ============================================
+# SUPABASE CONFIGURATION
+# ============================================
+
+# Project Info
+VITE_SUPABASE_PROJECT_ID=cnhwgplsmstnjqsltekh
+VITE_SUPABASE_URL=https://cnhwgplsmstnjqsltekh.supabase.co
+
+# Public Keys (pode ser exposta no frontend)
+VITE_SUPABASE_PUBLISHABLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNuaHdncGxzbXN0bmpxc2x0ZWtoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk0MTczODgsImV4cCI6MjA3NDk5MzM4OH0.nvSFZGoBQOajNC0HdcWj7pABan0eG9wtnEPtMU2jIJU
+
+# Service Role Key (NUNCA EXPOR NO FRONTEND!)
+# IMPORTANTE: Obtenha em https://supabase.com/dashboard/project/cnhwgplsmstnjqsltekh/settings/api
+VITE_SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.COLE_AQUI_SUA_SERVICE_ROLE_KEY
+
+# Storage
+VITE_SUPABASE_STORAGE_URL=https://cnhwgplsmstnjqsltekh.supabase.co/storage/v1/object/public
+
+# Database (para ferramentas CLI/Prisma)
+VITE_DATABASE_PASSWORD=+Forlives321+
+DATABASE_URL=postgresql://postgres.cnhwgplsmstnjqsltekh:+Forlives321+@aws-1-sa-east-1.pooler.supabase.com:6543/postgres?pgbouncer=true
+DIRECT_URL=postgresql://postgres.cnhwgplsmstnjqsltekh:+Forlives321+@aws-1-sa-east-1.pooler.supabase.com:5432/postgres
+
+# PWA
+PWA_ICON_BG=#0f172a
+
+# ============================================
+# DEFAULT IDs (do seu database)
+# ============================================
+DEFAULT_ORGANIZATION_ID=00000000-0000-0000-0000-000000000001
+DEFAULT_CLUSTER_ID=a6d47598-4420-44c6-9f52-09cb52ffe669
+```
+
+***
+
+### PASSO 3: Atualizar `.gitignore`
+
+Adicione ao `.gitignore` (ou crie se não existir):
+
+```gitignore
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Supabase
+.branches
+.temp
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+```
+
+***
+
+### PASSO 4: Inicializar Supabase no Projeto
+
+```bash
+# Dentro da pasta 9forlives-page/
+cd /caminho/para/9forlives-page
+
+# Inicializar Supabase
+supabase init
+
+# Link com seu projeto
+supabase link --project-ref cnhwgplsmstnjqsltekh
+# Quando pedir senha, use: +Forlives321+
+```
+
+Isso criará a pasta `supabase/` com `config.toml`.
+
+***
+
+### PASSO 5: Criar Estrutura de Pastas
+
+```bash
+# Criar pasta js/
+mkdir -p js
+
+# Criar pasta para Edge Function
+supabase functions new create-user-onboarding
+
+# Verificar estrutura
+tree -L 3
+```
+
+***
+
+## 4. CÓDIGOS COMPLETOS
+
+### ARQUIVO 1: `js/config.js`
+
+```javascript
+/**
+ * Configurações do Supabase
+ * Arquivo: js/config.js
+ */
+
+const SUPABASE_CONFIG = {
+  url: 'https://cnhwgplsmstnjqsltekh.supabase.co',
+  anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNuaHdncGxzbXN0bmpxc2x0ZWtoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk0MTczODgsImV4cCI6MjA3NDk5MzM4OH0.nvSFZGoBQOajNC0HdcWj7pABan0eG9wtnEPtMU2jIJU',
+  
+  // IDs padrão do sistema
+  defaultOrgId: '00000000-0000-0000-0000-000000000001',
+  defaultClusterId: 'a6d47598-4420-44c6-9f52-09cb52ffe669',
+  
+  // Edge Functions
+  functions: {
+    createUserOnboarding: 'create-user-onboarding'
+  }
+}
+
+// Export para uso em outros scripts
+window.SUPABASE_CONFIG = SUPABASE_CONFIG
+
+console.log('✅ Supabase Config loaded')
+```
+
+***
+
+### ARQUIVO 2: `js/supabaseClient.js`
+
+```javascript
+/**
+ * Supabase Client
+ * Arquivo: js/supabaseClient.js
+ */
+
+// Verificar se config foi carregado
+if (!window.SUPABASE_CONFIG) {
+  throw new Error('SUPABASE_CONFIG não encontrado! Certifique-se de carregar config.js primeiro.')
+}
+
+// Verificar se biblioteca Supabase foi carregada
+if (!window.supabase) {
+  throw new Error('Biblioteca Supabase não carregada! Adicione o script CDN no HTML.')
+}
+
+// Criar cliente Supabase
+const supabaseClient = window.supabase.createClient(
+  window.SUPABASE_CONFIG.url,
+  window.SUPABASE_CONFIG.anonKey,
+  {
+    auth: {
+      autoRefreshToken: true,
+      persistSession: true,
+      detectSessionInUrl: true
+    }
+  }
+)
+
+// Export global
+window.supabaseClient = supabaseClient
+
+console.log('✅ Supabase Client initialized')
+
+// Helper para verificar conexão
+async function testConnection() {
+  try {
+    const { data, error } = await supabaseClient
+      .from('profiles')
+      .select('id')
+      .limit(1)
+    
+    if (error) throw error
+    console.log('✅ Conexão com Supabase OK')
+    return true
+  } catch (error) {
+    console.error('❌ Erro na conexão:', error)
+    return false
+  }
+}
+
+// Test on load (opcional - comentar em produção)
+// testConnection()
+```
+
+***
+
+### ARQUIVO 3: `js/onboardingService.js`
+
+```javascript
+/**
+ * Onboarding Service
+ * Arquivo: js/onboardingService.js
+ */
+
+const OnboardingService = {
+  
+  /**
+   * Cria um missionário
+   * @param {Object} formData - Dados do formulário
+   * @returns {Promise<Object>} - Resultado da criação
+   */
+  async createMissionary(formData) {
+    try {
+      console.log('[MISSIONARY] Iniciando cadastro:', formData.email)
+      
+      const payload = {
+        role: 'MISSIONARY',
+        email: formData.email,
+        password: formData.password,
+        name: formData.name,
+        whatsapp: this.formatPhone(formData.whatsapp),
+        cpf: this.formatCPF(formData.cpf),
+        birthDate: formData.birthDate,
+        region: formData.region,
+        address: {
+          street: formData.street,
+          number: formData.number,
+          complement: formData.complement || '',
+          neighborhood: formData.neighborhood,
+          city: formData.city,
+          state: formData.state,
+          zipCode: this.formatCEP(formData.zipCode)
+        },
+        church: formData.church,
+        pastor: formData.pastor,
+        pastorPhone: this.formatPhone(formData.pastorPhone),
+        membershipYears: parseInt(formData.membershipYears) || 0,
+        specialization: formData.specialization || '',
+        project: formData.project || ''
+      }
+
+      console.log('[MISSIONARY] Payload preparado:', payload)
+
+      const { data, error } = await window.supabaseClient.functions.invoke(
+        window.SUPABASE_CONFIG.functions.createUserOnboarding,
+        { body: payload }
+      )
+
+      if (error) {
+        console.error('[MISSIONARY] Erro da Edge Function:', error)
+        throw error
+      }
+
+      if (data.error) {
+        console.error('[MISSIONARY] Erro retornado pela função:', data.error)
+        throw new Error(data.error)
+      }
+
+      console.log('[MISSIONARY] ✅ Cadastro concluído!', data)
+      return { success: true, data }
+
+    } catch (error) {
+      console.error('[MISSIONARY] ❌ Erro:', error)
+      return { 
+        success: false, 
+        error: error.message || 'Erro ao criar conta de missionário' 
+      }
+    }
+  },
+
+  /**
+   * Cria um financiador
+   * @param {Object} formData - Dados do formulário
+   * @returns {Promise<Object>} - Resultado da criação
+   */
+  async createFinancier(formData) {
+    try {
+      console.log('[FINANCIER] Iniciando cadastro:', formData.email)
+      
+      const payload = {
+        role: 'FINANCIER',
+        email: formData.email,
+        password: formData.password,
+        name: formData.name,
+        phone: formData.phone ? this.formatPhone(formData.phone) : null
+      }
+
+      console.log('[FINANCIER] Payload preparado:', payload)
+
+      const { data, error } = await window.supabaseClient.functions.invoke(
+        window.SUPABASE_CONFIG.functions.createUserOnboarding,
+        { body: payload }
+      )
+
+      if (error) {
+        console.error('[FINANCIER] Erro da Edge Function:', error)
+        throw error
+      }
+
+      if (data.error) {
+        console.error('[FINANCIER] Erro retornado pela função:', data.error)
+        throw new Error(data.error)
+      }
+
+      console.log('[FINANCIER] ✅ Cadastro concluído!', data)
+      
+      // Salvar userId para usar no checkout
+      localStorage.setItem('9forlives_financier_user_id', data.userId)
+      localStorage.setItem('9forlives_financier_email', formData.email)
+      
+      return { success: true, data }
+
+    } catch (error) {
+      console.error('[FINANCIER] ❌ Erro:', error)
+      return { 
+        success: false, 
+        error: error.message || 'Erro ao criar conta de financiador' 
+      }
+    }
+  },
+
+  /**
+   * Upload de documentos do missionário
+   * @param {string} userId - ID do usuário
+   * @param {Object} files - Objeto com os arquivos
+   * @returns {Promise<Object>} - URLs dos documentos
+   */
+  async uploadDocuments(userId, files) {
+    try {
+      console.log('[UPLOAD] Iniciando upload de documentos para usuário:', userId)
+      
+      const uploads = []
+      const bucket = 'missionary-documents'
+
+      for (const [fieldName, file] of Object.entries(files)) {
+        if (!file) continue
+
+        const fileExt = file.name.split('.').pop()
+        const fileName = `${userId}/${fieldName}-${Date.now()}.${fileExt}`
+        
+        console.log(`[UPLOAD] Enviando ${fieldName}:`, fileName)
+
+        const { data, error } = await window.supabaseClient.storage
+          .from(bucket)
+          .upload(fileName, file, {
+            cacheControl: '3600',
+            upsert: false
+          })
+
+        if (error) {
+          console.error(`[UPLOAD] Erro ao enviar ${fieldName}:`, error)
+          throw error
+        }
+
+        // Obter URL pública
+        const { data: publicData } = window.supabaseClient.storage
+          .from(bucket)
+          .getPublicUrl(data.path)
+
+        uploads.push({ 
+          fieldName, 
+          fileName: data.path, 
+          url: publicData.publicUrl 
+        })
+
+        console.log(`[UPLOAD] ✅ ${fieldName} enviado com sucesso`)
+      }
+
+      // Atualizar profile com status de documentos
+      await this.updateDocumentStatus(userId, uploads)
+
+      console.log('[UPLOAD] ✅ Todos os documentos enviados:', uploads)
+      return { success: true, uploads }
+
+    } catch (error) {
+      console.error('[UPLOAD] ❌ Erro:', error)
+      return { success: false, error: error.message }
+    }
+  },
+
+  /**
+   * Atualiza status de documentos no perfil do missionário
+   */
+  async updateDocumentStatus(userId, uploads) {
+    try {
+      const documentStatus = {
+        uploaded: true,
+        uploadedAt: new Date().toISOString(),
+        files: uploads.map(u => ({
+          type: u.fieldName,
+          url: u.url
+        }))
+      }
+
+      const { error } = await window.supabaseClient
+        .from('missionaries')
+        .update({ 
+          documents_submitted: documentStatus 
+        })
+        .eq('user_id', userId)
+
+      if (error) throw error
+
+      console.log('[UPLOAD] ✅ Status de documentos atualizado no banco')
+    } catch (error) {
+      console.error('[UPLOAD] ⚠️ Erro ao atualizar status:', error)
+    }
+  },
+
+  /**
+   * Helpers para formatação
+   */
+  formatPhone(phone) {
+    if (!phone) return ''
+    // Remove tudo exceto números
+    return phone.replace(/\D/g, '')
+  },
+
+  formatCPF(cpf) {
+    if (!cpf) return ''
+    // Remove tudo exceto números
+    return cpf.replace(/\D/g, '')
+  },
+
+  formatCEP(cep) {
+    if (!cep) return ''
+    // Remove tudo exceto números
+    return cep.replace(/\D/g, '')
+  }
+}
+
+// Export global
+window.OnboardingService = OnboardingService
+
+console.log('✅ Onboarding Service loaded')
+```
+
+***
+
+### ARQUIVO 4: `js/formHandlers.js`
+
+```javascript
+/**
+ * Form Handlers
+ * Arquivo: js/formHandlers.js
+ */
+
+// ============================================
+// UI HELPERS
+// ============================================
+
+const UIHelpers = {
+  showLoading(button, message = 'Processando...') {
+    button.disabled = true
+    button.dataset.originalText = button.innerHTML
+    button.innerHTML = `
+      <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>
+      ${message}
+    `
+  },
+
+  hideLoading(button) {
+    button.disabled = false
+    if (button.dataset.originalText) {
+      button.innerHTML = button.dataset.originalText
+      delete button.dataset.originalText
+    }
+  },
+
+  showToast(message, type = 'success') {
+    // Remove toasts anteriores
+    const existingToast = document.getElementById('toast-notification')
+    if (existingToast) existingToast.remove()
+
+    const bgColor = type === 'success' ? 'bg-green-500' : 'bg-red-500'
+    const icon = type === 'success' ? '✅' : '❌'
+
+    const toast = document.createElement('div')
+    toast.id = 'toast-notification'
+    toast.className = `fixed top-4 right-4 ${bgColor} text-white px-6 py-4 rounded-lg shadow-lg z-50 flex items-center gap-3 animate-slide-in`
+    toast.innerHTML = `
+      <span class="text-2xl">${icon}</span>
+      <span class="font-medium">${message}</span>
+    `
+
+    document.body.appendChild(toast)
+
+    // Auto-remove após 5 segundos
+    setTimeout(() => {
+      toast.classList.add('animate-slide-out')
+      setTimeout(() => toast.remove(), 300)
+    }, 5000)
+  },
+
+  showSuccessModal(title, message, onClose) {
+    const modal = document.createElement('div')
+    modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4'
+    modal.innerHTML = `
+      <div class="bg-white rounded-lg p-8 max-w-md w-full animate-scale-in">
+        <div class="text-center">
+          <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+            <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-medium text-gray-900 mb-2">${title}</h3>
+          <p class="text-sm text-gray-500 mb-6">${message}</p>
+          <button onclick="this.closest('.fixed').remove(); ${onClose ? onClose : ''}" 
+                  class="w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+            Continuar
+          </button>
+        </div>
+      </div>
+    `
+    document.body.appendChild(modal)
+  }
+}
+
+// ============================================
+// MISSIONARY FORM HANDLER
+// ============================================
+
+async function handleMissionarySubmit(event) {
+  event.preventDefault()
+  
+  const form = event.target
+  const submitButton = form.querySelector('button[type="submit"]')
+  
+  try {
+    // Mostrar loading
+    UIHelpers.showLoading(submitButton, '⏳ Criando sua conta...')
+    
+    // Coletar dados do formulário
+    const formData = {
+      // Dados pessoais
+      name: form.querySelector('[name="name"]')?.value,
+      email: form.querySelector('[name="email"]')?.value,
+      cpf: form.querySelector('[name="cpf"]')?.value,
+      whatsapp: form.querySelector('[name="whatsapp"]')?.value,
+      birthDate: form.querySelector('[name="birthDate"]')?.value,
+      password: form.querySelector('[name="password"]')?.value,
+      
+      // Endereço
+      zipCode: form.querySelector('[name="zipCode"]')?.value,
+      street: form.querySelector('[name="street"]')?.value,
+      number: form.querySelector('[name="number"]')?.value,
+      complement: form.querySelector('[name="complement"]')?.value || '',
+      neighborhood: form.querySelector('[name="neighborhood"]')?.value,
+      city: form.querySelector('[name="city"]')?.value,
+      state: form.querySelector('[name="state"]')?.value,
+      
+      // Igreja
+      church: form.querySelector('[name="church"]')?.value,
+      pastor: form.querySelector('[name="pastor"]')?.value,
+      pastorPhone: form.querySelector('[name="pastorPhone"]')?.value,
+      membershipYears: form.querySelector('[name="membershipYears"]')?.value || '0',
+      
+      // Missão
+      region: form.querySelector('[name="region"]')?.value,
+      specialization: form.querySelector('[name="specialization"]')?.value || '',
+      project: form.querySelector('[name="project"]')?.value || ''
+    }
+
+    // Validar campos obrigatórios
+    const requiredFields = ['name', 'email', 'cpf', 'whatsapp', 'birthDate', 'password', 
+                            'zipCode', 'street', 'number', 'neighborhood', 'city', 'state',
+                            'church', 'pastor', 'pastorPhone', 'region']
+    
+    const missingFields = requiredFields.filter(field => !formData[field])
+    
+    if (missingFields.length > 0) {
+      throw new Error(`Por favor, preencha todos os campos obrigatórios: ${missingFields.join(', ')}`)
+    }
+
+    console.log('[FORM] Dados coletados:', formData)
+    
+    // Enviar para o serviço
+    const result = await window.OnboardingService.createMissionary(formData)
+    
+    if (!result.success) {
+      throw new Error(result.error)
+    }
+
+    // Sucesso! Coletar e fazer upload de documentos (se houver)
+    const documents = collectDocuments(form)
+    
+    if (documents && Object.keys(documents).length > 0) {
+      console.log('[FORM] Fazendo upload de documentos...')
+      UIHelpers.showLoading(submitButton, '📤 Enviando documentos...')
+      
+      const uploadResult = await window.OnboardingService.uploadDocuments(
+        result.data.userId, 
+        documents
+      )
+      
+      if (!uploadResult.success) {
+        console.warn('[FORM] Erro ao enviar documentos, mas conta foi criada:', uploadResult.error)
+      }
+    }
+
+    // Mostrar mensagem de sucesso
+    UIHelpers.showSuccessModal(
+      '🎉 Cadastro Realizado com Sucesso!',
+      'Sua conta foi criada. Em breve você receberá um e-mail de confirmação.',
+      'window.location.href = "/9forlives-page.html"'
+    )
+
+  } catch (error) {
+    console.error('[FORM] Erro no cadastro:', error)
+    UIHelpers.showToast(error.message || 'Erro ao criar conta', 'error')
+    UIHelpers.hideLoading(submitButton)
+  }
+}
+
+// ============================================
+// FINANCIER FORM HANDLER
+// ============================================
+
+async function handleFinancierSubmit(event) {
+  event.preventDefault()
+  
+  const form = event.target
+  const submitButton = form.querySelector('button[type="submit"]')
+  
+  try {
+    UIHelpers.showLoading(submitButton, '⏳ Criando sua conta...')
+    
+    const formData = {
+      name: form.querySelector('[name="name"]')?.value,
+      email: form.querySelector('[name="email"]')?.value,
+      password: form.querySelector('[name="password"]')?.value,
+      phone: form.querySelector('[name="phone"]')?.value || ''
+    }
+
+    // Validar campos obrigatórios
+    if (!formData.name || !formData.email || !formData.password) {
+      throw new Error('Por favor, preencha todos os campos obrigatórios')
+    }
+
+    console.log('[FORM] Dados coletados:', formData)
+    
+    const result = await window.OnboardingService.createFinancier(formData)
+    
+    if (!result.success) {
+      throw new Error(result.error)
+    }
+
+    // Sucesso! Redirecionar para checkout ou página de planos
+    const selectedPlan = form.dataset.selectedPlan || 'basic'
+    
+    UIHelpers.showSuccessModal(
+      '✅ Conta Criada com Sucesso!',
+      'Você será redirecionado para escolher seu plano.',
+      `window.location.href = "/planos.html?user=${result.data.userId}&plan=${selectedPlan}"`
+    )
+
+  } catch (error) {
+    console.error('[FORM] Erro no cadastro:', error)
+    UIHelpers.showToast(error.message || 'Erro ao criar conta', 'error')
+    UIHelpers.hideLoading(submitButton)
+  }
+}
+
+// ============================================
+// HELPERS
+// ============================================
+
+function collectDocuments(form) {
+  const documents = {}
+  const fileInputs = form.querySelectorAll('input[type="file"]')
+  
+  fileInputs.forEach(input => {
+    if (input.files && input.files[0]) {
+      documents[input.name] = input.files[0]
+      console.log(`[FORM] Documento coletado: ${input.name} (${input.files[0].name})`)
+    }
+  })
+  
+  return documents
+}
+
+// ============================================
+// INICIALIZAÇÃO
+// ============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('[FORM] Inicializando form handlers...')
+  
+  // Attach handler ao formulário de missionário
+  const missionaryForm = document.getElementById('missionary-form')
+  if (missionaryForm) {
+    missionaryForm.addEventListener('submit', handleMissionarySubmit)
+    console.log('✅ Missionary form handler attached')
+  }
+  
+  // Attach handler ao formulário de financiador
+  const financierForm = document.getElementById('financier-form')
+  if (financierForm) {
+    financierForm.addEventListener('submit', handleFinancierSubmit)
+    console.log('✅ Financier form handler attached')
+  }
+  
+  console.log('✅ Form handlers initialized')
+})
+```
+
+***
+
+### ARQUIVO 5: `supabase/functions/create-user-onboarding/index.ts`
+
+```typescript
+import { serve } from 'https://deno.land/std@0.168.0/http/server.ts'
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+import { z } from 'https://deno.land/x/zod@v3.22.4/mod.ts'
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+}
+
+// ============================================
+// SCHEMAS DE VALIDAÇÃO
+// ============================================
+
+const missionarySchema = z.object({
+  email: z.string().email('Email inválido'),
+  password: z.string().min(6, 'Senha deve ter no mínimo 6 caracteres'),
+  role: z.literal('MISSIONARY'),
+  name: z.string().min(3, 'Nome deve ter no mínimo 3 caracteres'),
+  whatsapp: z.string().min(10, 'WhatsApp inválido'),
+  cpf: z.string().regex(/^\d{11}$/, 'CPF deve conter 11 dígitos'),
+  birthDate: z.string(), // ISO date
+  region: z.string().min(2, 'Região obrigatória'),
+  address: z.object({
+    street: z.string(),
+    number: z.string(),
+    complement: z.string().optional(),
+    neighborhood: z.string(),
+    city: z.string(),
+    state: z.string(),
+    zipCode: z.string()
+  }),
+  church: z.string().min(3, 'Nome da igreja obrigatório'),
+  pastor: z.string().min(3, 'Nome do pastor obrigatório'),
+  pastorPhone: z.string().min(10, 'Telefone do pastor inválido'),
+  membershipYears: z.number().min(0).max(100),
+  specialization: z.string().optional(),
+  project: z.string().optional()
+})
+
+const financierSchema = z.object({
+  email: z.string().email('Email inválido'),
+  password: z.string().min(6, 'Senha deve ter no mínimo 6 caracteres'),
+  role: z.literal('FINANCIER'),
+  name: z.string().min(3, 'Nome deve ter no mínimo 3 caracteres'),
+  phone: z.string().optional()
+})
+
+// ============================================
+// CONSTANTS
+// ============================================
+
+const DEFAULT_ORG_ID = '00000000-0000-0000-0000-000000000001'
+const DEFAULT_CLUSTER_ID = 'a6d47598-4420-44c6-9f52-09cb52ffe669'
+
+// ============================================
+// MAIN HANDLER
+// ============================================
+
+serve(async (req) => {
+  // Handle CORS preflight
+  if (req.method === 'OPTIONS') {
+    return new Response('ok', { headers: corsHeaders })
+  }
+
+  try {
+    // Initialize Supabase Admin Client
+    const supabaseUrl = Deno.env.get('SUPABASE_URL')!
+    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
+    
+    if (!supabaseUrl || !supabaseKey) {
+      throw new Error('Supabase environment variables not configured')
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseKey)
+
+    // Parse request body
+    const body = await req.json()
+    const role = body.role
+
+    console.log(`[CREATE_USER] Received request for role: ${role}`)
+
+    // Validate schema based on role
+    const schema = role === 'MISSIONARY' ? missionarySchema : financierSchema
+    const validation = schema.safeParse(body)
+
+    if (!validation.success) {
+      console.error('[VALIDATION] Failed:', validation.error.flatten())
+      return new Response(
+        JSON.stringify({ 
+          error: 'Dados inválidos',
+          details: validation.error.flatten().fieldErrors
+        }),
+        { 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' }, 
+          status: 400 
+        }
+      )
+    }
+
+    const input = validation.data
+    let userId: string | null = null
+
+    try {
+      // STEP 1: Create auth user
+      console.log(`[CREATE_USER] Creating auth user for ${input.email}`)
+      
+      const { data: authData, error: authError } = await supabase.auth.admin.createUser({
+        email: input.email,
+        password: input.password,
+        email_confirm: true,
+        user_metadata: {
+          name: input.name,
+          role: input.role,
+          created_at: new Date().toISOString()
+        }
+      })
+
+      if (authError || !authData.user) {
+        console.error('[CREATE_USER] Auth error:', authError)
+        throw new Error(authError?.message || 'Failed to create auth user')
+      }
+
+      userId = authData.user.id
+      console.log(`[CREATE_USER] ✅ Auth user created: ${userId}`)
+
+      // STEP 2: Create profile
+      console.log(`[CREATE_PROFILE] Creating profile for ${userId}`)
+      
+      const profileData: any = {
+        id: userId,
+        email: input.email,
+        name: input.name,
+        role: input.role,
+        status: 'PENDING_APPROVAL',
+        active: true,
+        organization_id: DEFAULT_ORG_ID,
+        cluster_id: DEFAULT_CLUSTER_ID,
+        preferred_language: 'pt-BR',
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      }
+
+      if (role === 'MISSIONARY') {
+        const missionary = input as z.infer<typeof missionarySchema>
+        profileData.whatsapp_number = missionary.whatsapp
+        profileData.phone_number = missionary.whatsapp
+        profileData.document = parseInt(missionary.cpf)
+        profileData.birth_date = missionary.birthDate
+      }
+
+      const { error: profileError } = await supabase
+        .from('profiles')
+        .insert(profileData)
+
+      if (profileError) {
+        console.error('[CREATE_PROFILE] Error:', profileError)
+        throw profileError
+      }
+
+      console.log(`[CREATE_PROFILE] ✅ Profile created successfully`)
+
+      // STEP 3: Create role-specific record
+      if (role === 'MISSIONARY') {
+        console.log(`[CREATE_MISSIONARY] Creating missionary record`)
+        
+        const missionary = input as z.infer<typeof missionarySchema>
+        const fullAddress = `${missionary.address.street}, ${missionary.address.number}${missionary.address.complement ? ' - ' + missionary.address.complement : ''} - ${missionary.address.neighborhood}, ${missionary.address.city}/${missionary.address.state} - CEP: ${missionary.address.zipCode}`
+
+        const { error: missionaryError } = await supabase
+          .from('missionaries')
+          .insert({
+            user_id: userId,
+            organization_id: DEFAULT_ORG_ID,
+            region: missionary.region,
+            location: fullAddress,
+            church_name: missionary.church,
+            pastor_name: missionary.pastor,
+            pastor_phone: missionary.pastorPhone,
+            membership_years: missionary.membershipYears,
+            specialization: missionary.specialization || null,
+            missionary_project_name: missionary.project || null,
+            documents_submitted: { status: 'PENDING_UPLOAD', uploaded_at: null },
+            active: true,
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString()
+          })
+
+        if (missionaryError) {
+          console.error('[CREATE_MISSIONARY] Error:', missionaryError)
+          throw missionaryError
+        }
+
+        console.log(`[CREATE_MISSIONARY] ✅ Missionary record created`)
+      } else {
+        console.log(`[CREATE_FINANCIER] Creating financier record`)
+        
+        const { error: financierError } = await supabase
+          .from('financiers')
+          .insert({
+            user_id: userId,
+            subscription_plan: 0,
+            current_balance_cents: 0,
+            spt_balance: 0,
+            spt_allocated: 0,
+            organization_id: DEFAULT_ORG_ID,
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString()
+          })
+
+        if (financierError) {
+          console.error('[CREATE_FINANCIER] Error:', financierError)
+          throw financierError
+        }
+
+        console.log(`[CREATE_FINANCIER] ✅ Financier record created`)
+      }
+
+      // SUCCESS RESPONSE
+      console.log(`[CREATE_USER] ✅ User creation completed for ${input.email}`)
+      
+      return new Response(
+        JSON.stringify({ 
+          success: true, 
+          userId: userId,
+          role: role,
+          email: input.email,
+          message: 'Usuário criado com sucesso!'
+        }),
+        { 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' }, 
+          status: 201 
+        }
+      )
+
+    } catch (dbError: any) {
+      // ROLLBACK: Delete auth user if database operations failed
+      if (userId) {
+        console.error(`[ROLLBACK] Database error occurred, deleting auth user ${userId}`)
+        try {
+          await supabase.auth.admin.deleteUser(userId)
+          console.log(`[ROLLBACK] ✅ Auth user ${userId} deleted successfully`)
+        } catch (deleteError) {
+          console.error(`[ROLLBACK] ❌ Failed to delete user ${userId}:`, deleteError)
+        }
+      }
+      
+      throw dbError
+    }
+
+  } catch (error: any) {
+    console.error('[ERROR]', error)
+    
+    return new Response(
+      JSON.stringify({ 
+        error: error.message || 'Erro interno do servidor',
+        details: error.details || error.hint || null
+      }),
+      { 
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }, 
+        status: 500 
+      }
+    )
+  }
+})
+```
+
+***
+
+### ARQUIVO 6: `supabase/functions/create-user-onboarding/deno.json`
+
+```json
+{
+  "imports": {
+    "supabase": "https://esm.sh/@supabase/supabase-js@2",
+    "zod": "https://deno.land/x/zod@v3.22.4/mod.ts"
+  },
+  "tasks": {
+    "dev": "deno run --allow-net --allow-env --allow-read --watch index.ts"
+  }
+}
+```
+
+***
+
+### ARQUIVO 7: Atualizar `onboarding-missionary.html`
+
+Adicione **ANTES DO FECHAMENTO DO `</body>`**:
+
+```html
+<!-- Supabase JS via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Scripts da aplicação (ordem importante!) -->
+<script src="/js/config.js"></script>
+<script src="/js/supabaseClient.js"></script>
+<script src="/js/onboardingService.js"></script>
+<script src="/js/formHandlers.js"></script>
+
+<!-- Adicionar animações CSS (opcional) -->
+<style>
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+.animate-slide-out {
+  animation: slide-out 0.3s ease-in;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
+}
+</style>
+```
+
+E adicione `id` ao formulário:
+
+```html
+<form id="missionary-form" class="space-y-6">
+  <!-- Seu formulário existente -->
+</form>
+```
+
+***
+
+### ARQUIVO 8: Atualizar `onboarding-financier.html`
+
+Mesma lógica do missionary:
+
+```html
+<!-- Supabase JS via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Scripts da aplicação -->
+<script src="/js/config.js"></script>
+<script src="/js/supabaseClient.js"></script>
+<script src="/js/onboardingService.js"></script>
+<script src="/js/formHandlers.js"></script>
+
+<!-- Mesmas animações CSS -->
+<style>
+/* ... mesmo CSS do missionary ... */
+</style>
+```
+
+```html
+<form id="financier-form" class="space-y-6">
+  <!-- Seu formulário existente -->
+</form>
+```
+
+***
+
+## 5. DEPLOY E TESTES
+
+### PASSO 1: Deploy da Edge Function
+
+```bash
+# Dentro da pasta 9forlives-page/
+
+# Deploy
+supabase functions deploy create-user-onboarding --no-verify-jwt
+
+# Verificar se foi deployado
+supabase functions list
+```
+
+**Saída esperada:**
+```
+┌─────────────────────────────┬────────────┬─────────────────┐
+│         Function            │  Status    │   Updated At    │
+├─────────────────────────────┼────────────┼─────────────────┤
+│ create-user-onboarding      │   ACTIVE   │  2025-12-09...  │
+└─────────────────────────────┴────────────┴─────────────────┘
+```
+
+***
+
+### PASSO 2: Testar a Edge Function (cURL)
+
+```bash
+# Testar criação de financiador
+curl -X POST \
+  'https://cnhwgplsmstnjqsltekh.supabase.co/functions/v1/create-user-onboarding' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNuaHdncGxzbXN0bmpxc2x0ZWtoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk0MTczODgsImV4cCI6MjA3NDk5MzM4OH0.nvSFZGoBQOajNC0HdcWj7pABan0eG9wtnEPtMU2jIJU' \
+  -d '{
+    "role": "FINANCIER",
+    "email": "teste@example.com",
+    "password": "senha123",
+    "name": "Teste Financiador"
+  }'
+```
+
+**Resposta esperada (sucesso):**
+```json
+{
+  "success": true,
+  "userId": "uuid-aqui",
+  "role": "FINANCIER",
+  "message": "Usuário criado com sucesso!"
+}
+```
+
+***
+
+### PASSO 3: Commit e Push para o Netlify
+
+```bash
+# Add all files
+git add .
+
+# Commit
+git commit -m "feat: integração Supabase onboarding completa"
+
+# Push
+git push origin main
+```
+
+Netlify fará deploy automático!
+
+***
+
+### PASSO 4: Testar no Navegador
+
+1. Acesse: `https://seu-site.netlify.app/onboarding-financier.html`
+2. Abra o **DevTools** (F12) → Console
+3. Preencha o formulário e clique em "Cadastrar"
+4. Observe os logs no console:
+   ```
+   ✅ Supabase Config loaded
+   ✅ Supabase Client initialized
+   ✅ Onboarding Service loaded
+   ✅ Form handlers initialized
+   [FORM] Dados coletados: {...}
+   [FINANCIER] Iniciando cadastro: teste@example.com
+   [FINANCIER] ✅ Cadastro concluído!
+   ```
+
+***
+
+## 6. TROUBLESHOOTING
+
+### ❌ Erro: "Supabase environment variables not configured"
+
+**Solução:**
+```bash
+# Verificar se as variáveis estão no Supabase
+supabase secrets list
+
+# Se não estiverem, adicionar:
+supabase secrets set SUPABASE_URL=https://cnhwgplsmstnjqsltekh.supabase.co
+supabase secrets set SUPABASE_SERVICE_ROLE_KEY=sua-service-role-key
+
+# Redeploy
+supabase functions deploy create-user-onboarding --no-verify-jwt
+```
+
+***
+
+### ❌ Erro: "CORS policy: No 'Access-Control-Allow-Origin' header"
+
+**Solução:**
+Certifique-se de que o `corsHeaders` está correto na Edge Function (linha 5-8).
+
+***
+
+### ❌ Erro: "Failed to create auth user"
+
+**Possíveis causas:**
+1. Email já existe
+2. Senha muito fraca
+3. SERVICE_ROLE_KEY incorreta
+
+**Solução:**
+```bash
+# Verificar logs da função
+supabase functions logs create-user-onboarding --tail
+
+# Verificar no dashboard se o usuário já existe
+# https://supabase.com/dashboard/project/cnhwgplsmstnjqsltekh/auth/users
+```
+
+***
+
+### ❌ Erro: "duplicate key value violates unique constraint"
+
+**Causa:** Email ou CPF já cadastrado
+
+**Solução:**
+- Verificar no banco se o registro já existe
+- Implementar validação de email único no frontend
+
+***
+
+### ❌ Formulário não envia (nada acontece)
+
+**Checklist:**
+1. ✅ Scripts carregados na ordem correta?
+2. ✅ `id="missionary-form"` ou `id="financier-form"` adicionado?
+3. ✅ Console mostra erros?
+4. ✅ Variáveis de ambiente em `config.js` corretas?
+
+***
+
+## ✅ CHECKLIST FINAL DE VERIFICAÇÃO
+
+- [ ] Supabase CLI instalado e logado
+- [ ] Projeto linkado (`supabase link`)
+- [ ] Edge Function deployada (`supabase functions deploy`)
+- [ ] SERVICE_ROLE_KEY obtida e configurada
+- [ ] Pasta `js/` criada com 4 arquivos
+- [ ] `config.js` com credenciais corretas
+- [ ] `onboarding-missionary.html` atualizado (scripts + id)
+- [ ] `onboarding-financier.html` atualizado (scripts + id)
+- [ ] `.env.local` criado e `.gitignore` atualizado
+- [ ] Testado localmente (função cURL)
+- [ ] Commit e push para Netlify
+- [ ] Testado no navegador (production)
+- [ ] Logs sem erros no console
+
+***
+
+## 📞 SUPORTE
+
+Se encontrar problemas:
+
+1. **Verificar logs da Edge Function:**
+   ```bash
+   supabase functions logs create-user-onboarding --tail
+   ```
+
+2. **Verificar console do navegador:** DevTools → Console
+
+3. **Verificar banco de dados:**
+   - Acesse: https://supabase.com/dashboard/project/cnhwgplsmstnjqsltekh/editor
+   - Verifique tabelas: `profiles`, `missionaries`, `financiers`
+
+4. **Testar função isoladamente:**
+   ```bash
+   supabase functions serve create-user-onboarding
+   # Acesse: http://localhost:54321/functions/v1/create-user-onboarding
+   ```
+
+***
+
+**🎉 INTEGRAÇÃO COMPLETA!**
+
+Agora você tem um sistema completo de onboarding com:
+- ✅ Validação robusta de dados (Zod)
+- ✅ Transacionalidade (rollback automático)
+- ✅ Segurança (service_role isolado)
+- ✅ UX moderna (loading, toasts, modals)
+- ✅ Deploy automatizado (Netlify)

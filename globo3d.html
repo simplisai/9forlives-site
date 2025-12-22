@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Globo 3D Puro</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        background: transparent;
+        overflow: hidden;
+      }
+      
+      #cobe {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="cobe"></canvas>
+
+    <script type="module">
+      import createGlobe from 'https://cdn.skypack.dev/cobe'
+
+      // Variáveis de Estado
+      let phi = 0
+      let canvas = document.getElementById("cobe")
+      let globe = null
+
+      // Localizações com marcadores menores e mais sutis
+      const locations = [
+        // BRASIL - Principais Cidades
+        { location: [-23.5505, -46.6333], size: 0.04, name: "São Paulo" },
+        { location: [-22.9068, -43.1729], size: 0.04, name: "Rio de Janeiro" },
+        { location: [-15.7942, -47.8822], size: 0.04, name: "Brasília" },
+        { location: [-19.9167, -43.9345], size: 0.03, name: "Belo Horizonte" },
+        { location: [-25.4284, -49.2733], size: 0.03, name: "Curitiba" },
+        { location: [-30.0346, -51.2177], size: 0.03, name: "Porto Alegre" },
+        { location: [-8.0476, -34.8770], size: 0.03, name: "Recife" },
+        { location: [-12.9714, -38.5014], size: 0.03, name: "Salvador" },
+        { location: [-3.7319, -38.5267], size: 0.03, name: "Fortaleza" },
+        { location: [-20.3155, -40.3128], size: 0.03, name: "Vitória" },
+        { location: [-27.5954, -48.5480], size: 0.03, name: "Florianópolis" },
+        { location: [-16.6869, -49.2648], size: 0.03, name: "Goiânia" },
+
+        // AMÉRICA DO NORTE
+        { location: [40.7128, -74.0060], size: 0.04, name: "Nova York" },
+        { location: [34.0522, -118.2437], size: 0.04, name: "Los Angeles" },
+        { location: [41.8781, -87.6298], size: 0.03, name: "Chicago" },
+        { location: [43.6532, -79.3832], size: 0.03, name: "Toronto" },
+        { location: [19.4326, -99.1332], size: 0.03, name: "Cidade do México" },
+
+        // EUROPA
+        { location: [51.5074, -0.1278], size: 0.04, name: "Londres" },
+        { location: [48.8566, 2.3522], size: 0.04, name: "Paris" },
+        { location: [52.5200, 13.4050], size: 0.03, name: "Berlim" },
+        { location: [41.9028, 12.4964], size: 0.03, name: "Roma" },
+        { location: [40.4168, -3.7038], size: 0.03, name: "Madrid" },
+        { location: [38.7223, -9.1393], size: 0.03, name: "Lisboa" },
+
+        // ÁSIA
+        { location: [35.6762, 139.6503], size: 0.04, name: "Tóquio" },
+        { location: [39.9042, 116.4074], size: 0.04, name: "Pequim" },
+        { location: [28.6139, 77.2090], size: 0.04, name: "Nova Delhi" },
+        { location: [1.3521, 103.8198], size: 0.03, name: "Singapura" },
+        { location: [37.5665, 126.9780], size: 0.03, name: "Seul" },
+        { location: [22.3193, 114.1694], size: 0.03, name: "Hong Kong" },
+
+        // ÁFRICA
+        { location: [-26.2041, 28.0473], size: 0.03, name: "Joanesburgo" },
+        { location: [-33.9249, 18.4241], size: 0.03, name: "Cidade do Cabo" },
+        { location: [30.0444, 31.2357], size: 0.03, name: "Cairo" },
+        { location: [-1.2921, 36.8219], size: 0.03, name: "Nairóbi" },
+
+        // OCEANIA
+        { location: [-33.8688, 151.2093], size: 0.03, name: "Sydney" },
+        { location: [-37.8136, 144.9631], size: 0.03, name: "Melbourne" },
+
+        // AMÉRICA DO SUL (outros países)
+        { location: [-34.6037, -58.3816], size: 0.03, name: "Buenos Aires" },
+        { location: [-33.4489, -70.6693], size: 0.03, name: "Santiago" },
+        { location: [4.7110, -74.0721], size: 0.03, name: "Bogotá" },
+        { location: [-12.0464, -77.0428], size: 0.03, name: "Lima" }
+      ]
+
+      // Configuração do Globo Minimalista
+      function initGlobe() {
+        const width = window.innerWidth
+        const height = window.innerHeight
+
+        // Iniciar na África - exatamente como na aplicação original
+        // África Central (longitude ~20°) para que ao girar chegue no Brasil
+        const africaLongitude = 20  // África como ponto inicial
+        const initialPhi = -(africaLongitude * Math.PI) / 180
+        phi = initialPhi
+
+        globe = createGlobe(canvas, {
+          devicePixelRatio: 2,
+          width: width,
+          height: height,
+          phi: initialPhi,
+          theta: -0.3,                // EXATO da aplicação original
+          dark: 1,                    // EXATO da aplicação original
+          diffuse: 1.2,               // EXATO da aplicação original
+          mapSamples: 16000,          // EXATO da aplicação original
+          mapBrightness: 4.2,         // 20% mais claro (3.5 * 1.2 = 4.2)
+          baseColor: [0.12, 0.12, 0.12], // 20% mais claro (0.1 * 1.2 = 0.12)
+          markerColor: [0.1, 0.9, 0.4], // EXATO da aplicação original
+          glowColor: [0.1, 0.3, 0.2],   // EXATO da aplicação original
+          markers: locations,
+          onRender: (state) => {
+            state.phi = phi
+            phi += 0.003              // EXATO da aplicação original
+          },
+        })
+      }
+
+      // Inicializar
+      initGlobe()
+
+      // Responsividade
+      let resizeTimeout
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout)
+        resizeTimeout = setTimeout(() => {
+          if (globe) {
+            globe.destroy()
+          }
+          initGlobe()
+        }, 250)
+      })
+
+      // API simples para controle externo
+      window.globePuro = {
+        addLocation: function(lat, lon, name, size = 0.03) {
+          locations.push({
+            location: [lat, lon],
+            size: size,
+            name: name
+          })
+          if (globe) {
+            globe.markers = locations
+          }
+        },
+        
+        setSpeed: function(speed) {
+          // Atualizar velocidade na próxima renderização
+          const currentOnRender = globe.onRender
+          globe.onRender = (state) => {
+            state.phi = phi
+            phi += speed
+          }
+        },
+        
+        pause: function() {
+          globe.onRender = (state) => {
+            state.phi = phi
+          }
+        },
+        
+        resume: function() {
+          globe.onRender = (state) => {
+            state.phi = phi
+            phi += 0.003
+          }
+        },
+        
+        reset: function() {
+          const africaLongitude = 20  // Mesma longitude usada na inicialização
+          phi = -(africaLongitude * Math.PI) / 180
+        }
+      }
+    </script>
+  </body>
+</html>

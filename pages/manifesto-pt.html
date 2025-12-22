@@ -1,0 +1,3809 @@
+<html lang="pt-BR"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>O Quinto Ato — Manifesto Histórico do 9forlives</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <style>
+      /* Classes de animação para o manifesto */
+      .reveal-element {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(4px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out, filter 0.8s ease-out;
+        will-change: opacity, transform, filter;
+      }
+      
+      .reveal-visible {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        filter: blur(0) !important;
+      }
+
+      /* Garantir que elementos não fiquem invisíveis se o JS falhar ou demorar */
+      @media (prefers-reduced-motion: reduce) {
+        .reveal-element {
+          opacity: 1;
+          transform: none;
+          filter: none;
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-zinc-950 text-zinc-100 antialiased" style="font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full blur-3xl" style="background: rgba(124,207,0,0.08);"></div>
+      <div class="absolute top-1/3 -right-24 h-80 w-80 rounded-full blur-3xl" style="background: rgba(154,230,0,0.06);"></div>
+      <div class="absolute bottom-1/4 left-1/4 h-64 w-64 rounded-full blur-3xl" style="background: rgba(187,244,81,0.05);"></div>
+    </div>
+
+    <div class="fixed top-0 left-0 right-0 h-1 z-50" style="background: rgba(255,255,255,0.05);">
+      <div id="progressBar" class="h-full transition-all duration-150" style="width: 0%; background: linear-gradient(90deg, #7ccf00, #bbf451);"></div>
+    </div>
+
+    <header class="fixed top-0 left-0 right-0 z-40 transition-all duration-300" id="header">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+        <div class="flex items-center justify-between rounded-2xl border px-4 sm:px-6 py-3" style="border-color: rgba(255,255,255,0.1); background: rgba(0,0,0,0.6); backdrop-filter: blur(20px);">
+          <a href="#" class="flex items-center gap-2">
+            <img src="/9forlives (1600 x 1600 px)-2.png" alt="9forlives" class="h-8 w-auto">
+          </a>
+          <div class="flex items-center gap-4">
+            <span class="hidden sm:block text-xs uppercase tracking-widest" style="color: rgba(255,255,255,0.5);">
+              Manifesto
+            </span>
+            <button id="tocToggle" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-all" style="background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);">
+              <iconify-icon icon="lucide:list" width="18" height="18" style="stroke-width: 1.5;"></iconify-icon>
+              <span class="hidden sm:inline">Índice</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside id="tocSidebar" class="fixed left-0 top-0 bottom-0 w-80 z-50 transform -translate-x-full transition-transform duration-300" style="background: rgba(9,9,11,0.98); backdrop-filter: blur(20px); border-right: 1px solid rgba(255,255,255,0.1);">
+      <div class="h-full overflow-y-auto p-6 pt-20">
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="text-sm font-medium uppercase tracking-widest" style="color: #7ccf00;">
+            Índice
+          </h3>
+          <button id="tocClose" class="p-2 rounded-lg transition-all" style="background: rgba(255,255,255,0.05);">
+            <iconify-icon icon="lucide:x" width="18" height="18" style="stroke-width: 1.5;"></iconify-icon>
+          </button>
+        </div>
+        <nav class="space-y-2">
+          <a href="#preludio" class="toc-link block py-2 px-3 rounded-lg text-sm transition-all" style="color: rgba(255,255,255,0.6);">
+            Prelúdio
+          </a>
+          <a href="#estrutura" class="toc-link block py-2 px-3 rounded-lg text-sm transition-all" style="color: rgba(255,255,255,0.6);">
+            A Estrutura da História
+          </a>
+          <a href="#ato1" class="toc-link block py-2 px-3 rounded-lg text-sm transition-all" style="color: rgba(255,255,255,0.6);">
+            Ato I — A Palavra Foi Fixada
+          </a>
+          <a href="#ato2" class="toc-link block py-2 px-3 rounded-lg text-sm transition-all" style="color: rgba(255,255,255,0.6);">
+            Ato II — A Palavra Se Tornou Livro
+          </a>
+          <a href="#ato3" class="toc-link block py-2 px-3 rounded-lg text-sm transition-all" style="color: rgba(255,255,255,0.6);">
+            Ato III — A Palavra Foi Traduzida
+          </a>
+          <a href="#ato4" class="toc-link block py-2 px-3 rounded-lg text-sm transition-all" style="color: rgba(255,255,255,0.6);">
+            Ato IV — A Palavra Ultrapassou a Leitura
+          </a>
+          <a href="#intervalo" class="toc-link block py-2 px-3 rounded-lg text-sm transition-all" style="color: rgba(255,255,255,0.6);">
+            O Intervalo
+          </a>
+          <a href="#ato5" class="toc-link block py-2 px-3 rounded-lg text-sm transition-all" style="color: rgba(255,255,255,0.6);">
+            Ato V — A Palavra Será Garantida
+          </a>
+          <a href="#papel" class="toc-link block py-2 px-3 rounded-lg text-sm transition-all" style="color: rgba(255,255,255,0.6);">
+            O Papel do 9forlives
+          </a>
+          <a href="#convocacao" class="toc-link block py-2 px-3 rounded-lg text-sm transition-all" style="color: rgba(255,255,255,0.6);">
+            A Convocação
+          </a>
+          <a href="#epilogo" class="toc-link block py-2 px-3 rounded-lg text-sm transition-all" style="color: rgba(255,255,255,0.6);">
+            Epílogo
+          </a>
+        </nav>
+      </div>
+    </aside>
+    <div id="tocOverlay" class="fixed inset-0 z-40 hidden" style="background: rgba(0,0,0,0.5);"></div>
+
+    <nav class="hidden lg:flex fixed right-8 top-1/2 -translate-y-1/2 z-30 flex-col gap-3">
+      <div class="relative">
+        <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px" style="background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);"></div>
+        <div class="flex flex-col gap-4 py-4">
+          <a href="#preludio" class="chapter-dot group relative flex items-center justify-center" data-chapter="preludio">
+            <div class="w-2.5 h-2.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.2);"></div>
+            <span class="absolute right-full mr-4 px-3 py-1.5 rounded-lg text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style="background: rgba(24,24,27,0.95); border: 1px solid rgba(255,255,255,0.1);">
+              Prelúdio
+            </span>
+          </a>
+          <a href="#ato1" class="chapter-dot group relative flex items-center justify-center" data-chapter="ato1">
+            <div class="w-2.5 h-2.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.2);"></div>
+            <span class="absolute right-full mr-4 px-3 py-1.5 rounded-lg text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style="background: rgba(24,24,27,0.95); border: 1px solid rgba(255,255,255,0.1);">
+              Ato I
+            </span>
+          </a>
+          <a href="#ato2" class="chapter-dot group relative flex items-center justify-center" data-chapter="ato2">
+            <div class="w-2.5 h-2.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.2);"></div>
+            <span class="absolute right-full mr-4 px-3 py-1.5 rounded-lg text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style="background: rgba(24,24,27,0.95); border: 1px solid rgba(255,255,255,0.1);">
+              Ato II
+            </span>
+          </a>
+          <a href="#ato3" class="chapter-dot group relative flex items-center justify-center" data-chapter="ato3">
+            <div class="w-2.5 h-2.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.2);"></div>
+            <span class="absolute right-full mr-4 px-3 py-1.5 rounded-lg text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style="background: rgba(24,24,27,0.95); border: 1px solid rgba(255,255,255,0.1);">
+              Ato III
+            </span>
+          </a>
+          <a href="#ato4" class="chapter-dot group relative flex items-center justify-center" data-chapter="ato4">
+            <div class="w-2.5 h-2.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.2);"></div>
+            <span class="absolute right-full mr-4 px-3 py-1.5 rounded-lg text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style="background: rgba(24,24,27,0.95); border: 1px solid rgba(255,255,255,0.1);">
+              Ato IV
+            </span>
+          </a>
+          <a href="#intervalo" class="chapter-dot group relative flex items-center justify-center" data-chapter="intervalo">
+            <div class="w-2.5 h-2.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.2);"></div>
+            <span class="absolute right-full mr-4 px-3 py-1.5 rounded-lg text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style="background: rgba(24,24,27,0.95); border: 1px solid rgba(255,255,255,0.1);">
+              Intervalo
+            </span>
+          </a>
+          <a href="#ato5" class="chapter-dot group relative flex items-center justify-center" data-chapter="ato5">
+            <div class="w-2.5 h-2.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.2);"></div>
+            <span class="absolute right-full mr-4 px-3 py-1.5 rounded-lg text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style="background: rgba(24,24,27,0.95); border: 1px solid rgba(255,255,255,0.1);">
+              Ato V
+            </span>
+          </a>
+          <a href="#papel" class="chapter-dot group relative flex items-center justify-center" data-chapter="papel">
+            <div class="w-2.5 h-2.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.2);"></div>
+            <span class="absolute right-full mr-4 px-3 py-1.5 rounded-lg text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style="background: rgba(24,24,27,0.95); border: 1px solid rgba(255,255,255,0.1);">
+              9forlives
+            </span>
+          </a>
+          <a href="#convocacao" class="chapter-dot group relative flex items-center justify-center" data-chapter="convocacao">
+            <div class="w-2.5 h-2.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.2);"></div>
+            <span class="absolute right-full mr-4 px-3 py-1.5 rounded-lg text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style="background: rgba(24,24,27,0.95); border: 1px solid rgba(255,255,255,0.1);">
+              Convocação
+            </span>
+          </a>
+          <a href="#epilogo" class="chapter-dot group relative flex items-center justify-center" data-chapter="epilogo">
+            <div class="w-2.5 h-2.5 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.2);"></div>
+            <span class="absolute right-full mr-4 px-3 py-1.5 rounded-lg text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style="background: rgba(24,24,27,0.95); border: 1px solid rgba(255,255,255,0.1);">
+              Epílogo
+            </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-28 pb-32">
+      <section class="max-w-4xl mx-auto px-4 sm:px-6 mb-24 text-center">
+        <div class="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-8" style="background: rgba(124,207,0,0.1); border: 1px solid rgba(124,207,0,0.2);">
+          <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background: #7ccf00;"></span>
+          <span class="text-xs uppercase tracking-widest font-medium" style="color: #7ccf00;">
+            Manifesto Histórico
+          </span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mb-6" style="font-family: 'Space Grotesk', sans-serif; background: linear-gradient(to bottom, rgba(255,255,255,0.98), rgba(161,161,170,0.7)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          O Quinto Ato
+        </h1>
+        <p class="text-lg sm:text-xl md:text-2xl font-light mb-4" style="color: rgba(255,255,255,0.7);">
+          A História do Acesso à Palavra
+        </p>
+        <p class="text-base sm:text-lg" style="color: rgba(255,255,255,0.5);">
+          e o Chamado da Nossa Geração
+        </p>
+
+        <!-- Globo 3D -->
+        <canvas id="cobe" class="mt-8 mx-auto block max-w-4xl w-full h-[260px] sm:h-[360px] md:h-[480px] lg:h-[560px] xl:h-[640px] bg-transparent" style="opacity: 0.8;"></canvas>
+
+        <script type="module">
+          import createGlobe from 'https://esm.sh/cobe@0.6.2'
+
+          let phi = 0
+          const canvas = document.getElementById('cobe')
+          let globe = null
+
+          const locations = [
+            { location: [-23.5505, -46.6333], size: 0.04, name: 'São Paulo' },
+            { location: [-22.9068, -43.1729], size: 0.04, name: 'Rio de Janeiro' },
+            { location: [-15.7942, -47.8822], size: 0.04, name: 'Brasília' },
+            { location: [-19.9167, -43.9345], size: 0.03, name: 'Belo Horizonte' },
+            { location: [-25.4284, -49.2733], size: 0.03, name: 'Curitiba' },
+            { location: [-30.0346, -51.2177], size: 0.03, name: 'Porto Alegre' },
+            { location: [-8.0476, -34.877], size: 0.03, name: 'Recife' },
+            { location: [-12.9714, -38.5014], size: 0.03, name: 'Salvador' },
+            { location: [-3.7319, -38.5267], size: 0.03, name: 'Fortaleza' },
+            { location: [-20.3155, -40.3128], size: 0.03, name: 'Vitória' },
+            { location: [-27.5954, -48.548], size: 0.03, name: 'Florianópolis' },
+            { location: [-16.6869, -49.2648], size: 0.03, name: 'Goiânia' },
+            { location: [40.7128, -74.006], size: 0.04, name: 'Nova York' },
+            { location: [34.0522, -118.2437], size: 0.04, name: 'Los Angeles' },
+            { location: [41.8781, -87.6298], size: 0.03, name: 'Chicago' },
+            { location: [43.6532, -79.3832], size: 0.03, name: 'Toronto' },
+            { location: [19.4326, -99.1332], size: 0.03, name: 'Cidade do México' },
+            { location: [51.5074, -0.1278], size: 0.04, name: 'Londres' },
+            { location: [48.8566, 2.3522], size: 0.04, name: 'Paris' },
+            { location: [52.52, 13.405], size: 0.03, name: 'Berlim' },
+            { location: [41.9028, 12.4964], size: 0.03, name: 'Roma' },
+            { location: [40.4168, -3.7038], size: 0.03, name: 'Madrid' },
+            { location: [38.7223, -9.1393], size: 0.03, name: 'Lisboa' },
+            { location: [35.6762, 139.6503], size: 0.04, name: 'Tóquio' },
+            { location: [39.9042, 116.4074], size: 0.04, name: 'Pequim' },
+            { location: [28.6139, 77.209], size: 0.04, name: 'Nova Delhi' },
+            { location: [1.3521, 103.8198], size: 0.03, name: 'Singapura' },
+            { location: [37.5665, 126.978], size: 0.03, name: 'Seul' },
+            { location: [22.3193, 114.1694], size: 0.03, name: 'Hong Kong' },
+            { location: [-26.2041, 28.0473], size: 0.03, name: 'Joanesburgo' },
+            { location: [-33.9249, 18.4241], size: 0.03, name: 'Cidade do Cabo' },
+            { location: [30.0444, 31.2357], size: 0.03, name: 'Cairo' },
+            { location: [-1.2921, 36.8219], size: 0.03, name: 'Nairóbi' },
+            { location: [-33.8688, 151.2093], size: 0.03, name: 'Sydney' },
+            { location: [-37.8136, 144.9631], size: 0.03, name: 'Melbourne' },
+            { location: [-34.6037, -58.3816], size: 0.03, name: 'Buenos Aires' },
+            { location: [-33.4489, -70.6693], size: 0.03, name: 'Santiago' },
+            { location: [4.711, -74.0721], size: 0.03, name: 'Bogotá' },
+            { location: [-12.0464, -77.0428], size: 0.03, name: 'Lima' }
+          ]
+
+          const africaLongitude = 20
+          const initialPhi = -(africaLongitude * Math.PI) / 180
+          phi = initialPhi
+
+          function updateCanvasSize() {
+            let desiredSize;
+            if (window.innerWidth < 640) {
+              desiredSize = Math.min(window.innerWidth * 0.55, 280);
+            } else if (window.innerWidth < 768) {
+              desiredSize = Math.min(window.innerWidth * 0.45, 340);
+            } else if (window.innerWidth < 1024) {
+              desiredSize = Math.min(window.innerWidth * 0.38, 380);
+            } else if (window.innerWidth < 1280) {
+              desiredSize = Math.min(window.innerWidth * 0.32, 420);
+            } else {
+              desiredSize = Math.min(window.innerWidth * 0.28, 460);
+            }
+
+            const dpr = window.devicePixelRatio || 2;
+            canvas.width = desiredSize * dpr;
+            canvas.height = desiredSize * dpr;
+            canvas.style.width = desiredSize + 'px';
+            canvas.style.height = desiredSize + 'px';
+            
+            return { width: canvas.width, height: canvas.height };
+          }
+
+          function initGlobe() {
+            const { width, height } = updateCanvasSize()
+            if (globe) globe.destroy()
+            globe = createGlobe(canvas, {
+              devicePixelRatio: window.devicePixelRatio || 2,
+              width,
+              height,
+              phi: initialPhi,
+              theta: -0.3,
+              dark: 1,
+              diffuse: 1.2,
+              mapSamples: 16000,
+              mapBrightness: 4.2,
+              baseColor: [0.12, 0.12, 0.12],
+              markerColor: [0.1, 0.9, 0.4],
+              glowColor: [0.1, 0.3, 0.2],
+              markers: locations,
+              onRender: (state) => {
+                state.phi = phi
+                phi += 0.003
+              }
+            })
+          }
+
+          initGlobe()
+
+          let resizeTimeout
+          window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout)
+            resizeTimeout = setTimeout(() => {
+              initGlobe()
+            }, 250)
+          })
+        </script>
+
+        <div class="mt-12 flex items-center justify-center gap-2" style="color: rgba(255,255,255,0.4);">
+          <iconify-icon icon="lucide:chevron-down" width="20" height="20" class="animate-bounce" style="stroke-width: 1.5;"></iconify-icon>
+        </div>
+      </section>
+
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <!-- PRELÚDIO -->
+        <section id="preludio" class="chapter mb-32 scroll-mt-24">
+          <div class="mb-12">
+            <span class="text-xs uppercase tracking-widest font-medium" style="color: #7ccf00;">
+              Prelúdio
+            </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mt-3" style="font-family: 'Space Grotesk', sans-serif;">
+              A Pergunta Que Define Tudo
+            </h2>
+          </div>
+
+          <div class="prose-content space-y-6" style="color: rgba(255,255,255,0.8);">
+            <p class="text-lg leading-relaxed">
+              Existe uma pergunta que atravessa dois milênios de cristianismo.
+            </p>
+
+            <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+              <p>Não é sobre doutrina.</p>
+              <p>Não é sobre denominação.</p>
+              <p>Não é sobre liturgia.</p>
+            </div>
+
+            <p class="text-lg leading-relaxed">
+              É mais simples. E mais devastadora:
+            </p>
+
+            <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(124,207,0,0.02)); border-left: 3px solid #7ccf00;">
+              <p class="text-xl sm:text-2xl font-light leading-relaxed" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.95);">
+                A Palavra de Deus existe.
+                <br>
+                <strong class="font-medium" style="color: #bbf451;">
+                  Mas ela chega?
+                </strong>
+              </p>
+            </blockquote>
+
+            <div class="flex items-center justify-center py-8">
+              <div class="w-16 h-px" style="background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);"></div>
+              <div class="mx-4 w-1.5 h-1.5 rounded-full" style="background: rgba(124,207,0,0.5);"></div>
+              <div class="w-16 h-px" style="background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);"></div>
+            </div>
+
+            <p class="text-lg leading-relaxed">
+              Toda a história da Igreja pode ser lida através dessa lente.
+            </p>
+
+            <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+              <p>Não como história de poder.</p>
+              <p>Não como história de instituições.</p>
+              <p>Não como história de personagens.</p>
+            </div>
+
+            <p class="text-lg leading-relaxed">
+              Mas como história de
+              <strong class="font-medium" style="color: #bbf451;">
+                acesso
+              </strong>
+              .
+            </p>
+
+            <div class="my-10 py-6 px-6 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+              <p class="text-base leading-relaxed mb-4">
+                A cada século, a mesma tensão:
+              </p>
+              <ul class="space-y-2" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>A Palavra existe.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>Mas nem todos a alcançam.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="my-10 py-6 px-6 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+              <p class="text-base leading-relaxed mb-4">
+                A cada século, a mesma pergunta:
+              </p>
+              <ul class="space-y-2" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>Quem fica de fora?</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>E o que faremos sobre isso?</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex items-center justify-center py-8">
+              <div class="w-16 h-px" style="background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);"></div>
+              <div class="mx-4 w-1.5 h-1.5 rounded-full" style="background: rgba(124,207,0,0.5);"></div>
+              <div class="w-16 h-px" style="background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);"></div>
+            </div>
+
+            <p class="text-lg leading-relaxed">
+              Este manifesto conta essa história.
+            </p>
+
+            <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+              <p>Não para glorificar o passado.</p>
+              <p>Mas para revelar o presente.</p>
+            </div>
+
+            <p class="text-lg leading-relaxed">
+              Porque estamos vivendo algo que nenhuma geração anterior viveu:
+            </p>
+
+            <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.12), rgba(124,207,0,0.04)); border: 1px solid rgba(124,207,0,0.2);">
+              <p class="text-xl sm:text-2xl font-medium leading-relaxed" style="font-family: 'Instrument Serif', serif; color: #bbf451;">
+                A possibilidade real de encerrar esse problema.
+              </p>
+            </blockquote>
+          </div>
+        </section>
+
+        <!-- A ESTRUTURA DA HISTÓRIA -->
+        <section id="estrutura" class="chapter mb-32 scroll-mt-24">
+          <div class="mb-12">
+            <span class="text-xs uppercase tracking-widest font-medium" style="color: #7ccf00;">
+              A Estrutura
+            </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mt-3" style="font-family: 'Space Grotesk', sans-serif;">
+              Os Cinco Atos do Acesso à Palavra
+            </h2>
+          </div>
+
+          <div class="prose-content space-y-6" style="color: rgba(255,255,255,0.8);">
+            <p class="text-lg leading-relaxed">
+              A história do acesso à Palavra de Deus se divide em
+              <strong class="font-medium" style="color: #bbf451;">
+                cinco grandes atos
+              </strong>
+              .
+            </p>
+
+            <div class="my-10 py-6 px-6 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+              <p class="text-base leading-relaxed mb-4">Cada ato representa:</p>
+              <ul class="space-y-3" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    Uma
+                    <strong class="font-medium text-white">barreira</strong>
+                    que parecia intransponível
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    Uma
+                    <strong class="font-medium text-white">ruptura</strong>
+                    que removeu essa barreira
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    Um
+                    <strong class="font-medium text-white">novo padrão</strong>
+                    que se tornou irreversível
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    Uma
+                    <strong class="font-medium text-white">
+                      nova responsabilidade
+                    </strong>
+                    para a geração seguinte
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <p class="text-lg leading-relaxed">
+              Os quatro primeiros atos já aconteceram.
+            </p>
+            <p class="text-lg leading-relaxed">
+              O quinto está acontecendo agora.
+            </p>
+            <p class="text-lg leading-relaxed font-medium" style="color: rgba(255,255,255,0.95);">
+              E você está lendo este manifesto no exato momento em que a
+              história se decide.
+            </p>
+
+            <div class="my-16 space-y-4">
+              <div class="flex items-center gap-4 p-5 rounded-xl transition-all" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <div class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-sm font-medium" style="background: rgba(124,207,0,0.15); color: #7ccf00;">
+                  I
+                </div>
+                <div>
+                  <p class="font-medium" style="color: rgba(255,255,255,0.95);">
+                    A Palavra Foi Fixada
+                  </p>
+                  <p class="text-sm" style="color: rgba(255,255,255,0.5);">
+                    O problema da volatilidade
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 p-5 rounded-xl transition-all" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <div class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-sm font-medium" style="background: rgba(124,207,0,0.15); color: #7ccf00;">
+                  II
+                </div>
+                <div>
+                  <p class="font-medium" style="color: rgba(255,255,255,0.95);">
+                    A Palavra Se Tornou Livro
+                  </p>
+                  <p class="text-sm" style="color: rgba(255,255,255,0.5);">
+                    O problema da escassez
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 p-5 rounded-xl transition-all" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <div class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-sm font-medium" style="background: rgba(124,207,0,0.15); color: #7ccf00;">
+                  III
+                </div>
+                <div>
+                  <p class="font-medium" style="color: rgba(255,255,255,0.95);">
+                    A Palavra Foi Traduzida
+                  </p>
+                  <p class="text-sm" style="color: rgba(255,255,255,0.5);">
+                    O problema da incompreensão
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 p-5 rounded-xl transition-all" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <div class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-sm font-medium" style="background: rgba(124,207,0,0.15); color: #7ccf00;">
+                  IV
+                </div>
+                <div>
+                  <p class="font-medium" style="color: rgba(255,255,255,0.95);">
+                    A Palavra Ultrapassou a Leitura
+                  </p>
+                  <p class="text-sm" style="color: rgba(255,255,255,0.5);">
+                    O problema da exclusão
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 p-5 rounded-xl transition-all" style="background: linear-gradient(135deg, rgba(124,207,0,0.12), rgba(124,207,0,0.04)); border: 1px solid rgba(124,207,0,0.3);">
+                <div class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-sm font-medium" style="background: rgba(124,207,0,0.3); color: #bbf451;">
+                  V
+                </div>
+                <div>
+                  <p class="font-medium" style="color: #bbf451;">
+                    A Palavra Será Garantida
+                  </p>
+                  <p class="text-sm" style="color: rgba(187,244,81,0.7);">
+                    O problema da descontinuidade
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ATO I -->
+        <section id="ato1" class="chapter mb-32 scroll-mt-24">
+          <div class="mb-16 p-8 sm:p-12 rounded-3xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(9,9,11,0.95)); border: 1px solid rgba(124,207,0,0.15);">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-5xl sm:text-6xl font-light" style="font-family: 'Space Grotesk', sans-serif; color: rgba(124,207,0,0.3);">
+                I
+              </span>
+              <div class="w-12 h-px" style="background: rgba(124,207,0,0.3);"></div>
+            </div>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mb-3" style="font-family: 'Space Grotesk', sans-serif;">
+              A Palavra Foi Fixada
+            </h2>
+            <p class="text-lg" style="color: rgba(255,255,255,0.5);">
+              O Problema da Volatilidade
+            </p>
+          </div>
+
+          <div class="prose-content space-y-6" style="color: rgba(255,255,255,0.8);">
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Mundo Antes
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Imagine um mundo onde a fé existe, mas não pode ser conferida.
+              </p>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Onde a verdade é transmitida de boca em boca.</p>
+                <p>Onde cada geração depende da memória da anterior.</p>
+                <p>Onde a mensagem pode mudar a cada vez que é contada.</p>
+              </div>
+
+              <p class="text-lg leading-relaxed">
+                Esse era o mundo antes do Primeiro Ato.
+              </p>
+
+              <div class="my-8 py-6 px-6 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <p class="text-lg" style="color: rgba(255,255,255,0.7);">
+                  A fé existia.
+                  <br>
+                  Mas era
+                  <strong class="font-medium" style="color: #bbf451;">
+                    volátil
+                  </strong>
+                  .
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Barreira
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                A barreira do Primeiro Ato não era má vontade.
+                <br>
+                Era a natureza da comunicação humana.
+              </p>
+
+              <ul class="my-6 space-y-3" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Histórias se transformam ao serem contadas</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Memórias falham</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Gerações morrem</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Detalhes se perdem</span>
+                </li>
+              </ul>
+
+              <p class="text-lg leading-relaxed">
+                A Palavra de Deus estava viva.
+                <br>
+                Mas poderia desaparecer.
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Ruptura
+              </h3>
+
+              <p class="text-lg leading-relaxed">Então algo aconteceu.</p>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Não por acidente.</p>
+                <p>Por providência.</p>
+              </div>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.12), rgba(124,207,0,0.04)); border: 1px solid rgba(124,207,0,0.2);">
+                <p class="text-xl sm:text-2xl font-medium leading-relaxed" style="font-family: 'Instrument Serif', serif; color: #bbf451;">
+                  A Palavra foi escrita.
+                </p>
+              </blockquote>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.7);">
+                <p>Moisés no Sinai.</p>
+                <p>Os profetas em Israel.</p>
+                <p>Os apóstolos no primeiro século.</p>
+              </div>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.8);">
+                <p>
+                  A revelação que era falada passou a ser
+                  <strong class="font-medium" style="color: #bbf451;">
+                    registrada
+                  </strong>
+                  .
+                </p>
+                <p>
+                  A mensagem que era lembrada passou a ser
+                  <strong class="font-medium" style="color: #bbf451;">
+                    preservada
+                  </strong>
+                  .
+                </p>
+                <p>
+                  A verdade que dependia de testemunhas passou a ser
+                  <strong class="font-medium" style="color: #bbf451;">
+                    verificável
+                  </strong>
+                  .
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Fundamento Teológico
+              </h3>
+
+              <blockquote class="relative my-8 py-6 px-6 sm:px-8 rounded-xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid rgba(255,255,255,0.2);">
+                <p class="text-base leading-relaxed italic" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.8);">
+                  "Toda a Escritura é inspirada por Deus e útil para o ensino,
+                  para a repreensão, para a correção e para a instrução na
+                  justiça."
+                </p>
+                <cite class="block mt-3 text-sm not-italic" style="color: rgba(255,255,255,0.5);">
+                  — 2 Timóteo 3:16
+                </cite>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                A Escritura não é apenas um registro histórico.
+                <br>
+                É o fundamento objetivo da fé.
+              </p>
+
+              <div class="my-8 py-6 px-6 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <p class="text-base leading-relaxed mb-4">Sem ela:</p>
+                <ul class="space-y-2" style="color: rgba(255,255,255,0.7);">
+                  <li class="flex items-start gap-3">
+                    <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                    <span>Heresias não podem ser confrontadas</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                    <span>Doutrinas não podem ser verificadas</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                    <span>A fé não pode ser transmitida com fidelidade</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Novo Padrão
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Depois do Primeiro Ato, algo se tornou irreversível:
+              </p>
+
+              <div class="my-8 p-6 rounded-xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(124,207,0,0.02)); border: 1px solid rgba(124,207,0,0.15);">
+                <p class="text-lg font-medium" style="color: rgba(255,255,255,0.95);">
+                  A fé cristã passou a ter um fundamento externo à experiência
+                  humana.
+                </p>
+              </div>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.7);">
+                <p>Não depende do que alguém sente.</p>
+                <p>Não depende do que alguém lembra.</p>
+                <p>Não depende de quem está vivo.</p>
+              </div>
+
+              <p class="text-lg leading-relaxed">
+                A Palavra foi fixada.
+                <br>
+                E nunca mais seria volátil.
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Nova Responsabilidade
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Mas com esse avanço, nasceu uma nova responsabilidade:
+              </p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid #7ccf00;">
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.9);">
+                  Se a Palavra existe em forma permanente, ela precisa ser
+                  preservada.
+                </p>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                A geração que recebeu a Escritura passou a ser responsável por
+                transmiti-la.
+              </p>
+              <p class="text-lg leading-relaxed mt-4">
+                O Primeiro Ato não encerrou o problema.
+                <br>
+                Ele
+                <strong class="font-medium" style="color: #bbf451;">
+                  transferiu
+                </strong>
+                a responsabilidade.
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Que Ficou Resolvido
+              </h3>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
+                  <thead>
+                    <tr>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tl-lg" style="background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);">
+                        Antes
+                      </th>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tr-lg" style="background: rgba(124,207,0,0.1); color: #7ccf00;">
+                        Depois
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody style="color: rgba(255,255,255,0.7);">
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        A fé podia mudar
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        A fé foi fixada
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        A verdade era subjetiva
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        A verdade é verificável
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm rounded-bl-lg" style="background: rgba(255,255,255,0.02);">
+                        Depende de quem conta
+                      </td>
+                      <td class="px-4 py-3 text-sm rounded-br-lg" style="background: rgba(124,207,0,0.03);">
+                        Depende do que está escrito
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="my-16 py-8 px-6 rounded-xl text-center" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);">
+              <p class="text-base mb-3" style="color: rgba(255,255,255,0.6);">
+                O Que Ainda Não Estava Resolvido
+              </p>
+              <p class="text-lg" style="color: rgba(255,255,255,0.8);">
+                A Palavra existia.
+                <br>
+                Mas ainda não
+                <strong class="font-medium" style="color: #bbf451;">
+                  circulava
+                </strong>
+                .
+              </p>
+              <p class="text-base mt-4" style="color: rgba(255,255,255,0.5);">
+                O problema da volatilidade foi vencido.
+                <br>
+                Mas o problema da
+                <strong>escassez</strong>
+                ainda estava por vir.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ATO II -->
+        <section id="ato2" class="chapter mb-32 scroll-mt-24">
+          <div class="mb-16 p-8 sm:p-12 rounded-3xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(9,9,11,0.95)); border: 1px solid rgba(124,207,0,0.15);">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-5xl sm:text-6xl font-light" style="font-family: 'Space Grotesk', sans-serif; color: rgba(124,207,0,0.3);">
+                II
+              </span>
+              <div class="w-12 h-px" style="background: rgba(124,207,0,0.3);"></div>
+            </div>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mb-3" style="font-family: 'Space Grotesk', sans-serif;">
+              A Palavra Se Tornou Livro
+            </h2>
+            <p class="text-lg" style="color: rgba(255,255,255,0.5);">
+              O Problema da Escassez
+            </p>
+          </div>
+
+          <div class="prose-content space-y-6" style="color: rgba(255,255,255,0.8);">
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Mundo Antes
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Imagine um mundo onde a Bíblia existe, mas quase ninguém a
+                possui.
+              </p>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Onde cada cópia leva meses para ser feita.</p>
+                <p>Onde o preço de uma Bíblia equivale a anos de trabalho.</p>
+                <p>Onde apenas monastérios, reis e bispos têm acesso.</p>
+              </div>
+
+              <p class="text-lg leading-relaxed">
+                Esse era o mundo antes do Segundo Ato.
+              </p>
+
+              <div class="my-8 py-6 px-6 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <p class="text-lg" style="color: rgba(255,255,255,0.7);">
+                  A Palavra estava preservada.
+                  <br>
+                  Mas era
+                  <strong class="font-medium" style="color: #bbf451;">
+                    rara
+                  </strong>
+                  .
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Barreira
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                A barreira do Segundo Ato não era espiritual.
+                <br>
+                Era
+                <strong class="font-medium" style="color: #bbf451;">
+                  física
+                </strong>
+                .
+              </p>
+
+              <ul class="my-6 space-y-3" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Pergaminho era caro</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Copistas eram poucos</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>O processo era lento</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>A distribuição era impossível</span>
+                </li>
+              </ul>
+
+              <p class="text-lg leading-relaxed">
+                A Bíblia existia.
+                <br>
+                Mas não estava nas mãos do povo.
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                Os Números da Escassez
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Para entender o tamanho dessa barreira:
+              </p>
+
+              <ul class="my-6 space-y-3" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    Uma Bíblia manuscrita levava
+                    <strong class="font-medium text-white">até 2 anos</strong>
+                    para ser copiada
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    O custo equivalia ao
+                    <strong class="font-medium text-white">
+                      salário de décadas
+                    </strong>
+                    de um trabalhador comum
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    Estima-se que antes de 1450 existiam
+                    <strong class="font-medium text-white">
+                      menos de 30.000 Bíblias
+                    </strong>
+                    no mundo
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    A população europeia era de
+                    <strong class="font-medium text-white">
+                      aproximadamente 60 milhões
+                    </strong>
+                  </span>
+                </li>
+              </ul>
+
+              <div class="my-8 p-6 rounded-xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(124,207,0,0.02)); border: 1px solid rgba(124,207,0,0.15);">
+                <p class="text-lg" style="color: rgba(255,255,255,0.9);">
+                  A proporção era devastadora:
+                  <br>
+                  <strong class="font-medium" style="color: #bbf451;">
+                    Uma Bíblia para cada 2.000 pessoas.
+                  </strong>
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Ruptura
+              </h3>
+
+              <p class="text-lg leading-relaxed">Então algo aconteceu.</p>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Não em um mosteiro.</p>
+                <p>Não em uma catedral.</p>
+                <p>Em uma oficina.</p>
+              </div>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.12), rgba(124,207,0,0.04)); border: 1px solid rgba(124,207,0,0.2);">
+                <p class="text-xl sm:text-2xl font-medium leading-relaxed" style="font-family: 'Instrument Serif', serif; color: #bbf451;">
+                  Johannes Gutenberg criou a prensa de tipos móveis.
+                </p>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                A primeira Bíblia impressa saiu em 1455.
+              </p>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.7);">
+                <p>O que antes levava anos, passou a levar semanas.</p>
+                <p>O que antes custava fortunas, passou a ser acessível.</p>
+                <p>O que antes era privilégio, passou a ser possibilidade.</p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Escala da Transformação
+              </h3>
+
+              <p class="text-lg leading-relaxed mb-6">
+                Os números são impressionantes:
+              </p>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
+                  <thead>
+                    <tr>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tl-lg" style="background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);">
+                        Período
+                      </th>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tr-lg" style="background: rgba(124,207,0,0.1); color: #7ccf00;">
+                        Bíblias produzidas
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody style="color: rgba(255,255,255,0.7);">
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Antes de 1450
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        ~30.000 (em 1.400 anos)
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        1450-1500
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        ~500.000 (em 50 anos)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm rounded-bl-lg" style="background: rgba(255,255,255,0.02);">
+                        1500-1600
+                      </td>
+                      <td class="px-4 py-3 text-sm rounded-br-lg" style="background: rgba(124,207,0,0.03);">
+                        Milhões
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="text-lg leading-relaxed mt-6">
+                Em menos de um século, a produção foi multiplicada por
+                <strong class="font-medium" style="color: #bbf451;">
+                  mais de 100 vezes
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Fundamento Providencial
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                A prensa não foi apenas tecnologia.
+                <br>
+                Foi
+                <strong class="font-medium" style="color: #bbf451;">
+                  instrumento providencial
+                </strong>
+                .
+              </p>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.7);">
+                <p>Sem ela, a Reforma não teria alcançado as massas.</p>
+                <p>Sem ela, "Sola Scriptura" seria apenas um slogan.</p>
+                <p>
+                  Sem ela, o cristianismo teria permanecido mediado por elites.
+                </p>
+              </div>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid #7ccf00;">
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.9);">
+                  A Reforma não criou a prensa.
+                  <br>
+                  A prensa
+                  <strong class="font-medium" style="color: #bbf451;">
+                    viabilizou
+                  </strong>
+                  a Reforma.
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Novo Padrão
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Depois do Segundo Ato, algo se tornou irreversível:
+              </p>
+
+              <div class="my-8 p-6 rounded-xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(124,207,0,0.02)); border: 1px solid rgba(124,207,0,0.15);">
+                <p class="text-lg font-medium" style="color: rgba(255,255,255,0.95);">
+                  A Bíblia deixou de ser objeto de posse exclusiva.
+                </p>
+              </div>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.7);">
+                <p>Famílias comuns podiam ter uma.</p>
+                <p>Igrejas pequenas podiam ter várias.</p>
+                <p>A Palavra entrou nos lares.</p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Nova Responsabilidade
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Mas com esse avanço, nasceu uma nova pergunta:
+              </p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid #7ccf00;">
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.9);">
+                  E se a pessoa tem a Bíblia, mas não entende o que lê?
+                </p>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                O Segundo Ato colocou a Bíblia nas mãos.
+                <br>
+                Mas ainda não a colocou na
+                <strong class="font-medium" style="color: #bbf451;">
+                  língua
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Que Ficou Resolvido
+              </h3>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
+                  <thead>
+                    <tr>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tl-lg" style="background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);">
+                        Antes
+                      </th>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tr-lg" style="background: rgba(124,207,0,0.1); color: #7ccf00;">
+                        Depois
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody style="color: rgba(255,255,255,0.7);">
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Bíblia rara
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Bíblia acessível
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Posse de elites
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Posse popular
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm rounded-bl-lg" style="background: rgba(255,255,255,0.02);">
+                        Produção lenta
+                      </td>
+                      <td class="px-4 py-3 text-sm rounded-br-lg" style="background: rgba(124,207,0,0.03);">
+                        Produção em escala
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="my-16 py-8 px-6 rounded-xl text-center" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);">
+              <p class="text-base mb-3" style="color: rgba(255,255,255,0.6);">
+                O Que Ainda Não Estava Resolvido
+              </p>
+              <p class="text-lg" style="color: rgba(255,255,255,0.8);">
+                A Palavra circulava.
+                <br>
+                Mas em
+                <strong class="font-medium" style="color: #bbf451;">
+                  latim
+                </strong>
+                .
+              </p>
+              <p class="text-base mt-4" style="color: rgba(255,255,255,0.5);">
+                O problema da escassez foi vencido.
+                <br>
+                Mas o problema da
+                <strong>incompreensão</strong>
+                ainda estava por vir.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ATO III -->
+        <section id="ato3" class="chapter mb-32 scroll-mt-24">
+          <div class="mb-16 p-8 sm:p-12 rounded-3xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(9,9,11,0.95)); border: 1px solid rgba(124,207,0,0.15);">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-5xl sm:text-6xl font-light" style="font-family: 'Space Grotesk', sans-serif; color: rgba(124,207,0,0.3);">
+                III
+              </span>
+              <div class="w-12 h-px" style="background: rgba(124,207,0,0.3);"></div>
+            </div>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mb-3" style="font-family: 'Space Grotesk', sans-serif;">
+              A Palavra Foi Traduzida
+            </h2>
+            <p class="text-lg" style="color: rgba(255,255,255,0.5);">
+              O Problema da Incompreensão
+            </p>
+          </div>
+
+          <div class="prose-content space-y-6" style="color: rgba(255,255,255,0.8);">
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Mundo Antes
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Imagine um mundo onde você tem uma Bíblia nas mãos, mas não
+                entende uma palavra.
+              </p>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Onde o texto é sagrado, mas os sons são estranhos.</p>
+                <p>
+                  Onde a página está diante dos olhos, mas o significado está
+                  escondido.
+                </p>
+                <p>
+                  Onde a Palavra existe, mas não
+                  <strong class="font-medium text-white">fala</strong>
+                  .
+                </p>
+              </div>
+
+              <p class="text-lg leading-relaxed">
+                Esse era o mundo antes do Terceiro Ato.
+              </p>
+
+              <div class="my-8 py-6 px-6 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <p class="text-lg" style="color: rgba(255,255,255,0.7);">
+                  A Bíblia estava disponível.
+                  <br>
+                  Mas era
+                  <strong class="font-medium" style="color: #bbf451;">
+                    incompreensível
+                  </strong>
+                  .
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Barreira
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                A barreira do Terceiro Ato não era acesso físico.
+                <br>
+                Era
+                <strong class="font-medium" style="color: #bbf451;">
+                  acesso linguístico
+                </strong>
+                .
+              </p>
+
+              <ul class="my-6 space-y-3" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>O latim era língua de clérigos</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>O grego era língua de eruditos</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>O hebraico era língua de especialistas</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>
+                    O povo falava alemão, inglês, português, espanhol...
+                  </span>
+                </li>
+              </ul>
+
+              <p class="text-lg leading-relaxed">
+                A Bíblia estava presente.
+                <br>
+                Mas silenciosa.
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Dimensão do Abismo
+              </h3>
+
+              <p class="text-lg leading-relaxed">Para o camponês medieval:</p>
+
+              <ul class="my-6 space-y-3" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>
+                    Ele podia
+                    <strong class="font-medium text-white">ver</strong>
+                    a Bíblia
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>
+                    Ele podia
+                    <strong class="font-medium text-white">tocar</strong>
+                    a Bíblia
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>
+                    Ele podia
+                    <strong class="font-medium text-white">ouvir</strong>
+                    a Bíblia sendo lida
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>
+                    Mas não podia
+                    <strong class="font-medium text-white">entender</strong>
+                    uma única palavra
+                  </span>
+                </li>
+              </ul>
+
+              <div class="my-8 py-6 px-6 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <p class="text-lg" style="color: rgba(255,255,255,0.8);">
+                  A Palavra de Deus era como uma carta de amor escrita em
+                  código.
+                  <br>
+                  Presente, mas inacessível.
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Ruptura
+              </h3>
+
+              <p class="text-lg leading-relaxed">Então algo aconteceu.</p>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Não nos palácios.</p>
+                <p>Não nas universidades.</p>
+                <p>Nas trincheiras da fé.</p>
+              </div>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.12), rgba(124,207,0,0.04)); border: 1px solid rgba(124,207,0,0.2);">
+                <p class="text-xl sm:text-2xl font-medium leading-relaxed" style="font-family: 'Instrument Serif', serif; color: #bbf451;">
+                  Homens arriscaram suas vidas para traduzir a Bíblia.
+                </p>
+              </blockquote>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.7);">
+                <p>John Wycliffe na Inglaterra.</p>
+                <p>Jan Hus na Boêmia.</p>
+                <p>Martinho Lutero na Alemanha.</p>
+                <p>William Tyndale na Inglaterra.</p>
+                <p>João Ferreira de Almeida em português.</p>
+              </div>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Alguns foram exilados.</p>
+                <p>Alguns foram queimados.</p>
+                <p>Alguns morreram sem ver o fruto.</p>
+              </div>
+
+              <p class="text-lg leading-relaxed">
+                Mas a Palavra passou a
+                <strong class="font-medium" style="color: #bbf451;">
+                  falar a língua do povo
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Custo da Tradução
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                William Tyndale, antes de ser executado por traduzir a Bíblia
+                para o inglês, disse:
+              </p>
+
+              <blockquote class="relative my-8 py-6 px-6 sm:px-8 rounded-xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid rgba(255,255,255,0.2);">
+                <p class="text-base leading-relaxed italic" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.8);">
+                  "Se Deus preservar minha vida, farei com que o menino que
+                  conduz o arado saiba mais das Escrituras do que o próprio
+                  Papa."
+                </p>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                Ele foi estrangulado e queimado em 1536.
+              </p>
+
+              <p class="text-lg leading-relaxed mt-4">
+                Mas sua tradução sobreviveu.
+                <br>
+                E milhões leram a Palavra em sua própria língua.
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Fundamento Teológico
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                A tradução não é traição.
+                <br>
+                É
+                <strong class="font-medium" style="color: #bbf451;">
+                  fidelidade ao propósito da revelação
+                </strong>
+                .
+              </p>
+
+              <blockquote class="relative my-8 py-6 px-6 sm:px-8 rounded-xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid rgba(255,255,255,0.2);">
+                <p class="text-base leading-relaxed italic" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.8);">
+                  "A tua palavra é lâmpada para os meus pés e luz para o meu
+                  caminho."
+                </p>
+                <cite class="block mt-3 text-sm not-italic" style="color: rgba(255,255,255,0.5);">
+                  — Salmos 119:105
+                </cite>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                Uma lâmpada que não ilumina
+                <strong class="font-medium text-white">para você</strong>
+                não cumpre sua função.
+                <br>
+                Uma Palavra que você não entende não é acesso real.
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Novo Padrão
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Depois do Terceiro Ato, algo se tornou irreversível:
+              </p>
+
+              <div class="my-8 p-6 rounded-xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(124,207,0,0.02)); border: 1px solid rgba(124,207,0,0.15);">
+                <p class="text-lg font-medium" style="color: rgba(255,255,255,0.95);">
+                  A fé deixou de ser mediada pela elite linguística.
+                </p>
+              </div>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.7);">
+                <p>Qualquer pessoa podia ler.</p>
+                <p>Qualquer pessoa podia estudar.</p>
+                <p>Qualquer pessoa podia confrontar o erro.</p>
+              </div>
+
+              <p class="text-lg leading-relaxed">
+                A Bíblia deixou de ser monopólio.
+                <br>
+                E se tornou
+                <strong class="font-medium" style="color: #bbf451;">
+                  herança do povo
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Nova Responsabilidade
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Mas com esse avanço, nasceu uma nova pergunta:
+              </p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid #7ccf00;">
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.9);">
+                  E se a pessoa não sabe ler?
+                </p>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                O Terceiro Ato colocou a Bíblia na língua certa.
+                <br>
+                Mas ainda exigia
+                <strong class="font-medium" style="color: #bbf451;">
+                  alfabetização
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Que Ficou Resolvido
+              </h3>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
+                  <thead>
+                    <tr>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tl-lg" style="background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);">
+                        Antes
+                      </th>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tr-lg" style="background: rgba(124,207,0,0.1); color: #7ccf00;">
+                        Depois
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody style="color: rgba(255,255,255,0.7);">
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Bíblia em latim
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Bíblia na língua do povo
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Dependência de clérigos
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Leitura pessoal possível
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm rounded-bl-lg" style="background: rgba(255,255,255,0.02);">
+                        Fé mediada
+                      </td>
+                      <td class="px-4 py-3 text-sm rounded-br-lg" style="background: rgba(124,207,0,0.03);">
+                        Fé direta
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="my-16 py-8 px-6 rounded-xl text-center" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);">
+              <p class="text-base mb-3" style="color: rgba(255,255,255,0.6);">
+                O Que Ainda Não Estava Resolvido
+              </p>
+              <p class="text-lg" style="color: rgba(255,255,255,0.8);">
+                A Palavra era compreensível.
+                <br>
+                Mas ainda exigia
+                <strong class="font-medium" style="color: #bbf451;">
+                  leitura
+                </strong>
+                .
+              </p>
+              <p class="text-base mt-4" style="color: rgba(255,255,255,0.5);">
+                O problema da incompreensão foi vencido.
+                <br>
+                Mas o problema da
+                <strong>exclusão</strong>
+                ainda estava por vir.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ATO IV -->
+        <section id="ato4" class="chapter mb-32 scroll-mt-24">
+          <div class="mb-16 p-8 sm:p-12 rounded-3xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(9,9,11,0.95)); border: 1px solid rgba(124,207,0,0.15);">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-5xl sm:text-6xl font-light" style="font-family: 'Space Grotesk', sans-serif; color: rgba(124,207,0,0.3);">
+                IV
+              </span>
+              <div class="w-12 h-px" style="background: rgba(124,207,0,0.3);"></div>
+            </div>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mb-3" style="font-family: 'Space Grotesk', sans-serif;">
+              A Palavra Ultrapassou a Leitura
+            </h2>
+            <p class="text-lg" style="color: rgba(255,255,255,0.5);">
+              O Problema da Exclusão
+            </p>
+          </div>
+
+          <div class="prose-content space-y-6" style="color: rgba(255,255,255,0.8);">
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Mundo Antes
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Imagine um mundo onde a Bíblia está traduzida, acessível,
+                disponível...
+              </p>
+
+              <p class="text-lg leading-relaxed mt-4">Mas você não sabe ler.</p>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Onde as letras existem, mas não significam nada.</p>
+                <p>Onde o livro está em suas mãos, mas é um objeto mudo.</p>
+                <p>Onde a Palavra está tão perto — e tão longe.</p>
+              </div>
+
+              <p class="text-lg leading-relaxed">
+                Esse era o mundo antes do Quarto Ato.
+              </p>
+
+              <div class="my-8 py-6 px-6 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <p class="text-lg" style="color: rgba(255,255,255,0.7);">
+                  A Bíblia era compreensível.
+                  <br>
+                  Mas ainda era
+                  <strong class="font-medium" style="color: #bbf451;">
+                    excludente
+                  </strong>
+                  .
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Barreira
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                A barreira do Quarto Ato não era língua.
+                <br>
+                Era
+                <strong class="font-medium" style="color: #bbf451;">
+                  capacidade de decodificação
+                </strong>
+                .
+              </p>
+
+              <ul class="my-6 space-y-3" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Analfabetos ficavam de fora</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Cegos ficavam de fora</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Crianças pequenas ficavam de fora</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>
+                    Pessoas com dificuldades cognitivas ficavam de fora
+                  </span>
+                </li>
+              </ul>
+
+              <p class="text-lg leading-relaxed">
+                A Bíblia estava presente.
+                <br>
+                Mas não era
+                <strong class="font-medium" style="color: #bbf451;">
+                  universalmente acessível
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                Os Números da Exclusão
+              </h3>
+
+              <p class="text-lg leading-relaxed">Mesmo no século XX:</p>
+
+              <ul class="my-6 space-y-3" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    <strong class="font-medium text-white">
+                      Centenas de milhões
+                    </strong>
+                    de cristãos eram analfabetos
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    <strong class="font-medium text-white">Milhões</strong>
+                    de cegos não tinham acesso a braille
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    <strong class="font-medium text-white">
+                      Comunidades inteiras
+                    </strong>
+                    dependiam de um único leitor
+                  </span>
+                </li>
+              </ul>
+
+              <p class="text-lg leading-relaxed">
+                A Palavra existia.
+                <br>
+                Mas a alfabetização era pré-requisito.
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Ruptura
+              </h3>
+
+              <p class="text-lg leading-relaxed">Então algo aconteceu.</p>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Não em uma única invenção.</p>
+                <p>Em uma série de inovações:</p>
+              </div>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.12), rgba(124,207,0,0.04)); border: 1px solid rgba(124,207,0,0.2);">
+                <p class="text-xl sm:text-2xl font-medium leading-relaxed" style="font-family: 'Instrument Serif', serif; color: #bbf451;">
+                  A Bíblia passou a ser ouvida.
+                </p>
+              </blockquote>
+
+              <ul class="my-6 space-y-3" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>O rádio levou a Palavra a quem não lia</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>Gravações permitiram repetição infinita</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>Áudio solar alcançou regiões sem energia</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    Bíblias em braille tocaram mãos que não enxergavam
+                  </span>
+                </li>
+              </ul>
+
+              <p class="text-lg leading-relaxed">
+                A Palavra deixou de depender dos olhos.
+                <br>
+                E passou a depender apenas dos
+                <strong class="font-medium" style="color: #bbf451;">
+                  ouvidos
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Fundamento Bíblico
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Isso não é adaptação moderna.
+                <br>
+                É retorno à origem.
+              </p>
+
+              <blockquote class="relative my-8 py-6 px-6 sm:px-8 rounded-xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid rgba(255,255,255,0.2);">
+                <p class="text-base leading-relaxed italic" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.8);">
+                  "A fé vem pelo ouvir, e o ouvir pela Palavra de Cristo."
+                </p>
+                <cite class="block mt-3 text-sm not-italic" style="color: rgba(255,255,255,0.5);">
+                  — Romanos 10:17
+                </cite>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                O ouvir
+                <strong class="font-medium text-white">sempre</strong>
+                foi meio legítimo.
+                <br>
+                A tecnologia apenas restaurou o que a cultura da escrita havia
+                limitado.
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Novo Padrão
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Depois do Quarto Ato, algo se tornou irreversível:
+              </p>
+
+              <div class="my-8 p-6 rounded-xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(124,207,0,0.02)); border: 1px solid rgba(124,207,0,0.15);">
+                <p class="text-lg font-medium" style="color: rgba(255,255,255,0.95);">
+                  A alfabetização deixou de ser pré-requisito para a fé.
+                </p>
+              </div>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.7);">
+                <p>Quem não lê, ouve.</p>
+                <p>Quem não vê, toca.</p>
+                <p>Quem não processa texto, processa som.</p>
+              </div>
+
+              <p class="text-lg leading-relaxed">
+                A Palavra venceu a
+                <strong class="font-medium" style="color: #bbf451;">
+                  limitação humana
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Nova Responsabilidade
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Mas com esse avanço, nasceu a pergunta final:
+              </p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid #7ccf00;">
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.9);">
+                  E se a pessoa pode ouvir, mas a Bíblia não chega?
+                </p>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                O Quarto Ato removeu a barreira do formato.
+                <br>
+                Mas não garantiu a
+                <strong class="font-medium" style="color: #bbf451;">
+                  entrega
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Que Ficou Resolvido
+              </h3>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
+                  <thead>
+                    <tr>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tl-lg" style="background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);">
+                        Antes
+                      </th>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tr-lg" style="background: rgba(124,207,0,0.1); color: #7ccf00;">
+                        Depois
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody style="color: rgba(255,255,255,0.7);">
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Só quem lia tinha acesso
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Qualquer um pode ouvir
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Cegos excluídos
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Braille disponível
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm rounded-bl-lg" style="background: rgba(255,255,255,0.02);">
+                        Analfabetos dependentes
+                      </td>
+                      <td class="px-4 py-3 text-sm rounded-br-lg" style="background: rgba(124,207,0,0.03);">
+                        Áudio independente
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="my-16 py-8 px-6 rounded-xl text-center" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);">
+              <p class="text-base mb-3" style="color: rgba(255,255,255,0.6);">
+                O Que Ainda Não Estava Resolvido
+              </p>
+              <p class="text-lg" style="color: rgba(255,255,255,0.8);">
+                A Palavra existia em todos os formatos.
+                <br>
+                Mas a
+                <strong class="font-medium" style="color: #bbf451;">
+                  distribuição
+                </strong>
+                era falha.
+              </p>
+              <p class="text-base mt-4" style="color: rgba(255,255,255,0.5);">
+                O problema da exclusão foi vencido.
+                <br>
+                Mas o problema da
+                <strong>descontinuidade</strong>
+                permaneceu.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- O INTERVALO -->
+        <section id="intervalo" class="chapter mb-32 scroll-mt-24">
+          <div class="mb-16 p-8 sm:p-12 rounded-3xl" style="background: linear-gradient(135deg, rgba(255,200,100,0.08), rgba(9,9,11,0.95)); border: 1px solid rgba(255,200,100,0.15);">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mb-3" style="font-family: 'Space Grotesk', sans-serif;">
+              O Intervalo
+            </h2>
+            <p class="text-lg" style="color: rgba(255,255,255,0.5);">
+              O Problema Que Ninguém Nomeou
+            </p>
+          </div>
+
+          <div class="prose-content space-y-6" style="color: rgba(255,255,255,0.8);">
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(255,200,100,0.5);"></span>
+                O Diagnóstico Incômodo
+              </h3>
+
+              <p class="text-lg leading-relaxed">Chegamos ao século XXI com:</p>
+
+              <ul class="my-6 space-y-3" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500">✅</span>
+                  <span>Escritura preservada</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500">✅</span>
+                  <span>Bíblias em escala</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500">✅</span>
+                  <span>Traduções em milhares de línguas</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500">✅</span>
+                  <span>Formatos para todas as necessidades</span>
+                </li>
+              </ul>
+
+              <p class="text-lg leading-relaxed">E ainda assim:</p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(255,100,100,0.08), rgba(255,100,100,0.02)); border: 1px solid rgba(255,100,100,0.2);">
+                <p class="text-xl sm:text-2xl font-medium leading-relaxed" style="font-family: 'Instrument Serif', serif; color: rgba(255,150,150,1);">
+                  +300 milhões de cristãos não têm acesso real à Bíblia.
+                </p>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">Como isso é possível?</p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(255,200,100,0.5);"></span>
+                A Resposta Que Ninguém Quer Ouvir
+              </h3>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>O problema não é mais teológico.</p>
+                <p>Não é mais tecnológico.</p>
+                <p>Não é mais linguístico.</p>
+                <p>Não é mais de formato.</p>
+              </div>
+
+              <p class="text-lg leading-relaxed">
+                O problema é
+                <strong class="font-medium" style="color: #ffcc66;">
+                  estrutural
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(255,200,100,0.5);"></span>
+                Os Sintomas do Problema
+              </h3>
+
+              <div class="grid gap-4">
+                <div class="p-5 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <p class="font-medium mb-2" style="color: rgba(255,255,255,0.95);">
+                    1. Doações pontuais
+                  </p>
+                  <ul class="space-y-2" style="color: rgba(255,255,255,0.6);">
+                    <li>Picos de emoção</li>
+                    <li>Vales de abandono</li>
+                    <li>Impacto imprevisível</li>
+                  </ul>
+                </div>
+                <div class="p-5 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <p class="font-medium mb-2" style="color: rgba(255,255,255,0.95);">
+                    2. Falta de método
+                  </p>
+                  <ul class="space-y-2" style="color: rgba(255,255,255,0.6);">
+                    <li>Boa intenção sem sistema</li>
+                    <li>Generosidade desorganizada</li>
+                    <li>Recursos desperdiçados</li>
+                  </ul>
+                </div>
+                <div class="p-5 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <p class="font-medium mb-2" style="color: rgba(255,255,255,0.95);">
+                    3. Ausência de rastreabilidade
+                  </p>
+                  <ul class="space-y-2" style="color: rgba(255,255,255,0.6);">
+                    <li>"Para onde foi meu dinheiro?"</li>
+                    <li>"Chegou mesmo?"</li>
+                    <li>"Quem recebeu?"</li>
+                  </ul>
+                </div>
+                <div class="p-5 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <p class="font-medium mb-2" style="color: rgba(255,255,255,0.95);">
+                    4. Dependência de campanhas
+                  </p>
+                  <ul class="space-y-2" style="color: rgba(255,255,255,0.6);">
+                    <li>Datas religiosas</li>
+                    <li>Eventos especiais</li>
+                    <li>Marketing emocional</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(255,200,100,0.5);"></span>
+                A Verdade Brutal
+              </h3>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid rgba(255,200,100,0.5);">
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.9);">
+                  O cristianismo aprendeu a preservar, multiplicar, traduzir e
+                  adaptar a Palavra.
+                  <br>
+                  <br>
+                  Mas nunca aprendeu a
+                  <strong class="font-medium" style="color: #ffcc66;">
+                    garantir sua entrega de forma constante
+                  </strong>
+                  .
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(255,200,100,0.5);"></span>
+                O Modelo Falido
+              </h3>
+
+              <p class="text-lg leading-relaxed mb-6">
+                O modelo tradicional funciona assim:
+              </p>
+
+              <div class="my-8 py-6 px-6 rounded-xl font-mono text-sm" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);">
+                <p>1. Sensibilizar</p>
+                <p>2. Arrecadar</p>
+                <p>3. Centralizar</p>
+                <p>4. Decidir depois</p>
+                <p>5. Distribuir quando possível</p>
+              </div>
+
+              <p class="text-lg leading-relaxed mb-4">Esse modelo gera:</p>
+
+              <ul class="my-6 space-y-2" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Gargalos</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Custos ocultos</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Falta de previsibilidade</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Perda de eficiência</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Dependência eterna</span>
+                </li>
+              </ul>
+
+              <blockquote class="relative my-8 py-6 px-6 sm:px-8 rounded-xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid rgba(255,255,255,0.2);">
+                <p class="text-base leading-relaxed italic" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.8);">
+                  É como tentar manter um hospital vivo só com vaquinhas.
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(255,200,100,0.5);"></span>
+                A Pergunta Que Ficou Sem Resposta
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Depois de quatro atos de avanço histórico, a pergunta permanece:
+              </p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(255,200,100,0.08), rgba(255,200,100,0.02)); border: 1px solid rgba(255,200,100,0.2);">
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.9);">
+                  <strong class="font-medium" style="color: #ffcc66;">
+                    A Palavra existe.
+                  </strong>
+                  <br>
+                  <strong class="font-medium" style="color: #ffcc66;">
+                    Mas ela chega?
+                  </strong>
+                  <br>
+                  <br>
+                  De forma constante?
+                  <br>
+                  De forma verificável?
+                  <br>
+                  De forma sustentável?
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <!-- ATO V -->
+        <section id="ato5" class="chapter mb-32 scroll-mt-24">
+          <div class="mb-16 p-8 sm:p-12 rounded-3xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.15), rgba(9,9,11,0.95)); border: 1px solid rgba(124,207,0,0.3);">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-5xl sm:text-6xl font-light" style="font-family: 'Space Grotesk', sans-serif; color: rgba(124,207,0,0.5);">
+                V
+              </span>
+              <div class="w-12 h-px" style="background: rgba(124,207,0,0.5);"></div>
+            </div>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mb-3" style="font-family: 'Space Grotesk', sans-serif; color: #bbf451;">
+              A Palavra Será Garantida
+            </h2>
+            <p class="text-lg" style="color: rgba(187,244,81,0.7);">
+              O Problema da Descontinuidade
+            </p>
+          </div>
+
+          <div class="prose-content space-y-6" style="color: rgba(255,255,255,0.8);">
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Mundo Agora
+              </h3>
+
+              <p class="text-lg leading-relaxed">Vivemos em um mundo onde:</p>
+
+              <ul class="my-6 space-y-2" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>A tecnologia existe</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Os recursos existem</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>As redes missionárias existem</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Os formatos existem</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>As traduções existem</span>
+                </li>
+              </ul>
+
+              <p class="text-lg leading-relaxed font-medium" style="color: rgba(255,255,255,0.95);">
+                Tudo existe.
+              </p>
+
+              <p class="text-lg leading-relaxed mt-4">Exceto uma coisa:</p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(124,207,0,0.02)); border-left: 3px solid #7ccf00;">
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.9);">
+                  Um sistema que garanta acesso
+                  <strong class="font-medium" style="color: #bbf451;">
+                    contínuo, rastreável e sustentável
+                  </strong>
+                  .
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Barreira Final
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                A barreira do Quinto Ato não é externa.
+                <br>
+                É
+                <strong class="font-medium" style="color: #bbf451;">
+                  interna
+                </strong>
+                .
+              </p>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.7);">
+                <p>Não é falta de Bíblia.</p>
+                <p>
+                  É falta de
+                  <strong class="font-medium text-white">método</strong>
+                  .
+                </p>
+              </div>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.7);">
+                <p>Não é falta de dinheiro.</p>
+                <p>
+                  É falta de
+                  <strong class="font-medium text-white">constância</strong>
+                  .
+                </p>
+              </div>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.7);">
+                <p>Não é falta de vontade.</p>
+                <p>
+                  É falta de
+                  <strong class="font-medium text-white">sistema</strong>
+                  .
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Ruptura
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                O Quinto Ato não acontece em uma descoberta.
+                <br>
+                Acontece em uma
+                <strong class="font-medium" style="color: #bbf451;">
+                  decisão
+                </strong>
+                .
+              </p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.12), rgba(124,207,0,0.04)); border: 1px solid rgba(124,207,0,0.2);">
+                <p class="text-xl sm:text-2xl font-medium leading-relaxed" style="font-family: 'Instrument Serif', serif; color: #bbf451;">
+                  A decisão de tratar o acesso à Palavra como infraestrutura.
+                </p>
+              </blockquote>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Não como caridade.</p>
+                <p>Não como campanha.</p>
+                <p>Não como projeto.</p>
+              </div>
+
+              <p class="text-lg leading-relaxed">
+                Como
+                <strong class="font-medium" style="color: #bbf451;">
+                  sistema permanente
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Que Muda
+              </h3>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
+                  <thead>
+                    <tr>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tl-lg" style="background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);">
+                        Modelo Antigo
+                      </th>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tr-lg" style="background: rgba(124,207,0,0.1); color: #7ccf00;">
+                        Quinto Ato
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody style="color: rgba(255,255,255,0.7);">
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Doação pontual
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Financiamento recorrente
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Emoção
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Método
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Campanha
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Infraestrutura
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Promessa
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Prova
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        "Confie em nós"
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        "Veja você mesmo"
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm rounded-bl-lg" style="background: rgba(255,255,255,0.02);">
+                        Dependência
+                      </td>
+                      <td class="px-4 py-3 text-sm rounded-br-lg" style="background: rgba(124,207,0,0.03);">
+                        Sustentabilidade
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Fundamento Teológico
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                O Quinto Ato não é inovação teológica.
+                <br>
+                É
+                <strong class="font-medium" style="color: #bbf451;">
+                  fidelidade aplicada
+                </strong>
+                .
+              </p>
+
+              <blockquote class="relative my-8 py-6 px-6 sm:px-8 rounded-xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid rgba(255,255,255,0.2);">
+                <p class="text-base leading-relaxed italic" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.8);">
+                  "Além disso, o que se requer dos despenseiros é que cada um
+                  seja encontrado fiel."
+                </p>
+                <cite class="block mt-3 text-sm not-italic" style="color: rgba(255,255,255,0.5);">
+                  — 1 Coríntios 4:2
+                </cite>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                A fidelidade não é medida pela emoção.
+                <br>
+                É medida pela
+                <strong class="font-medium" style="color: #bbf451;">
+                  constância
+                </strong>
+                .
+              </p>
+
+              <blockquote class="relative my-8 py-6 px-6 sm:px-8 rounded-xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid rgba(255,255,255,0.2);">
+                <p class="text-base leading-relaxed italic" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.8);">
+                  "Quem é fiel no pouco também é fiel no muito."
+                </p>
+                <cite class="block mt-3 text-sm not-italic" style="color: rgba(255,255,255,0.5);">
+                  — Lucas 16:10
+                </cite>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                A fidelidade não é evento.
+                <br>
+                É
+                <strong class="font-medium" style="color: #bbf451;">
+                  sistema
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Novo Padrão
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                O Quinto Ato estabelece um novo padrão irreversível:
+              </p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.12), rgba(124,207,0,0.04)); border: 1px solid rgba(124,207,0,0.2);">
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.9);">
+                  <strong class="font-medium" style="color: #bbf451;">
+                    O acesso à Palavra deixa de depender de campanhas
+                    emocionais.
+                  </strong>
+                  <br>
+                  <br>
+                  <strong class="font-medium" style="color: #bbf451;">
+                    E passa a funcionar como infraestrutura.
+                  </strong>
+                </p>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">Assim como:</p>
+
+              <ul class="my-6 space-y-2" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Saneamento básico funciona todo dia</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Energia elétrica funciona todo dia</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: rgba(255,255,255,0.4);"></span>
+                  <span>Internet funciona todo dia</span>
+                </li>
+              </ul>
+
+              <p class="text-lg leading-relaxed">
+                O acesso à Palavra
+                <strong class="font-medium" style="color: #bbf451;">
+                  pode funcionar todo dia
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Nova Responsabilidade
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Mas com esse avanço, nasce a responsabilidade final:
+              </p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid #7ccf00;">
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.9);">
+                  Se temos os meios, somos responsáveis por usá-los.
+                </p>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                Esta não é mais uma questão de possibilidade.
+                <br>
+                É uma questão de
+                <strong class="font-medium" style="color: #bbf451;">
+                  decisão
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Que Ficará Resolvido
+              </h3>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
+                  <thead>
+                    <tr>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tl-lg" style="background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);">
+                        Antes
+                      </th>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tr-lg" style="background: rgba(124,207,0,0.1); color: #7ccf00;">
+                        Depois
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody style="color: rgba(255,255,255,0.7);">
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Doações pontuais
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Financiamento constante
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Impacto imprevisível
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Impacto rastreável
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Generosidade desorganizada
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Sistema estruturado
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm rounded-bl-lg" style="background: rgba(255,255,255,0.02);">
+                        "Espero que chegue"
+                      </td>
+                      <td class="px-4 py-3 text-sm rounded-br-lg" style="background: rgba(124,207,0,0.03);">
+                        "Eu vi chegar"
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- O PAPEL DO 9FORLIVES -->
+        <section id="papel" class="chapter mb-32 scroll-mt-24">
+          <div class="mb-12">
+            <span class="text-xs uppercase tracking-widest font-medium" style="color: #7ccf00;">
+              O Papel
+            </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mt-3" style="font-family: 'Space Grotesk', sans-serif;">
+              O 9forlives no Quinto Ato
+            </h2>
+          </div>
+
+          <div class="prose-content space-y-6" style="color: rgba(255,255,255,0.8);">
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Que o 9forlives NÃO É
+              </h3>
+
+              <p class="text-lg leading-relaxed mb-4">O 9forlives:</p>
+
+              <ul class="my-6 space-y-2" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="text-red-400">❌</span>
+                  <span>Não é o Quinto Ato em si</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-red-400">❌</span>
+                  <span>Não é salvador</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-red-400">❌</span>
+                  <span>Não substitui a Igreja</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-red-400">❌</span>
+                  <span>Não é inovação teológica</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-red-400">❌</span>
+                  <span>Não é a única resposta possível</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Que o 9forlives É
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                O 9forlives é uma
+                <strong class="font-medium" style="color: #bbf451;">
+                  ferramenta
+                </strong>
+                do Quinto Ato.
+              </p>
+
+              <p class="text-lg leading-relaxed mt-4">
+                É a
+                <strong class="font-medium" style="color: #bbf451;">
+                  primeira infraestrutura
+                </strong>
+                projetada para:
+              </p>
+
+              <div class="my-8 py-6 px-6 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <ul class="space-y-3" style="color: rgba(255,255,255,0.7);">
+                  <li class="flex items-start gap-3">
+                    <span class="font-medium" style="color: #7ccf00;">1.</span>
+                    <span>
+                      Transformar financiamento recorrente em acesso real
+                    </span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="font-medium" style="color: #7ccf00;">2.</span>
+                    <span>
+                      Conectar Financiador → Missionário → Receptor sem
+                      intermediação
+                    </span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="font-medium" style="color: #7ccf00;">3.</span>
+                    <span>
+                      Garantir rastreabilidade completa (NF + rastreio + vídeo)
+                    </span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="font-medium" style="color: #7ccf00;">4.</span>
+                    <span>
+                      Operar de forma sustentável (não depende de campanhas)
+                    </span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="font-medium" style="color: #7ccf00;">5.</span>
+                    <span>Escalar sem mudar o modelo</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Sistema em 6 Passos
+              </h3>
+
+              <div class="my-8 py-6 px-6 rounded-xl font-mono text-sm space-y-4" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);">
+                <div>
+                  <p style="color: #7ccf00;">01. FINANCIADOR CONTRIBUI</p>
+                  <p class="pl-6">
+                    └─ Valor mensal vira crédito na carteira digital
+                  </p>
+                </div>
+                <div>
+                  <p style="color: #7ccf00;">02. MISSIONÁRIO CADASTRA</p>
+                  <p class="pl-6">└─ Nome, local, necessidade específica</p>
+                </div>
+                <div>
+                  <p style="color: #7ccf00;">03. SISTEMA CONECTA</p>
+                  <p class="pl-6">
+                    └─ Matching automático: créditos → pedidos reais
+                  </p>
+                </div>
+                <div>
+                  <p style="color: #7ccf00;">04. BÍBLIA É ENVIADA</p>
+                  <p class="pl-6">└─ Comprada, entregue com rastreio</p>
+                </div>
+                <div>
+                  <p style="color: #7ccf00;">05. ENTREGA ACONTECE</p>
+                  <p class="pl-6">└─ Missionário entrega e registra vídeo</p>
+                </div>
+                <div>
+                  <p style="color: #7ccf00;">06. VOCÊ COMPROVA</p>
+                  <p class="pl-6">└─ NF + código de rastreio + vídeo nominal</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Tripé Estrutural
+              </h3>
+
+              <blockquote class="relative my-8 py-6 px-6 sm:px-8 rounded-xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(124,207,0,0.02)); border: 1px solid rgba(124,207,0,0.15);">
+                <p class="text-lg font-medium" style="color: #bbf451;">
+                  Constância × União × Transparência = Impacto²
+                </p>
+              </blockquote>
+
+              <div class="grid gap-4 mt-6">
+                <div class="p-5 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <p class="font-medium mb-2" style="color: #bbf451;">
+                    Constância
+                  </p>
+                  <ul class="space-y-1" style="color: rgba(255,255,255,0.6);">
+                    <li>Pequenas contribuições regulares</li>
+                    <li>Impacto previsível</li>
+                    <li>Produção em escala</li>
+                    <li>Custo menor por Bíblia</li>
+                  </ul>
+                </div>
+                <div class="p-5 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <p class="font-medium mb-2" style="color: #bbf451;">União</p>
+                  <ul class="space-y-1" style="color: rgba(255,255,255,0.6);">
+                    <li>Um pouco de muitos &gt; muito de poucos</li>
+                    <li>Democratização do impacto</li>
+                    <li>Nenhum peso individual insustentável</li>
+                  </ul>
+                </div>
+                <div class="p-5 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <p class="font-medium mb-2" style="color: #bbf451;">
+                    Transparência
+                  </p>
+                  <ul class="space-y-1" style="color: rgba(255,255,255,0.6);">
+                    <li>Cada real rastreado</li>
+                    <li>Cada Bíblia comprovada</li>
+                    <li>Cada entrega documentada</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                Os 4 Formatos de Acesso
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                O 9forlives não decide o formato.
+                <br>
+                A realidade decide.
+              </p>
+
+              <div class="overflow-x-auto mt-6">
+                <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
+                  <thead>
+                    <tr>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tl-lg" style="background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);">
+                        Formato
+                      </th>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tr-lg" style="background: rgba(124,207,0,0.1); color: #7ccf00;">
+                        Para Quem
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody style="color: rgba(255,255,255,0.7);">
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm font-medium" style="background: rgba(255,255,255,0.02);">
+                        Bíblia Impressa
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Onde o papel é o canal mais acessível
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm font-medium" style="background: rgba(255,255,255,0.02);">
+                        Bíblia em Áudio Solar
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Analfabetos + regiões sem energia
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm font-medium" style="background: rgba(255,255,255,0.02);">
+                        Bíblia Infantil em Áudio
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Crianças
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm font-medium rounded-bl-lg" style="background: rgba(255,255,255,0.02);">
+                        Bíblia em Braille
+                      </td>
+                      <td class="px-4 py-3 text-sm rounded-br-lg" style="background: rgba(124,207,0,0.03);">
+                        Deficientes visuais
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <blockquote class="relative my-8 py-6 px-6 sm:px-8 rounded-xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid rgba(255,255,255,0.2);">
+                <p class="text-base leading-relaxed italic" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.8);">
+                  "Onde há uma limitação, nasce um formato.
+                  <br>
+                  Onde há um formato, nasce uma ponte.
+                  <br>
+                  Onde há uma ponte, a Palavra chega."
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Economia da Missão
+              </h3>
+
+              <div class="grid gap-4">
+                <div class="p-5 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <p class="font-medium mb-2" style="color: #bbf451;">
+                    SimplisPay (fintech própria)
+                  </p>
+                  <ul class="space-y-1" style="color: rgba(255,255,255,0.6);">
+                    <li>Processa assinaturas</li>
+                    <li>Faz split automático</li>
+                    <li>Captura taxas que iriam para bancos seculares</li>
+                    <li>Dinheiro nunca fica parado</li>
+                  </ul>
+                </div>
+                <div class="p-5 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <p class="font-medium mb-2" style="color: #bbf451;">
+                    Forlives Distribuidora (fornecedor exclusivo)
+                  </p>
+                  <ul class="space-y-1" style="color: rgba(255,255,255,0.6);">
+                    <li>Cliente garantido</li>
+                    <li>Produção sob demanda</li>
+                    <li>Zero marketing</li>
+                    <li>Bíblia mais barata que o mercado</li>
+                  </ul>
+                </div>
+              </div>
+
+              <blockquote class="relative my-8 py-6 px-6 sm:px-8 rounded-xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid #7ccf00;">
+                <p class="text-base leading-relaxed" style="color: rgba(255,255,255,0.8);">
+                  O sistema se sustenta para não depender de doações instáveis.
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Prova Como Arquitetura
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                No 9forlives, confiança não é emocional.
+                <br>
+                É
+                <strong class="font-medium" style="color: #bbf451;">
+                  verificável
+                </strong>
+                .
+              </p>
+
+              <ul class="my-6 space-y-3" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    <strong class="font-medium text-white">Nota fiscal</strong>
+                    de cada Bíblia
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    <strong class="font-medium text-white">
+                      Código de rastreio
+                    </strong>
+                    de cada entrega
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    <strong class="font-medium text-white">
+                      Vídeo nominal
+                    </strong>
+                    de cada beneficiário
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    <strong class="font-medium text-white">Dashboard</strong>
+                    com DRE completo
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>
+                    <strong class="font-medium text-white">
+                      Linha do tempo
+                    </strong>
+                    de impacto
+                  </span>
+                </li>
+              </ul>
+
+              <blockquote class="relative my-8 py-6 px-6 sm:px-8 rounded-xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(124,207,0,0.02)); border: 1px solid rgba(124,207,0,0.15);">
+                <p class="text-lg font-medium" style="color: #bbf451;">
+                  Você não acredita. Você vê.
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <!-- A CONVOCAÇÃO -->
+        <section id="convocacao" class="chapter mb-32 scroll-mt-24">
+          <div class="mb-12">
+            <span class="text-xs uppercase tracking-widest font-medium" style="color: #7ccf00;">
+              A Convocação
+            </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mt-3" style="font-family: 'Space Grotesk', sans-serif;">
+              O Chamado da Nossa Geração
+            </h2>
+          </div>
+
+          <div class="prose-content space-y-6" style="color: rgba(255,255,255,0.8);">
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Padrão da História
+              </h3>
+
+              <p class="text-lg leading-relaxed">Olhe para trás.</p>
+
+              <p class="text-lg leading-relaxed mt-4">
+                Cada ato da história exigiu uma resposta:
+              </p>
+
+              <div class="overflow-x-auto mt-6">
+                <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
+                  <thead>
+                    <tr>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tl-lg" style="background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);">
+                        Ato
+                      </th>
+                      <th class="px-4 py-3 text-sm font-medium" style="background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);">
+                        O Que Deus Fez
+                      </th>
+                      <th class="px-4 py-3 text-sm font-medium rounded-tr-lg" style="background: rgba(124,207,0,0.1); color: #7ccf00;">
+                        O Que a Igreja Fez
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody style="color: rgba(255,255,255,0.7);">
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm font-medium" style="background: rgba(255,255,255,0.02);">
+                        1
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Revelou a Palavra
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Preservou
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm font-medium" style="background: rgba(255,255,255,0.02);">
+                        2
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Permitiu a tecnologia
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Multiplicou
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm font-medium" style="background: rgba(255,255,255,0.02);">
+                        3
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Levantou tradutores
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Traduziu
+                      </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                      <td class="px-4 py-3 text-sm font-medium" style="background: rgba(255,255,255,0.02);">
+                        4
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Abriu novos formatos
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(124,207,0,0.03);">
+                        Adaptou
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm font-medium rounded-bl-lg" style="background: rgba(255,255,255,0.02);">
+                        5
+                      </td>
+                      <td class="px-4 py-3 text-sm" style="background: rgba(255,255,255,0.02);">
+                        Deu os meios
+                      </td>
+                      <td class="px-4 py-3 text-sm rounded-br-lg font-medium" style="background: rgba(124,207,0,0.1); color: #bbf451;">
+                        ?
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="text-lg leading-relaxed mt-6">
+                O quinto espaço está em branco.
+              </p>
+
+              <p class="text-lg leading-relaxed">
+                Porque ainda está sendo escrito.
+              </p>
+
+              <p class="text-lg leading-relaxed font-medium" style="color: rgba(255,255,255,0.95);">
+                Por esta geração.
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Pergunta Que Define Tudo
+              </h3>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(124,207,0,0.02)); border-left: 3px solid #7ccf00;">
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.8);">
+                  Deus deu a Palavra.
+                  <br>
+                  Deus preservou a Palavra.
+                  <br>
+                  Deus multiplicou a Palavra.
+                  <br>
+                  Deus traduziu a Palavra.
+                  <br>
+                  Deus adaptou a Palavra.
+                  <br>
+                  <br>
+                  <strong class="font-medium" style="color: #bbf451;">
+                    Deus deu todos os meios.
+                  </strong>
+                  <br>
+                  <br>
+                  <strong class="font-medium" style="color: #bbf451;">
+                    O que faremos com eles?
+                  </strong>
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Privilégio Histórico
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Nenhuma geração anterior teve o que temos:
+              </p>
+
+              <ul class="my-6 space-y-2" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>Tecnologia de pagamento instantâneo</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>Logística global</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>Redes missionárias em todos os continentes</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>Formatos para todas as necessidades</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>Traduções em milhares de línguas</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>Comunicação instantânea</span>
+                </li>
+              </ul>
+
+              <p class="text-lg leading-relaxed font-medium" style="color: rgba(255,255,255,0.95);">
+                Tudo está pronto.
+              </p>
+
+              <p class="text-lg leading-relaxed mt-4">
+                A única coisa que falta é
+                <strong class="font-medium" style="color: #bbf451;">
+                  decisão
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Responsabilidade Histórica
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Com privilégio vem responsabilidade.
+              </p>
+
+              <blockquote class="relative my-8 py-6 px-6 sm:px-8 rounded-xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid rgba(255,255,255,0.2);">
+                <p class="text-base leading-relaxed italic" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.8);">
+                  "A quem muito foi dado, muito será exigido."
+                </p>
+                <cite class="block mt-3 text-sm not-italic" style="color: rgba(255,255,255,0.5);">
+                  — Lucas 12:48
+                </cite>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                Se esta geração tem os meios de garantir o acesso à Palavra...
+                <br>
+                E não usa...
+              </p>
+
+              <p class="text-lg leading-relaxed mt-4">O que diremos?</p>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Oportunidade Única
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Pela primeira vez em 2.000 anos, uma geração pode declarar:
+              </p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.12), rgba(124,207,0,0.04)); border: 1px solid rgba(124,207,0,0.2);">
+                <p class="text-xl sm:text-2xl font-medium leading-relaxed" style="font-family: 'Instrument Serif', serif; color: #bbf451;">
+                  "Nós resolvemos."
+                  <br>
+                  <br>
+                  "Acabou."
+                  <br>
+                  <br>
+                  "Ninguém ficou sem a Palavra."
+                </p>
+              </blockquote>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Não por milagre.</p>
+                <p>Por método.</p>
+              </div>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Não por emoção.</p>
+                <p>Por constância.</p>
+              </div>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Não por campanha.</p>
+                <p>Por infraestrutura.</p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Convite
+              </h3>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>Este não é um pedido de doação.</p>
+                <p>Este não é um apelo emocional.</p>
+                <p>Este não é um gatilho de culpa.</p>
+              </div>
+
+              <p class="text-lg leading-relaxed">
+                Este é um
+                <strong class="font-medium" style="color: #bbf451;">
+                  convite histórico
+                </strong>
+                .
+              </p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: rgba(255,255,255,0.03); border-left: 3px solid #7ccf00;">
+                <p class="text-xl sm:text-2xl font-light leading-relaxed" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.95);">
+                  Você quer fazer parte da geração que resolveu isso?
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                As Duas Opções
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Existem apenas duas respostas possíveis:
+              </p>
+
+              <div class="grid gap-4 mt-6">
+                <div class="p-5 rounded-xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <p class="font-medium mb-3" style="color: rgba(255,255,255,0.95);">
+                    Opção 1:
+                  </p>
+                  <ul class="space-y-1" style="color: rgba(255,255,255,0.6);">
+                    <li>Continuar como sempre.</li>
+                    <li>Doações pontuais.</li>
+                    <li>Campanhas emocionais.</li>
+                    <li>Esperança sem sistema.</li>
+                    <li class="font-medium" style="color: rgba(255,150,150,1);">
+                      O problema continua.
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-5 rounded-xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(124,207,0,0.02)); border: 1px solid rgba(124,207,0,0.15);">
+                  <p class="font-medium mb-3" style="color: #bbf451;">
+                    Opção 2:
+                  </p>
+                  <ul class="space-y-1" style="color: rgba(255,255,255,0.7);">
+                    <li>Sustentar uma infraestrutura.</li>
+                    <li>Constância.</li>
+                    <li>Método.</li>
+                    <li>Rastreabilidade.</li>
+                    <li class="font-medium" style="color: #bbf451;">
+                      O problema acaba.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Frase Final
+              </h3>
+
+              <div class="space-y-1 py-4" style="color: rgba(255,255,255,0.6);">
+                <p>O Quinto Ato não é sobre o 9forlives.</p>
+              </div>
+
+              <p class="text-lg leading-relaxed">
+                É sobre
+                <strong class="font-medium" style="color: #bbf451;">
+                  você
+                </strong>
+                .
+              </p>
+
+              <p class="text-lg leading-relaxed">
+                É sobre
+                <strong class="font-medium" style="color: #bbf451;">nós</strong>
+                .
+              </p>
+
+              <p class="text-lg leading-relaxed">
+                É sobre
+                <strong class="font-medium" style="color: #bbf451;">
+                  esta geração
+                </strong>
+                .
+              </p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.12), rgba(124,207,0,0.04)); border: 1px solid rgba(124,207,0,0.2);">
+                <p class="text-xl sm:text-2xl font-medium leading-relaxed" style="font-family: 'Instrument Serif', serif; color: #bbf451;">
+                  O impossível deixou de ser utopia.
+                  <br>
+                  <br>
+                  Agora é uma questão de decisão.
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <!-- EPÍLOGO -->
+        <section id="epilogo" class="chapter mb-32 scroll-mt-24">
+          <div class="mb-12">
+            <span class="text-xs uppercase tracking-widest font-medium" style="color: #7ccf00;">
+              Epílogo
+            </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mt-3" style="font-family: 'Space Grotesk', sans-serif;">
+              A História Continua
+            </h2>
+          </div>
+
+          <div class="prose-content space-y-6" style="color: rgba(255,255,255,0.8);">
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                O Arco Narrativo
+              </h3>
+
+              <div class="my-8 py-6 px-6 rounded-xl font-mono text-sm space-y-4" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);">
+                <div>
+                  <p>
+                    <strong style="color: #7ccf00;">ATO 1</strong>
+                    — A Palavra existia, mas podia se perder.
+                  </p>
+                  <p class="pl-6">SOLUÇÃO: Foi fixada.</p>
+                </div>
+                <div>
+                  <p>
+                    <strong style="color: #7ccf00;">ATO 2</strong>
+                    — A Palavra estava fixada, mas não circulava.
+                  </p>
+                  <p class="pl-6">SOLUÇÃO: Virou livro.</p>
+                </div>
+                <div>
+                  <p>
+                    <strong style="color: #7ccf00;">ATO 3</strong>
+                    — A Palavra circulava, mas não era entendida.
+                  </p>
+                  <p class="pl-6">SOLUÇÃO: Foi traduzida.</p>
+                </div>
+                <div>
+                  <p>
+                    <strong style="color: #7ccf00;">ATO 4</strong>
+                    — A Palavra era entendida, mas nem todos podiam ler.
+                  </p>
+                  <p class="pl-6">SOLUÇÃO: Ultrapassou a leitura.</p>
+                </div>
+                <div>
+                  <p>
+                    <strong style="color: #bbf451;">ATO 5</strong>
+                    — A Palavra existe em todos os formatos...
+                  </p>
+                  <p class="pl-6">Mas a entrega não é garantida.</p>
+                  <p class="pl-6" style="color: #bbf451;">
+                    SOLUÇÃO: Infraestrutura.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Verdade Que Atravessa os Séculos
+              </h3>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.08), rgba(124,207,0,0.02)); border-left: 3px solid #7ccf00;">
+                <p class="text-lg leading-relaxed" style="color: rgba(255,255,255,0.9);">
+                  <strong class="font-medium" style="color: #bbf451;">
+                    Toda grande virada do cristianismo aconteceu quando alguém
+                    resolveu um problema de acesso.
+                  </strong>
+                </p>
+              </blockquote>
+
+              <p class="text-lg leading-relaxed">
+                E toda vez que isso aconteceu:
+              </p>
+
+              <ul class="my-6 space-y-2" style="color: rgba(255,255,255,0.7);">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>A Igreja cresceu</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>A fé se espalhou</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1 h-1 rounded-full flex-shrink-0" style="background: #7ccf00;"></span>
+                  <span>O Reino avançou</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mb-16">
+              <h3 class="text-xl font-medium mb-6 flex items-center gap-3" style="color: rgba(255,255,255,0.95);">
+                <span class="w-8 h-px" style="background: rgba(124,207,0,0.5);"></span>
+                A Pergunta Final
+              </h3>
+
+              <p class="text-lg leading-relaxed">
+                Você está lendo este manifesto no exato momento em que o Quinto
+                Ato está sendo escrito.
+              </p>
+
+              <p class="text-lg leading-relaxed mt-4">
+                A história não perguntará quanto você sentiu.
+                <br>
+                Perguntará o que você
+                <strong class="font-medium" style="color: #bbf451;">fez</strong>
+                .
+              </p>
+
+              <blockquote class="relative my-10 py-8 px-6 sm:px-10 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,207,0,0.12), rgba(124,207,0,0.04)); border: 1px solid rgba(124,207,0,0.2);">
+                <p class="text-xl sm:text-2xl font-medium leading-relaxed" style="font-family: 'Instrument Serif', serif; color: #bbf451;">
+                  Esta é a geração que pode garantir que ninguém fique sem a
+                  Palavra.
+                  <br>
+                  <br>
+                  A única pergunta é: você fará parte?
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <!-- DECLARAÇÃO FINAL -->
+        <section class="mb-16">
+          <div class="p-8 sm:p-12 rounded-3xl text-center" style="background: linear-gradient(135deg, rgba(124,207,0,0.15), rgba(9,9,11,0.98)); border: 1px solid rgba(124,207,0,0.3);">
+            <p class="text-sm uppercase tracking-widest mb-6" style="color: rgba(124,207,0,0.7);">
+              Declaração Final
+            </p>
+            <blockquote class="text-xl sm:text-2xl md:text-3xl font-light leading-relaxed mb-8" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.95);">
+              "Deus sempre garantiu Sua Palavra.
+              <br>
+              <br>
+              <strong class="font-medium" style="color: #bbf451;">
+                Agora Ele chama Sua Igreja a garantir o acesso.
+              </strong>
+              "
+            </blockquote>
+
+            <p class="text-lg mb-4" style="color: rgba(255,255,255,0.7);">
+              O Quinto Ato não é opcional.
+              <br>
+              É inevitável.
+            </p>
+
+            <p class="text-lg mb-8" style="color: rgba(255,255,255,0.7);">
+              A única questão é quem escreverá a história.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+              <a href="#" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium text-base transition-all hover:scale-105" style="background: linear-gradient(135deg, #7ccf00, #5ba300); color: #000;">
+                <span>Junte-se ao movimento</span>
+                <iconify-icon icon="lucide:arrow-right" width="18" height="18"></iconify-icon>
+              </a>
+              <a href="#" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium text-base transition-all" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);">
+                <span>Compartilhar manifesto</span>
+                <iconify-icon icon="lucide:share-2" width="18" height="18"></iconify-icon>
+              </a>
+            </div>
+
+            <div class="pt-6" style="border-top: 1px solid rgba(255,255,255,0.1);">
+              <p class="text-lg font-medium mb-2" style="font-family: 'Space Grotesk', sans-serif; color: #7ccf00;">
+                9forlives
+              </p>
+              <p class="text-sm mb-4" style="color: rgba(255,255,255,0.5);">
+                Infraestrutura de Acesso à Palavra
+              </p>
+              <p class="text-sm" style="color: rgba(255,255,255,0.5);">
+                9forlives.com
+              </p>
+              <p class="text-base mt-4 italic" style="font-family: 'Instrument Serif', serif; color: rgba(255,255,255,0.6);">
+                "Ninguém ficará sem a Palavra."
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="border-t py-12" style="border-color: rgba(255,255,255,0.05);">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-lg font-medium mb-2" style="font-family: 'Space Grotesk', sans-serif; color: #7ccf00;">
+          9forlives
+        </p>
+        <p class="text-sm mb-6" style="color: rgba(255,255,255,0.5);">
+          Infraestrutura de continuidade para o acesso à Palavra
+        </p>
+        <p class="text-xs" style="color: rgba(255,255,255,0.3);">
+          © 2024 9forlives. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Progress bar
+      window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('progressBar').style.width = scrolled + '%';
+      });
+
+      // Table of contents toggle
+      const tocToggle = document.getElementById('tocToggle');
+      const tocSidebar = document.getElementById('tocSidebar');
+      const tocClose = document.getElementById('tocClose');
+      const tocOverlay = document.getElementById('tocOverlay');
+
+      tocToggle.addEventListener('click', () => {
+        tocSidebar.classList.remove('-translate-x-full');
+        tocOverlay.classList.remove('hidden');
+      });
+
+      const closeToc = () => {
+        tocSidebar.classList.add('-translate-x-full');
+        tocOverlay.classList.add('hidden');
+      };
+
+      tocClose.addEventListener('click', closeToc);
+      tocOverlay.addEventListener('click', closeToc);
+
+      // Close TOC on link click
+      document.querySelectorAll('.toc-link').forEach(link => {
+        link.addEventListener('click', closeToc);
+      });
+
+      // Active chapter highlighting
+      const chapters = document.querySelectorAll('.chapter');
+      const chapterDots = document.querySelectorAll('.chapter-dot');
+      const tocLinks = document.querySelectorAll('.toc-link');
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -60% 0px',
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+
+            // Update chapter dots
+            chapterDots.forEach(dot => {
+              const dotChapter = dot.getAttribute('data-chapter');
+              const dotCircle = dot.querySelector('div');
+              if (dotChapter === id) {
+                dotCircle.style.background = '#7ccf00';
+                dotCircle.style.transform = 'scale(1.3)';
+              } else {
+                dotCircle.style.background = 'rgba(255,255,255,0.2)';
+                dotCircle.style.transform = 'scale(1)';
+              }
+            });
+
+            // Update TOC links
+            tocLinks.forEach(link => {
+              if (link.getAttribute('href') === '#' + id) {
+                link.style.background = 'rgba(124,207,0,0.1)';
+                link.style.color = '#7ccf00';
+              } else {
+                link.style.background = 'transparent';
+                link.style.color = 'rgba(255,255,255,0.6)';
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      chapters.forEach(chapter => observer.observe(chapter));
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Opções do Observer ajustadas para garantir disparo confiável
+      const observerOptions = {
+        root: null,
+        threshold: 0.1, // Dispara assim que 10% do elemento for visível
+        rootMargin: '0px 0px -50px 0px' // Margem negativa leve para garantir que entre um pouco na tela
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            
+            // Se já tiver sido animado, ignora (redundância de segurança)
+            if (el.classList.contains('reveal-visible')) {
+              observer.unobserve(el);
+              return;
+            }
+
+            // Pega o delay configurado
+            const delay = parseInt(el.getAttribute('data-delay') || '0');
+            
+            // Aplica a animação após o delay
+            setTimeout(() => {
+              el.classList.add('reveal-visible');
+              
+              // Uma vez visível, removemos o listener para garantir que fique estático
+              // e limpamos classes de animação pesadas após a transição terminar
+              setTimeout(() => {
+                // Opcional: remover a classe base se quiser limpar o DOM, 
+                // mas manter reveal-visible é mais seguro para garantir o estado final
+                el.style.willChange = 'auto'; // Libera memória da GPU
+              }, 1000);
+              
+            }, delay);
+            
+            // Para de observar imediatamente para não disparar novamente
+            observer.unobserve(el);
+          }
+        });
+      }, observerOptions);
+
+      // Função para preparar os elementos
+      function initAnimations() {
+        const chapters = document.querySelectorAll('.chapter');
+        
+        chapters.forEach(chapter => {
+          // Seleciona elementos-chave dentro de cada capítulo
+          // Inclui título do capítulo, e todos os filhos diretos do conteúdo
+          const header = chapter.querySelector('.mb-12');
+          const contentContainer = chapter.querySelector('.prose-content');
+          
+          let elementsToAnimate = [];
+          
+          if (header) elementsToAnimate.push(header);
+          
+          if (contentContainer) {
+            // Pega filhos diretos do container de texto
+            const children = Array.from(contentContainer.children);
+            elementsToAnimate = elementsToAnimate.concat(children);
+          }
+
+          // Configura cada elemento
+          elementsToAnimate.forEach((el, index) => {
+            // Adiciona a classe base que oculta o elemento
+            el.classList.add('reveal-element');
+            
+            // Define um delay escalonado (stagger), mas limita o máximo
+            // para evitar que o usuário espere demais se rolar rápido
+            // Reinicia o contador para cada capítulo, mas mantém fluxo local
+            const staggerDelay = Math.min(index * 100, 500); 
+            el.setAttribute('data-delay', staggerDelay);
+            
+            // Começa a observar
+            observer.observe(el);
+          });
+        });
+        
+        // Fallback: Se o observer não disparar em 3s (ex: aba inativa), força visibilidade
+        // Isso previne que o conteúdo fique invisível para sempre em casos de erro
+        setTimeout(() => {
+          const hiddenElements = document.querySelectorAll('.reveal-element:not(.reveal-visible)');
+          // Apenas se estiverem visíveis na viewport (verificação básica)
+          hiddenElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              el.classList.add('reveal-visible');
+            }
+          });
+        }, 1000);
+      }
+
+      // Inicia
+      initAnimations();
+    });
+  </script>
+</body></html>
