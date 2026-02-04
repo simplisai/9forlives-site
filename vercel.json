@@ -1,1 +1,1 @@
-{"rewrites":[{"source":"/(.*)","destination":"/index.html"}]}
+{"rewrites":[{"source":"/manifest-en","destination":"/pages/manifest-en.html"},{"source":"/manifesto-pt","destination":"/pages/manifesto-pt.html"},{"source":"/","destination":"/pages/9forlives-page.html"},{"source":"/index.html","destination":"/pages/9forlives-page.html"},{"source":"/(.*)","destination":"/pages/9forlives-page.html"}]}

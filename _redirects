@@ -13,6 +13,7 @@
 
 # Nova página Manifesto
 /manifesto-pt    /pages/manifesto-pt.html    200
+/manifest-en    /pages/manifest-en.html    200
 
 # Fallback para SPA (caso necessário no futuro)
 /*    /pages/9forlives-page.html    200
