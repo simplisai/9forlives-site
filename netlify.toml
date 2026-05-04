@@ -7,16 +7,25 @@
 
 # Configurações de redirecionamento
 [[redirects]]
-  # Redireciona a raiz para o arquivo HTML principal
+  # Redireciona a raiz para o arquivo HTML principal (v2)
   from = "/"
-  to = "/pages/9forlives-page.html"
+  to = "/pages/9forlives_page_v2.html"
   status = 200
+  force = true
 
 [[redirects]]
-  # Redireciona index.html para o arquivo principal
+  # Redireciona index.html para o arquivo principal (v2)
   from = "/index.html"
-  to = "/pages/9forlives-page.html"
+  to = "/pages/9forlives_page_v2.html"
   status = 301
+  force = true
+
+[[redirects]]
+  # Garante que a versão antiga sempre redirecione para a V2
+  from = "/pages/9forlives-page.html"
+  to = "/pages/9forlives_page_v2.html"
+  status = 301
+  force = true
 
 # Headers de segurança e performance
 [[headers]]
