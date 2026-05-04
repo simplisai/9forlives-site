@@ -24,5 +24,9 @@
 # Página de Patentes e Insígnias
 /ranks           /pages/ranks.html           200
 
-# Fallback para SPA (caso necessário no futuro)
-/*    /pages/9forlives_page_v2.html    200!
+# Garante entrega direta dos assets estáticos
+/images/*        /images/:splat              200
+/js/*            /js/:splat                  200
+
+# Importante: não usar fallback global com 200! para não interceptar assets
+# (ex.: /images/*). Isso quebrava logo e imagens no deploy.

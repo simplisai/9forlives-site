@@ -66,12 +66,27 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+  for = "/images/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
   for = "/*.jpg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+  for = "/images/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
   for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*.svg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
